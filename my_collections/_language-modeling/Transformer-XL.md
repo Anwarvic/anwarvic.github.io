@@ -1,18 +1,21 @@
 ---
 title: "Transformer-XL"
-date: 2019-07-28
+date: 2019-01-09
 cover: /image0.png
-labs: ["Open AI"]
+labs: ["Carnegie Mellon University", "Google Brain"]
 ---
 
 Transformer-XL, stands for "Transformer Extra Long", is a language model
-published in this paper: "[Language Models are Unsupervised Multitask
-Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)"
-by Google Brain in 2019. In this paper, the authors are trying to
-increase the context-dependency scope. Hence, the name of the paper:
-Transformer-XL Attentive Language Models Beyond a Fixed-Length Context.
-A simple comparison between Transformer-XL and GPT and BERT can be
-summarized in the following figure:
+published in this paper: "[Transformer-XL: Attentive Language Models
+Beyond a Fixed-Length Context](https://arxiv.org/pdf/1901.02860.pdf)"
+by Google Brain in 2019.The official code for this paper can be found in the
+following GitHub repository: [transformer-xl
+](https://github.com/kimiyoung/transformer-xl).
+
+In this paper, the authors are trying to increase the context-dependency scope.
+Hence, the name of the paper: Transformer-XL Attentive Language Models Beyond a
+Fixed-Length Context. A simple comparison between Transformer-XL and GPT and
+BERT can be summarized in the following figure:
 
 <div align="center">
     <img src="media/Transformer-XL/image1.png" width=750>
