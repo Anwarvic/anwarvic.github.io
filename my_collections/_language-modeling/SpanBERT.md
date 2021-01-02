@@ -2,8 +2,8 @@
 title: "SpanBERT"
 date: 2019-07-24
 cover: /image0.png
-labs: ["Princeton University", "Allen Institute of Artificial Intelligence",
-"Facebook AI"]
+labs: ["Princeton University", "Allen Institute AI",
+"FAIR"]
 ---
 
 SpanBERT is a model created by Facebook AI and Allen Institute in
