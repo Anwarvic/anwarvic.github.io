@@ -9,8 +9,8 @@ XLNet stands for "Extra-Long Net" which is a model that integrates both
 GPT and BERT introduced in 2019 by Google Brain and published in this
 paper: "[XLNet: Generalized Autoregressive Pretraining for Language
 Understanding](https://arxiv.org/pdf/1906.08237.pdf)" by the same
-authors of Transformer-XL under the name of " Generalized
-Auto-regressive Pre-training for Language Understanding".
+authors of Transformer-XL. The official code for this paper can be found in
+the following GitHub repository: [xlnet](https://github.com/zihangdai/xlnet).
 
 In Transformer-XL, they extended the context-dependency length by
 introducing the segment-level recurrence mechanism which uses the hidden
