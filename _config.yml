@@ -7,15 +7,17 @@ baseurl: ''
 # disqus_shortname: 'your-disqus-name'
 # disable_landing_page: true
 
-topics: ["Language Models", "Machine Translation", "Multilingual NMT",
-         "Word Embeddings", "Speech Recognition"]
-
 author:
   name: 'Mohamed Anwar'
+  pronouns: "(he/him/his)"
   email: mohamedanwarvic@gmail.com
   github_username:  anwarvic
   linkedin_username:  anwarvic
   stackoverflow_username:  5612363/anwarvic
+
+
+topics: ["Language Models", "Machine Translation", "Multilingual NMT",
+         "Word Embeddings", "Speech Recognition"]
 
 defaults:
   -

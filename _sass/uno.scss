@@ -1190,16 +1190,18 @@ hr {
 	vertical-align: middle; }
 
 .panel-title {
+	font-family: 'Raleway';
 	margin: 0 0 5px 0;
 	font-size: 2.5em;
-	letter-spacing: 4px;
+	letter-spacing: 2px;
 	color: #FFF; }
 
 .panel-subtitle {
 	font-family: "Roboto Slab", serif;
 	font-size: 1.2em;
 	font-weight: lighter;
-	letter-spacing: 3px;
+	letter-spacing: 1px;
+	padding: 5px;
 	color: #cccccc;
 	-webkit-font-smoothing: antialiased; }
 
