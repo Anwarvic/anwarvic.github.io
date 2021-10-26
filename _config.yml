@@ -11,9 +11,11 @@ author:
   name: 'Mohamed Anwar'
   pronouns: "(he/him/his)"
   email: mohamedanwarvic@gmail.com
-  github_username:  anwarvic
-  linkedin_username:  anwarvic
-  stackoverflow_username:  5612363/anwarvic
+  github:  anwarvic
+  linkedin:  anwarvic
+  stackoverflow:  5612363/anwarvic
+  hackerrank: anwarvic
+  leetcode: anwarvic
 
 
 topics: ["Language Models", "Machine Translation", "Multilingual NMT",

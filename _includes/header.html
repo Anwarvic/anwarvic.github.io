@@ -27,35 +27,55 @@
             </li>
             {% endif %}
 
-            {% if site.author.linkedin_username %}
+            {% if site.author.linkedin %}
             <!-- LinkedIn -->
             <li class="navigation__item">
-              <a href="https://www.linkedin.com/in/{{ site.author.linkedin_username }}" target="_blank">
+              <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank">
                 <i class="icon icon-social-linkedin"></i>
                 <span class="label">LinkedIn</span>
               </a>
             </li>
             {% endif %}
 
-            {% if site.author.github_username %}
+            {% if site.author.github %}
             <!-- GitHub -->
             <li class="navigation__item">
-              <a href="https://www.github.com/{{ site.author.github_username }}" target="_blank">
+              <a href="https://www.github.com/{{ site.author.github }}" target="_blank">
                 <i class="icon icon-social-github"></i>
                 <span class="label">GitHub</span>
               </a>
             </li>
             {% endif %}
 
-            {% if site.author.stackoverflow_username %}
+            {% if site.author.stackoverflow %}
             <!-- Stackoverflow -->
             <li class="navigation__item">
-              <a href="https://www.stackoverflow.com/users/{{ site.author.stackoverflow_username }}" target="_blank">
+              <a href="https://www.stackoverflow.com/users/{{ site.author.stackoverflow }}" target="_blank">
                 <i class="icon icon-social-stack-overflow"></i>
                 <span class="label">Stackoverflow</span>
               </a>
             </li>
-            {% endif %}              
+            {% endif %}
+
+            {% if site.author.hackerrank %}
+            <!-- Hackerrank -->
+            <li class="navigation__item">
+              <a href="https://www.hackerrank.com/{{ site.author.hackerrank }}" target="_blank">
+                <i class="extra-icon fab fa-hackerrank"></i>
+                <span class="label">Hackerrank</span>
+              </a>
+            </li>
+            {% endif %}
+
+            {% if site.author.leetcode %}
+            <!-- Leetcode -->
+            <li class="navigation__item">
+              <a href="https://www.leetcode.com/{{ site.author.leetcode }}" target="_blank">
+                <i class="extra-icon iconify-inline" data-icon="simple-icons:leetcode"></i>
+                <span class="label">Hackerrank</span>
+              </a>
+            </li>
+            {% endif %}
 
             <!-- RSS -->
             <!-- <li class="navigation__item">
