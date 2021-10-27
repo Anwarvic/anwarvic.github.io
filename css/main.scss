@@ -72,3 +72,10 @@ pre.highlight code,
 .extra-icon{
   font-size: 1.65em;
 }
+
+::selection {
+  background: #0011ff; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #0011ff; /* Gecko Browsers */
+}
