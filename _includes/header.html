@@ -10,7 +10,8 @@
     <div class="panel-main__inner panel-inverted">
       <div class="panel-main__content">
         <a href="{{ site.baseurl }}/">
-          <img src="{{ site.baseurl }}/images/avatar.png" class="user-image">
+          <img src="{{ site.baseurl }}/images/avatar.png" class="user-image"
+          onmouseover="this.src='{{ site.baseurl }}/images/avatar-light.png';" onmouseout="this.src='{{ site.baseurl }}/images/avatar.png';">
         </a>
         <h1 class="panel-cover__title panel-title">{{ site.author.name }}</h1>
         <h6 class="panel-cover__title panel-subtitle">{{ site.author.pronouns }} <i class="gender-icon icon icon-male-symbol"></i></h6>
@@ -22,7 +23,7 @@
             <li class="navigation__item">
               <a href="mailto:{{ site.author.email }}" target="_blank">
                 <i class="icon icon-mail"></i>
-                <span class="label">Email</span>
+                <!-- <span class="label">Email</span> -->
               </a>
             </li>
             {% endif %}
@@ -32,7 +33,7 @@
             <li class="navigation__item">
               <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank">
                 <i class="icon icon-social-linkedin"></i>
-                <span class="label">LinkedIn</span>
+                <!-- <span class="label">LinkedIn</span> -->
               </a>
             </li>
             {% endif %}
@@ -42,7 +43,7 @@
             <li class="navigation__item">
               <a href="https://www.github.com/{{ site.author.github }}" target="_blank">
                 <i class="icon icon-social-github"></i>
-                <span class="label">GitHub</span>
+                <!-- <span class="label">GitHub</span> -->
               </a>
             </li>
             {% endif %}
@@ -52,7 +53,7 @@
             <li class="navigation__item">
               <a href="https://www.stackoverflow.com/users/{{ site.author.stackoverflow }}" target="_blank">
                 <i class="icon icon-social-stack-overflow"></i>
-                <span class="label">Stackoverflow</span>
+                <!-- <span class="label">Stackoverflow</span> -->
               </a>
             </li>
             {% endif %}
@@ -62,7 +63,7 @@
             <li class="navigation__item">
               <a href="https://www.hackerrank.com/{{ site.author.hackerrank }}" target="_blank">
                 <i class="extra-icon fab fa-hackerrank"></i>
-                <span class="label">Hackerrank</span>
+                <!-- <span class="label">Hackerrank</span> -->
               </a>
             </li>
             {% endif %}
@@ -72,7 +73,7 @@
             <li class="navigation__item">
               <a href="https://www.leetcode.com/{{ site.author.leetcode }}" target="_blank">
                 <i class="extra-icon iconify-inline" data-icon="simple-icons:leetcode"></i>
-                <span class="label">Hackerrank</span>
+                <!-- <span class="label">Leetcode</span> -->
               </a>
             </li>
             {% endif %}
