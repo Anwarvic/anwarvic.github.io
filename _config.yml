@@ -46,7 +46,7 @@ collections:
 
 # Build settings
 destination: _site
-paginate: 10
+# paginate: 10
 permalink: /:collection
 markdown: kramdown
 highlighter: rouge

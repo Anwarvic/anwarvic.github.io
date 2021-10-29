@@ -16,7 +16,8 @@ layout: default
         {% capture workspace_collection %}
             <div class="main-post-list">
                 <ol class="post-list">
-                {% for post in site[collection_name]%}
+                {% assign sorted_posts = site[collection_name] | sort: 'date' %}
+                {% for post in sorted_posts %}
                     <li>
                     <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
                     <p class="excerpt">{{ post.excerpt | strip_html }}&hellip;</p>
