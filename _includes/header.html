@@ -15,7 +15,7 @@
           onmouseout="this.src='{{ site.baseurl }}/images/avatar.png';">
         </a>
         <h1 class="panel-cover__title panel-title">{{ site.author.name }}</h1>
-        <h6 class="panel-cover__title panel-subtitle">{{ site.author.pronouns }} <i class="gender-icon icon icon-male-symbol"></i></h6>
+        <h6 class="panel-cover__title panel-subtitle">{{ site.author.pronouns }} <i class="gender-icon fas fa-mars"></i></h6>
         <nav class="cover-navigation navigation--social">
           <ul class="navigation">
 
@@ -23,7 +23,7 @@
             <!-- Email -->
             <li class="navigation__item">
               <a href="mailto:{{ site.author.email }}" target="_blank" title="Email">
-                <i class="icon icon-mail"></i>
+                <i class="extra-icon far fa-envelope"></i>
               </a>
             </li>
             {% endif %}
@@ -32,8 +32,7 @@
             <!-- LinkedIn -->
             <li class="navigation__item">
               <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" title="LinkedIn">
-                <i class="icon icon-social-linkedin"></i>
-                <!-- <span class="label">LinkedIn</span> -->
+                <i class="extra-icon fab fa-linkedin"></i>
               </a>
             </li>
             {% endif %}
@@ -42,8 +41,7 @@
             <!-- GitHub -->
             <li class="navigation__item">
               <a href="https://www.github.com/{{ site.author.github }}" target="_blank" title="GitHub">
-                <i class="icon icon-social-github"></i>
-                <!-- <span class="label">GitHub</span> -->
+                <i class="extra-icon fab fa-github"></i>
               </a>
             </li>
             {% endif %}
@@ -52,8 +50,7 @@
             <!-- Stackoverflow -->
             <li class="navigation__item">
               <a href="https://www.stackoverflow.com/users/{{ site.author.stackoverflow }}" target="_blank" title="StackOverflow">
-                <i class="icon icon-social-stack-overflow"></i>
-                <!-- <span class="label">Stackoverflow</span> -->
+                <i class="extra-icon fab fa-stack-overflow"></i>
               </a>
             </li>
             {% endif %}
@@ -96,12 +93,15 @@
 
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
-              {% for topic in site.topics %}
+              {% for collection in site.collections %}
+              {% assign topic = collection.label %}
+              {% if topic != "posts" %}
               <li class="navigation__item">
-                {% assign id = topic | downcase | replace: ' ', '-' %}
-                <a href="{{ site.baseurl }}/{{ id }}" class="blog-button" id="{{ id }}"
-                onclick="activateButton(this.id)">{{ topic }}</a>
+                <!-- {% assign name = topic | uppercase | replace: '-', ' ' %} -->
+                <a href="{{ site.baseurl }}/{{ topic }}" class="blog-button" id="{{ topic }}"
+                onclick="activateButton(this.id)">{{ topic | capitalize | replace: '-', ' ' }}</a>
               </li>
+              {% endif %}
               {% endfor %}
             </ul>
           </nav>

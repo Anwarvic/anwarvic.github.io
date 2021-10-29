@@ -7,6 +7,7 @@ exclude: 'yes'
 
 $(document).ready(function () {
   {% if site.disable_landing_page != true %}
+  var baseurl = "{{ site.baseurl}}";
   // $('a.blog-button').click(function (e) {
   //   if ($('.panel-cover').hasClass('panel-cover--collapsed')){
   //     return
@@ -57,29 +58,6 @@ function expand() {
   $('.panel-cover').css('max-width', maxwidth)
   $('.panel-cover').animate({ 'max-width': maxwidth, 'width': '100%' }, 500, swing = 'swing', function () { })
   $('.panel-cover').removeClass('panel-cover--collapsed')
-}
-
-function generateContent(id){
-  const txt = `
-  <ol class="post-list">
-  <h1>{{ page.url }}</h1>
-  {% for post in site.machine-translation%}
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-      <p class="excerpt">{{ post.excerpt | strip_html }}&hellip;</p>
-      <div class="post-list__meta">
-          <time datetime="{{ post.date | date: '%Y-%m-%d %H:%M' }}" class="post-list__meta--date date">{{ post.date | date: "%-d %b %Y" }}</time>
-          {% if post.tags.size > 0 %}
-          &#8226; <span class="post-meta__tags">on {% for tag in post.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}</span>
-          {% endif %}
-      </div>
-      <hr class="post-list__divider">
-    </li>
-  {% endfor %}
-  </ol>
-  `;
-  console.log(txt);
-  $("#list-items").html(txt);
 }
 
 function activateButton(id) {
