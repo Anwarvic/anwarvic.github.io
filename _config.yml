@@ -18,19 +18,22 @@ author:
   leetcode: anwarvic
 
 
-topics: ["Language Models", "Machine Translation", "Multilingual NMT",
-         "Word Embeddings", "Speech Recognition"]
-
-
 collections_dir: my_collections
 
 collections:
+  language-modeling:
+    output: true
+    permalink: /:collection/:title
   machine-translation:
     output: true
     permalink: /:collection/:title
-    # pages:
-    #   output: true
-    #   permalink: /:collection/
+  multilingual-nmts:
+    output: true
+    permalink: /:collection/:title
+  word-embedding:
+    output: true
+    permalink: /:collection/:title
+
 
 
 # defaults:
