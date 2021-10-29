@@ -11,13 +11,12 @@ layout: default
         {%- endif -%}
 
         {{ content }}
-
         {% assign has_output = False %}
         {%- if target_collection.size > 0 -%}
         {% capture workspace_collection %}
             <div class="main-post-list">
                 <ol class="post-list">
-                {% for post in site.machine-translation%}
+                {% for post in site[collection_name]%}
                     <li>
                     <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
                     <p class="excerpt">{{ post.excerpt | strip_html }}&hellip;</p>
@@ -33,9 +32,9 @@ layout: default
                 </ol>
                 <hr class="post-list__divider ">
             
-                {% if paginator.previous_page or paginator.next_page %}
+                <!-- {% if paginator.previous_page or paginator.next_page %}
                     {% include pagination.html %}
-                {% endif %}
+                {% endif %} -->
             </div>
         {% endcapture %}
         {%- if has_output == True -%}
@@ -43,4 +42,4 @@ layout: default
         {%- endif -%}
         {%- endif -%}
     </div>
-{% endcapture %}{{ workspace_collections | strip }}{% assign workspace_collections = nil %}page
+{% endcapture %}{{ workspace_collections | strip }}{% assign workspace_collections = nil %}

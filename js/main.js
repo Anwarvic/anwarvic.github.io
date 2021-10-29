@@ -7,7 +7,6 @@ exclude: 'yes'
 
 $(document).ready(function () {
   {% if site.disable_landing_page != true %}
-  var baseurl = "{{ site.baseurl}}";
   // $('a.blog-button').click(function (e) {
   //   if ($('.panel-cover').hasClass('panel-cover--collapsed')){
   //     return
@@ -28,6 +27,8 @@ $(document).ready(function () {
 
   if (window.location.pathname !== '{{ site.baseurl }}/' && window.location.pathname !== '{{ site.baseurl }}/index.html') {
     $('.panel-cover').addClass('panel-cover--collapsed')
+    let id = window.location.pathname.split('/')[1];
+    activateButton(id);
   }
   {% endif %}
 
@@ -62,9 +63,11 @@ function expand() {
 
 function activateButton(id) {
   const elem = $('#'+id);
+  console.log("Before: " + activeButtons);
   // deactivate
   if (window.activeButtons.includes(id)) {
     elem.removeClass('clicked');
+    window.activeButtons.pop();
     expand();
   }
   // activate
@@ -75,6 +78,6 @@ function activateButton(id) {
     window.activeButtons.push(id);
     elem.addClass('clicked');
     collapse();
-    // generateContent(id);
   }
+  console.log("After: " + activeButtons);
 }
