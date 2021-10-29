@@ -99,7 +99,7 @@
               {% for topic in site.topics %}
               <li class="navigation__item">
                 {% assign id = topic | downcase | replace: ' ', '-' %}
-                <a href="{{ site.baseurl }}/#{{ id }}" class="blog-button" id="{{ id }}"
+                <a href="{{ site.baseurl }}/{{ id }}" class="blog-button" id="{{ id }}"
                 onclick="activateButton(this.id)">{{ topic }}</a>
               </li>
               {% endfor %}

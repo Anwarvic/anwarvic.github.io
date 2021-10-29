@@ -21,18 +21,30 @@ author:
 topics: ["Language Models", "Machine Translation", "Multilingual NMT",
          "Word Embeddings", "Speech Recognition"]
 
-defaults:
-  -
-    scope:
-      path: ''
-      type: 'posts'
-    values:
-        layout: 'post'
+
+collections_dir: my_collections
+
+collections:
+  machine-translation:
+    output: true
+    permalink: /:collection/:title
+    # pages:
+    #   output: true
+    #   permalink: /:collection/
+
+
+# defaults:
+#   -
+#     scope:
+#       path: ''
+#       type: 'posts'
+#     values:
+#         layout: 'post'
 
 # Build settings
 destination: _site
 paginate: 10
-permalink: /:year/:title/
+permalink: /:collection
 markdown: kramdown
 highlighter: rouge
 

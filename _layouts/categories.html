@@ -3,7 +3,7 @@ layout: default
 ---
 <h2>Categories:</h2>
 <div class="categories"> 
-{% for catitem in site.categories  %} 
+{% for catitem in site.topics  %} 
   <a href="#{{ catitem[0] }}">{{  catitem[0] }}</a>
 {% endfor %}
 </div>
