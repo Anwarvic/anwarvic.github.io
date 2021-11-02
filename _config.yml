@@ -23,16 +23,16 @@ collections_dir: my_collections
 collections:
   language-modeling:
     output: true
-    permalink: /:collection/:title
+    permalink: /:collection/:path
   machine-translation:
     output: true
-    permalink: /:collection/:title
+    permalink: /:collection/:path
   multilingual-nmts:
     output: true
-    permalink: /:collection/:title
+    permalink: /:collection/:path
   word-embedding:
     output: true
-    permalink: /:collection/:title
+    permalink: /:collection/:path
 
 
 
@@ -56,10 +56,14 @@ sass:
     style: compressed
 
 kramdown:
+  mathjax: true
   # use Github Flavored Markdown
   input: GFM
   # do not replace newlines by <br>s
   hard_wrap: false
 
-plugins: ['jekyll-paginate']
+# plugins:
+#   - jekyll-paginate
+#   - jekyll-spaceship
+
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
