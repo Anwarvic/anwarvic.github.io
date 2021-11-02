@@ -302,7 +302,7 @@ with different weight matrices. By doing that, we end up with multiple
 different Z matrices. So, we need to concatenate them together to get
 one big matrix as shown below:
 
--   enate them together to get one big matrix as shown below:
+-   concatenate them together to get one big matrix as shown below:
 
 <div align="center">
     <img src="media/Attention/image9.png" width=750>
