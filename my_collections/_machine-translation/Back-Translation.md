@@ -1,6 +1,6 @@
 ---
 title: "Back-translation"
-date: 2015-09-04
+date: 2016-06-03
 layout: default
 ---
 
@@ -8,7 +8,7 @@ layout: default
 Back-translation is a semi-supervised mechanism proposed in this paper:
 "[Improving Neural Machine Translation Models with Monolingual
 Data](https://arxiv.org/pdf/1511.06709.pdf)" by the Rico Sennrich and
-the University of Edinburgh in 2015 that uses a reverse translation
+the University of Edinburgh in 2016 that uses a reverse translation
 system make the best use out of target-side monolingual data.
 
 Back-translation operates in a semi-supervised setup where both
