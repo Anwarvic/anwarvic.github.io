@@ -24,7 +24,7 @@ Attention Matrix
 ----------------
 
 <div align="center">
-    <img src="media/Align_and_Translate/image1.png" width=500>
+    <img src="media/Align_and_Translate/image1.png" width=750>
 </div>
 In this part, we are going to recap how the encoder-decoder multi-head
 attention sub-layer works and how the attention matrix is represented.
@@ -122,5 +122,5 @@ toolkit achieved the least AER while maintaining the translation BLEU
 score on two different language-pairs.
 
 <div align="center">
-    <img src="media/Align_and_Translate/image2.png" width=500>
+    <img src="media/Align_and_Translate/image2.png" width=750>
 </div>
