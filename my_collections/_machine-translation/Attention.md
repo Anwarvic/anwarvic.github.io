@@ -1,6 +1,6 @@
 ---
 title: "Attention Mechanism"
-date: 2017-09-04
+date: 2016-05-19
 layout: default
 ---
 
@@ -27,7 +27,7 @@ performance comes down.
 In order to address this issue, this paper "[Neural Machine Translation
 by Jointly Learning to Align and
 Translate](https://arxiv.org/pdf/1409.0473.pdf)" introduced an extension
-to the encoder--decoder model called "Attention mechanism" in 2014. The
+to the encoder--decoder model called "Attention mechanism" in 2016. The
 most important distinguishing feature of this approach from the basic
 encoder--decoder is that it does not attempt to encode a whole input
 sentence into a single fixed-length vector. Instead, it encodes the
