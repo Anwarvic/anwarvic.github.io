@@ -4,7 +4,7 @@
 </span> -->
 
 <header class="panel-cover {% if site.disable_landing_page %}panel-cover--collapsed{% endif %}"
-  style="background-image: url({{ site.baseurl }}/images/volcano.jpg)">
+  style="background-image: url({{ site.baseurl }}/{{ site.cover }})">
   <div class="panel-main">
 
     <div class="panel-main__inner panel-inverted">
@@ -15,7 +15,9 @@
           onmouseout="this.src='{{ site.baseurl }}/images/avatar.png';">
         </a>
         <h1 class="panel-cover__title panel-title">{{ site.author.name }}</h1>
-        <h6 class="panel-cover__title panel-subtitle">{{ site.author.pronouns }} <i class="gender-icon fas fa-mars"></i></h6>
+        <h6 class="panel-cover__title panel-subtitle">{{ site.author.pronouns }}
+          <i class="gender-icon iconify-inline" data-icon="foundation:male-symbol"></i>
+        </h6>
         <nav class="cover-navigation navigation--social">
           <ul class="navigation">
 
