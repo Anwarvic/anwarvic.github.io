@@ -2,6 +2,7 @@
 title: Anwarvic
 description: "I write about research papers in these topics"
 url: 'https://anwarvic.github.io'
+cover: images/volcano.jpg
 baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
@@ -34,15 +35,6 @@ collections:
     output: true
     permalink: /:collection/:path
 
-
-
-# defaults:
-#   -
-#     scope:
-#       path: ''
-#       type: 'posts'
-#     values:
-#         layout: 'post'
 
 # Build settings
 destination: _site
