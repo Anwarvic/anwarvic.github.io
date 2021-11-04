@@ -1,5 +1,5 @@
 ---
-title: "Align & Translate"
+title: "Align & Translate with Transformers"
 date: 2019-09-04
 layout: default
 ---
