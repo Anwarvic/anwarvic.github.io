@@ -1,7 +1,6 @@
 ---
 title: "Transformers"
 date: 2017-12-06
-layout: default
 ---
 
 # Transformer
