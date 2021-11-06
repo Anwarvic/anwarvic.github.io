@@ -1,7 +1,6 @@
 ---
 title: "ConvS2S"
 date: 2017-07-25
-layout: default
 ---
 
 # ConvS2S
