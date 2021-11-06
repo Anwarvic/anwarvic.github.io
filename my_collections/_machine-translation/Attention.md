@@ -1,7 +1,6 @@
 ---
 title: "Attention Mechanism"
 date: 2016-05-19
-layout: default
 ---
 
 # Attention Mechanism
