@@ -1,7 +1,6 @@
 ---
 title: "Dr. NMT"
 date: 2021-08-01
-layout: default
 ---
 
 # DrNMT
