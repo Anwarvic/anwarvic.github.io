@@ -1,7 +1,6 @@
 ---
 title: "Fusion"
 date: 2015-07-12
-layout: default
 ---
 
 # Fusion
@@ -14,8 +13,8 @@ was published in 2015, it uses the encoder-decoder architecture. So, the
 integrating part will be done on the decoder's side.
 
 In the paper, they proposed two method for integrating a language model
-into an NMT translation system; and they are <u>**shallow fusion**</u>
-and <u>**deep fusion**</u> where the language model is a recurrent
+into an NMT translation system; and they are <u><strong>shallow fusion</strong></u>
+and <u><strong>deep fusion</strong></u> where the language model is a recurrent
 neural network language model (RNN-LM) same as the decoder but trained
 separately using monolingual data.
 
