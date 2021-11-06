@@ -1,7 +1,6 @@
 ---
 title: "Dual Learning for Machine Translation"
 date: 2016-11-01
-layout: default
 ---
 
 # Dual Learning for Machine Translation
