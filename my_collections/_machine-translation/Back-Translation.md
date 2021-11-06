@@ -1,7 +1,6 @@
 ---
 title: "Back-translation"
 date: 2016-06-03
-layout: default
 ---
 
 # Back-Translation
