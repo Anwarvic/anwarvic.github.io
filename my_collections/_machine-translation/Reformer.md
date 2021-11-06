@@ -1,7 +1,6 @@
 ---
 title: "Reformer: Efficient Transformer"
 date: 2020-02-18
-layout: default
 ---
 
 # Reformer
