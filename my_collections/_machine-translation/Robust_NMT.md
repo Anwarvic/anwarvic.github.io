@@ -1,7 +1,6 @@
 ---
 title: "Robust NMT"
 date: 2019-06-06
-layout: default
 ---
 
 # Robust NMT
