@@ -1,7 +1,6 @@
 ---
 title: "NAT: Non-Autoregressive Transformer"
 date: 2018-03-09
-layout: default
 ---
 
 # NAT
