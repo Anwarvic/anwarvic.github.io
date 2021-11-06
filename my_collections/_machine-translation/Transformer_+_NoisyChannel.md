@@ -1,7 +1,6 @@
 ---
 title: "Transformer + Noisy Channel"
 date: 2019-08-15
-layout: default
 ---
 
 # Transformer + Noisy Channel
