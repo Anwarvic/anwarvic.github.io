@@ -1,7 +1,6 @@
 ---
 title: "Google's NMT"
 date: 2016-10-08
-layout: default
 ---
 
 # GNMT
