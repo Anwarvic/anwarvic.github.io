@@ -1,7 +1,6 @@
 ---
 title: "SB-NMT: Synchronous Bidirectional NMT"
 date: 2019-05-13
-layout: default
 ---
 
 # SB-NMT
