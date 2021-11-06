@@ -1,7 +1,6 @@
 ---
 title: "Gated CNN"
 date: 2017-09-08
-layout: default
 ---
 
 # Gated CNN
