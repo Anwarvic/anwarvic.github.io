@@ -9,12 +9,13 @@
 
     <div class="panel-main__inner panel-inverted">
       <div class="panel-main__content">
-        <a href="{{ site.baseurl }}/">
-          <img src="{{ site.baseurl }}/images/avatar.png" class="user-image"
-          onmouseover="this.src='{{ site.baseurl }}/images/avatar-light.png';"
-          onmouseout="this.src='{{ site.baseurl }}/images/avatar.png';">
+        <img src="{{ site.baseurl }}/images/avatar.png" class="user-image"
+        onmouseover="this.src='{{ site.baseurl }}/images/avatar-light.png';"
+        onmouseout="this.src='{{ site.baseurl }}/images/avatar.png';">
+        <h1 class="panel-cover__title panel-title">
+          <a href="{{ site.baseurl }}/">{{ site.author.name }}</a>
+        </h1>
         </a>
-        <h1 class="panel-cover__title panel-title">{{ site.author.name }}</h1>
         <h6 class="panel-cover__title panel-subtitle">{{ site.author.pronouns }}
           <i class="gender-icon iconify-inline" data-icon="foundation:male-symbol"></i>
         </h6>
