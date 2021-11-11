@@ -5,7 +5,7 @@ url: 'https://anwarvic.github.io'
 cover: images/volcano.jpg
 baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
-# disqus_shortname: 'your-disqus-name'
+disqus_shortname: 'anwarvic'
 # disable_landing_page: true
 
 author:
@@ -34,7 +34,16 @@ collections:
   word-embedding:
     output: true
     permalink: /:collection/:path
+  speech-recognition:
+    output: true
+    permalink: /:collection/:path
 
+defaults:
+  -
+    scope:
+      path: "my_collections/*" # means all files
+    values:
+      layout: "post"
 
 # Build settings
 destination: _site
@@ -48,11 +57,9 @@ sass:
     style: compressed
 
 kramdown:
-  mathjax: true
-  # use Github Flavored Markdown
-  input: GFM
-  # do not replace newlines by <br>s
-  hard_wrap: false
+  mathjax: true  #use mathjax to process math equations
+  input: GFM # use Github Flavored Markdown
+  hard_wrap: false # do not replace newlines by <br>
 
 # plugins:
 #   - jekyll-paginate
