@@ -76,9 +76,7 @@ pre.highlight code,
 .page-heading{
   color: gray;
 }
-::selection {
-  background: #0011ff9c; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: #0011ff9c; /* Gecko Browsers */
+
+.panel-main ::selection {
+  background: #0011ff9c;
 }
