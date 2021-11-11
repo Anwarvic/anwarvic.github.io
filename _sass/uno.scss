@@ -65,10 +65,10 @@ body {
 	background: #fae3df; }
 
 a {
-	text-decoration: none;
-	color: #e25440; }
+	text-decoration: underline;
+	color: #0645AD; }
 	a:hover {
-		color: #b9301c;
+		color: #0B0080;
 		-o-transition: .5s;
 		-ms-transition: .5s;
 		-moz-transition: .5s;
@@ -323,7 +323,10 @@ hr {
 	margin: 0 0 5px 0;
 	font-size: 2.5em;
 	letter-spacing: 2px;
-	color: #FFF; }
+	color: #FFF;
+	a {
+		text-decoration: none;}
+	}
 
 .panel-subtitle {
 	font-family: "Roboto Slab", serif;
@@ -438,6 +441,7 @@ hr {
 	background: none; }
 
 .btn, .navigation__item a {
+	text-decoration: none;
 	padding: 10px 20px;
 	border: 1px solid #e25440;
 	border-radius: 20px;
@@ -573,7 +577,8 @@ i {
 	font-size: 1.5em;
 	line-height: 1.3em; }
 	.post-list__post-title a {
-		color: #333333; }
+		color: #333333;
+		text-decoration: none; }
 		.post-list__post-title a:hover {
 			color: #b9301c; }
 
