@@ -63,12 +63,11 @@ function expand() {
 
 function activateButton(id) {
   const elem = $('#'+id);
-  console.log("Before: " + activeButtons);
   // deactivate
   if (window.activeButtons.includes(id)) {
     elem.removeClass('clicked');
     window.activeButtons.pop();
-    expand();
+    // expand();
   }
   // activate
   else {
@@ -79,5 +78,4 @@ function activateButton(id) {
     elem.addClass('clicked');
     collapse();
   }
-  console.log("After: " + activeButtons);
 }
