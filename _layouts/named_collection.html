@@ -5,7 +5,7 @@ layout: default
     {% assign collection_name = page.collection_name | default: include.collection_name | default: nil %}
     {% assign target_collection = site[collection_name] %}
 
-    <div class="home">
+    <div class="main">
 
         {{ content }}
         {% assign has_output = False %}
