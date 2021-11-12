@@ -25,30 +25,35 @@ collections:
   language-modeling:
     output: true
     permalink: /:collection/:path
+    title: "Language Modeling"
   machine-translation:
     output: true
     permalink: /:collection/:path
+    title: "Machine Translation"
   multilingual-nmts:
     output: true
     permalink: /:collection/:path
+    title: "Multilingual NMTs"
   word-embedding:
     output: true
     permalink: /:collection/:path
+    title: "Word Embedding"
   speech-recognition:
     output: true
     permalink: /:collection/:path
+    title: "Speech Recognition"
 
 defaults:
   -
     scope:
-      path: "my_collections/*" # means all files
+      path: "my_collections/*" # means all files inside my_collections
     values:
-      layout: "post"
+      layout: "post" #post.html
 
 # Build settings
 destination: _site
 # paginate: 10
-permalink: /:collection
+# permalink: /:collection
 markdown: kramdown
 highlighter: rouge
 
