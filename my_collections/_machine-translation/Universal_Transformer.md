@@ -63,7 +63,7 @@ $$M\text{ultiHead}\left( H^{t} \right) = Concat\left( \text{head}_{1},...\text{h
 
 $$\text{head}_{i} = \text{Attention}\left( H^{t}W_{i}^{Q},H^{t}W_{i}^{K},H^{t}W_{i}^{V} \right) = \text{softmax}\left\lbrack \frac{H^{t}W_{i}^{Q}\left( H^{t}W_{i}^{K} \right)^{T}}{\sqrt{d}} \right\rbrack H^{t}W_{i}^{V}$$
 
-They map the state $H^{t}$ to queries, keys and values with affine
+&emsp;&emsp;&emsp;They map the state $H^{t}$ to queries, keys and values with affine
 projections using learned parameter matrices
 $W_{i}^{Q},W_{i}^{K},W_{i}^{V} \in \mathbb{R}^{d \times \frac{d}{k}},W_{i}^{O} \in \mathbb{R}^{d \times d}$
 where $d$ is the embedding size and $k$ is the number of heads.
@@ -85,17 +85,15 @@ $$A^{t} = \text{LayerNorm}\left( \left( H^{t - 1} + P^{t} \right) + \text{Dropou
     functions:
 
     -   Either a separable convolution as described in the [Xception
-        paper](http://arxiv.org/pdf/1607.06450.pdf).
+        paper](https://arxiv.org/pdf/1610.02357.pdf).
 
     -   Or a fully-connected neural network that consists of a single
         ReLU activation function between two affine transformations,
         applied to each row of $A^{t}$.
 
-        After $T$ steps (each updating all positions of the input
-        sequence in parallel), the final output of the Universal
-        Transformer encoder is a matrix
-        $H^{t} \in \mathbb{R}^{m \times d}$ for the $m$ symbols of the
-        input sequence.
+After $T$ steps (each updating all positions of the input sequence in parallel),
+the final output of the Universal Transformer encoder is a matrix
+$H^{t} \in \mathbb{R}^{m \times d}$ for the $m$ symbols of the input sequence.
 
 Decoder
 -------
@@ -135,7 +133,7 @@ In sequence processing systems, certain symbols (e.g. some words or
 phonemes) are usually more ambiguous than others. It is therefore
 reasonable to allocate more processing resources to these more ambiguous
 symbol. [Adaptive Computation Time
-(ACT)](http://arxiv.org/pdf/1410.5401.pdf) is mechanism implemented to
+(ACT)](https://arxiv.org/pdf/1603.08983.pdf) is mechanism implemented to
 do exactly that in standard RNNs.
 
 Inspired by it, the researchers of this paper added a dynamic ACT
