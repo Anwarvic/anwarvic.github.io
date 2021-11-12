@@ -40,7 +40,8 @@
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-194x194.png" sizes="194x194">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/android-chrome-512x512png" sizes="512x512">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/android-chrome-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/android-chrome-512x512.png" sizes="512x512">
   <link rel="manifest" href="{{ site.baseurl }}/images/favicons/manifest.json">
   <link rel="shortcut icon" href="{{ site.baseurl }}/images/favicons/favicon.ico">
   <meta name="msapplication-TileColor" content="#ffc40d">
@@ -59,5 +60,10 @@
       }
     });
   </script>
+  {% if jekyll.environment == "development" %}
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  {% else %}
+  <h1>APPLE</h1>
   <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  {% endif %}
 </head>
