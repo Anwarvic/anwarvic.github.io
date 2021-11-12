@@ -96,12 +96,10 @@
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
               {% for collection in site.collections %}
-              {% assign topic = collection.label %}
-              {% if topic != "posts" %}
+              {% if collection.label != "posts" %}
               <li class="navigation__item">
-                <!-- {% assign name = topic | uppercase | replace: '-', ' ' %} -->
-                <a href="{{ site.baseurl }}/{{ topic }}" class="blog-button" id="{{ topic }}"
-                onclick="activateButton(this.id)">{{ topic | capitalize | replace: '-', ' ' }}</a>
+                <a href="{{ site.baseurl }}/{{ collection.label }}" class="blog-button" id="{{ collection.label }}"
+                onclick="activateButton(this.id)">{{ collection.title }}</a>
               </li>
               {% endif %}
               {% endfor %}
