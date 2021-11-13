@@ -46,7 +46,7 @@ collections:
 defaults:
   -
     scope:
-      path: "my_collections/*" # means all files inside my_collections
+      path: "my_collections/*" # all files inside my_collections
     values:
       layout: "post" #post.html
 
