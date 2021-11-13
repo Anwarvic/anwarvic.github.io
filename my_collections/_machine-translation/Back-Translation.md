@@ -13,8 +13,8 @@ system make the best use out of target-side monolingual data.
 Back-translation operates in a semi-supervised setup where both
 bilingual and monolingual data in the target language are available.
 Using "English-French" data as a use-case where the source is
-<u>**English**</u> and the target is <u>**French**</u>, the
-back-translation process can be summarized into the following steps:
+<u><strong>English</strong></u> and the target is <u><strong>French</strong></u>,
+the back-translation process can be summarized into the following steps:
 
 -   We have "en-fr" parallel corpus that can be used to train NMT model,
     let's call it "Forward NMT en→fr".
@@ -25,8 +25,8 @@ back-translation process can be summarized into the following steps:
 -   We have a corpus of just "French" data.
 
 -   We will use the "Backward NMT en→fr" to translate this French data
-    to English which will get us a "<u>**synthetic en-fr parallel
-    corpus**</u>". To be able to get the best synthetic data possible,
+    to English which will get us a "<u><strong>synthetic en-fr parallel
+    corpus</strong></u>". To be able to get the best synthetic data possible,
     the paper uses beam search.
 
 -   Then, we are going to mix the original "en-fr" data with the
@@ -37,7 +37,7 @@ back-translation process can be summarized into the following steps:
 </div>
 
 You could either leave it at that (hopefully better than just the
-original model), or you can extend it to </u>**dual learning**</u>
+original model), or you can extend it to <u><strong>dual learning</strong></u>
 where you have to find some monolingual source language data and
 translate it with the forward model to further train the backward
 model (back-translation for the backward model). With this
@@ -47,11 +47,15 @@ and so on.
 
 **Notes:**
 
--   You can iteratively train both models forever, but that only makes sense if you have monolingual source data as well, and it usually stops improving after a two rounds or so.
+-   You can iteratively train both models forever, but that only makes sense if
+you have monolingual source data as well, and it usually stops improving after
+a two rounds or so.
 
--   In the paper, they were using the encoder-decoder architecture. However, this technique can be used with any other NMT architecture.
+-   In the paper, they were using the encoder-decoder architecture. However,
+this technique can be used with any other NMT architecture.
 
--   As discussed in the paper, back-translation delays overfitting in NMT models especially for small datasets.
+-   As discussed in the paper, back-translation delays overfitting in NMT
+models especially for small datasets.
 
 -   Usually, back-translation outperforms deep fusion.
 
@@ -65,11 +69,14 @@ they froze the layers of the encoder.
 The following are the different results obtained by each method on
 English -\> German parallel corpus where:
 
--   <u>**parallel**</u>: means using just the NMT model
+-   <u><strong>parallel</strong></u>: means using just the NMT model
 
--   <u>**monolingual**</u>: means using the NMT model with monolingual data where the source source sentence is empty.
+-   <u><strong>monolingual</strong></u>: means using the NMT model with
+monolingual data where the source source sentence is empty.
 
--   <u>**synthetic**</u>: means using the NMT model with monolingual data where the source sentence is translated using a backward NMT model.
+-   <u><strong>synthetic</strong></u>: means using the NMT model with
+monolingual data where the source sentence is translated using a backward NMT
+model.
 
 <div align="center">
     <img src="media/Back-Translation/image2.png" width=750>
