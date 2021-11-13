@@ -8,7 +8,7 @@ Neural Machine Translation (NMT) is known to suffer from a beam-search
 problem: after a certain point, increasing beam size causes an overall
 drop in translation quality. This effect is especially in long
 sentences. A factor that strongly contributes to the quality degradation
-with large beams is <u>**dataset-length bias**</u> which means that NMT
+with large beams is <u><strong>dataset-length bias</strong></u> which means that NMT
 datasets are strongly biased towards short sentences.
 
 To mitigate this issue, some researchers from Yandex in 2021 proposed a
