@@ -18,7 +18,7 @@
   <!-- Google / Search Engine Tags -->
   <meta itemprop="name" content="Anwarvic's Blog">
   <meta itemprop="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | remove_first: page.title}}{% else %}{{ site.description }}{% endif %}">
-  <meta itemprop="image" content="{{ site.baseurl }}/images/avatar.png">
+  <meta itemprop="image" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/avatar.png">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary">
@@ -27,7 +27,7 @@
   {% if site.author.twitter_username %}
   <meta name="twitter:creator" content="{{ site.author.twitter_username }}">
   {% endif %}
-  <meta name="twitter:image" content="{{ site.baseurl }}/images/avatar.png">
+  <meta name="twitter:image" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/avatar.png">
 
   <!-- OpenGraph Meta Tags -->
   <meta property="og:url" content="https://anwarvic.github.io">
@@ -35,35 +35,35 @@
   <meta property="og:site_name" content="Anwarvic's Blog"/>
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | remove_first: page.title }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:image" content="{{ site.baseurl }}images/avatar.png">
+  <meta property="og:image" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}images/avatar.png">
 
-  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-196x196.png" sizes="196x196">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/android-chrome-194x194.png" sizes="194x194">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/android-chrome-512x512.png" sizes="512x512">
-  <link rel="manifest" href="{{ site.baseurl }}/images/favicons/manifest.json">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/images/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/android-chrome-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/android-chrome-512x512.png" sizes="512x512">
+  <link rel="manifest" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/favicon.ico">
   <meta name="msapplication-TileColor" content="#ffc40d">
-  <meta name="msapplication-TileImage" content="{{ site.baseurl }}/images/favicons/mstile-144x144.png">
-  <meta name="msapplication-square70x70logo" content="{{ site.baseurl }}/images/favicons/mstile-70x70.png" />
-  <meta name="msapplication-square150x150logo" content="{{ site.baseurl }}/images/favicons/mstile-150x150.png" />
-  <meta name="msapplication-wide310x150logo" content="{{ site.baseurl }}/images/favicons/mstile-310x150.png" />
-  <meta name="msapplication-square310x310logo" content="{{ site.baseurl }}/images/favicons/mstile-310x310.png" />
+  <meta name="msapplication-TileImage" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/mstile-144x144.png">
+  <meta name="msapplication-square70x70logo" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/mstile-310x310.png" />
   <meta name="theme-color" content="#ffffff">
   
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?{{site.time | date: '%s%N'}}">
+  <link rel="stylesheet" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/css/main.css?{{site.time | date: '%s%N'}}">
   <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/feed.xml">
   <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
