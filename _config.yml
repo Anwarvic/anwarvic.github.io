@@ -3,7 +3,7 @@ title: Anwarvic
 description: "I write about research papers in these topics"
 url: 'https://anwarvic.github.io'
 cover: images/space.jpg
-baseurl: 'https://anwarvic.github.io/'
+baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
 disqus_shortname: 'anwarvic'
 # disable_landing_page: true
