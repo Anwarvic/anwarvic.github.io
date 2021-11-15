@@ -15,18 +15,19 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  <!--  Social META Tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | remove_first: page.title}}{% else %}{{ site.description }}{% endif %}">
   {% if site.author.twitter_username %}
   <meta name="twitter:creator" content="{{ site.author.twitter_username }}">
   {% endif %}
-  <meta name="twitter:image" content="{{ site.baseurl }}/images/favicons/favicon-194x194.png" />
+  <meta name="twitter:image" content="{{ site.baseurl }}/images/avatar.png" />
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:image" content="{{ site.baseurl }}/images/favicons/favicon-194x194.png" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | remove_first: page.title }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:image" content="{{ site.baseurl }}/images/avatar.png" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-72x72.png">
@@ -38,8 +39,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-180x180.png">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-194x194.png" sizes="194x194">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-194x194.png" sizes="194x194">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/android-chrome-194x194.png" sizes="194x194">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/android-chrome-512x512.png" sizes="512x512">
   <link rel="manifest" href="{{ site.baseurl }}/images/favicons/manifest.json">
