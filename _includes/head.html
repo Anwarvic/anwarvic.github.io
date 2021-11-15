@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="Anwarvic">
+  <meta itemprop="name" content="Anwarvic's Blog">
   <meta itemprop="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | remove_first: page.title}}{% else %}{{ site.description }}{% endif %}">
   <meta itemprop="image" content="{{ site.baseurl }}images/avatar.png">
 
@@ -29,9 +29,10 @@
   {% endif %}
   <meta name="twitter:image" content="{{ site.baseurl }}images/avatar.png">
 
-  <!-- Facebook Meta Tags -->
+  <!-- OpenGraph Meta Tags -->
   <meta property="og:url" content="https://anwarvic.github.io">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Anwarvic's Blog"/>
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | remove_first: page.title }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:image" content="{{ site.baseurl }}images/avatar.png">
