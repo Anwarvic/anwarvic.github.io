@@ -4,7 +4,6 @@ date: 2021-08-06
 ---
 
 
-# Universal Transformer
 In "Universal Transformers", the researchers from Google extended the
 standard Transformer architecture to be computationally universal
 (Turing complete) using a novel, efficient flavor of parallel-in-time

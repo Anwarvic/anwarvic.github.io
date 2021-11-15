@@ -3,7 +3,6 @@ title: "Seq2Seq"
 date: 2014-12-14
 ---
 
-# Seq2Seq
 Sequence-to-sequence (seq2seq) models or encoder-decoder architecture,
 created by IlyaSutskever and published in their paper: [Sequence to
 Sequence Learning with Neural Networks](https://arxiv.org/pdf/1409.3215.pdf)

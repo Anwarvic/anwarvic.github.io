@@ -3,7 +3,6 @@ title: "BERT"
 date: 2019-05-24
 ---
 
-# BERT
 BERT stands for "Bidirectional Encoder Representations from
 Transformers" which is a model published by researchers at Google in
 this paper: "[BERT: Pre-training of Deep Bidirectional Transformers for

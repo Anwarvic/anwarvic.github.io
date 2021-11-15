@@ -3,7 +3,6 @@ title: "LASER"
 date: 2019-09-25
 ---
 
-# LASER
 LASER stands for "**L**anguage-**A**gnostic **Se**ntence
 **R**epresentation". LASER is an encoder-decoder architecture proposed
 by FAIR in 2019 and published in their paper: [Massively Multilingual

@@ -3,7 +3,6 @@ title: "RoBERTa"
 date: 2019-07-26
 ---
 
-# RoBERTa
 RoBERTa, stands for "**R**obustly **o**ptimized **BERT** **a**pproach",
 is an approach to train BERT created by Facebook AI in 2019 and
 published in this paper: "[RoBERTa: A Robustly Optimized BERT

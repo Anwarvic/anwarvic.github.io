@@ -3,7 +3,6 @@ title: "GPT"
 date: 2018-06-11
 ---
 
-# GPT
 Transform is a state-of-the-art architecture for machine translation.
 OpenAI tried to use this architecture for the language modeling task in
 this paper "[Improving Language Understanding by Generative

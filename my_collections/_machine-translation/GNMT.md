@@ -3,7 +3,6 @@ title: "Google's NMT"
 date: 2016-10-08
 ---
 
-# Google's GNMT
 GNMT stands for "Google Neural Machine Translation" which is a machine
 translation model proposed in 2016 by Google Research sin this paper:
 [Google's Neural Machine Translation System: Bridging the Gap between

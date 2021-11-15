@@ -3,7 +3,6 @@ title: "vq-wav2vec"
 date: 2020-02-16
 ---
 
-# vq-wav2vec
 vq-wav2vec stands for "vector-quantized wav2vec" which is a model
 created by Facebook AI Research in 2020 and published in this paper:
 [vq-wav2vec: Self-Supervised Learning of Discrete Speech

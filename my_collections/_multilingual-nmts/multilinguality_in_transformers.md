@@ -3,7 +3,6 @@ title: "Multilinguality in Transformers"
 date: 2021-05-31
 ---
 
-# Multilinguality in Transformers
 The following paper: [Do Multilingual Neural Machine Translation Models
 Contain Language Pair Specific Attention
 Heads?](https://arxiv.org/pdf/2105.14940.pdf) asks a very good question.

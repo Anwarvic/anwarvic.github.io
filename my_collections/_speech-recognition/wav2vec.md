@@ -3,7 +3,6 @@ title: "wav2vec"
 date: 2019-09-11
 ---
 
-# wav2vec
 Wav2Vec is a model created by Facebook AI Research in 2019 and published
 in this paper: [Wav2Vec: Unsupervised Pre-Training For Speech
 Recognition](https://arxiv.org/pdf/1904.05862.pdf).

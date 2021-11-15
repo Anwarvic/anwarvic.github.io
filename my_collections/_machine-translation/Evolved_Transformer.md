@@ -3,7 +3,6 @@ title: "The Evolved Transformer"
 date: 2019-05-17
 ---
 
-# Evolved Transformer
 The Evolved Transformer (ET) ia an evolved version of the Transformer
 architecture created by applying Neural Architecture Search (NAS)
 algorithm over the standard architecture.The Evolved Transformer was

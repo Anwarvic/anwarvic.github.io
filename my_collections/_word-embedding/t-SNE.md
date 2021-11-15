@@ -3,7 +3,6 @@ title: "t-SNE"
 date: 2008-11-25
 ---
 
-# t-SNE
 One of the popular things to do with word embedding, is to take this
 N-dimensional data and embed it in a two-dimensional space so that we
 can visualize them. The most common algorithm for doing this is the

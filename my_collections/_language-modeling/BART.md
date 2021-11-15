@@ -3,7 +3,6 @@ title: "BART"
 date: 2019-10-29
 ---
 
-# BART
 BART stands for "Bidirectional Auto-regressive Transformer" which is a
 pre-training scheme for models created by Facebook AI in 2019 and
 published in this paper: "[BART: Denoising Sequence-to-Sequence

@@ -3,7 +3,6 @@ title: "SpanBERT"
 date: 2020-01-18
 ---
 
-# SpanBERT
 SpanBERT is a model created by Facebook AI and Allen Institute in
 January 2020 and published in this paper "[SpanBERT: Improving
 Pre-training by Representing and Predicting

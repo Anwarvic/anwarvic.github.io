@@ -3,7 +3,6 @@ title: "Encoder with 2 Decoders"
 date: 2018-02-26
 ---
 
-# Encoder with 2 Decoders
 The first model proposed in this area was created under the supervision
 of Cho in 2018 and published in this paper: "[Unsupervised Neural
 Machine Translation](https://arxiv.org/pdf/1710.11041.pdf)". The

@@ -3,7 +3,6 @@ title: "Transformers"
 date: 2017-12-06
 ---
 
-# Transformer
 Transformers were introduced in 2017 by Google in the "[Attention is all
 you need](https://arxiv.org/pdf/1706.03762.pdf)" paper. Transformer
 architecture was created in attempt to combine all good things from

@@ -3,7 +3,6 @@ title: "Back-translation"
 date: 2016-06-03
 ---
 
-# Back-Translation
 Back-translation is a semi-supervised mechanism proposed in this paper:
 "[Improving Neural Machine Translation Models with Monolingual
 Data](https://arxiv.org/pdf/1511.06709.pdf)" by the Rico Sennrich and

@@ -3,7 +3,6 @@ title: "Deep Speech"
 date: 2014-12-19
 ---
 
-# Deep Speech
 Deep Speech is a model created by Baidu in December 2014 and published
 in their paper: [Deep Speech: Scaling up end-to-end speech
 recognition](https://arxiv.org/pdf/1412.5567.pdf). The Deep Speech

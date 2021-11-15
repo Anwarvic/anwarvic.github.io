@@ -3,7 +3,6 @@ title: "Contextualized Word Embedding: ELMO & BERT"
 date: 2018-03-22
 ---
 
-# Contextualized Word Embedding
 In the past few years, a number of new methods leveraging contextualized
 embeddings have been proposed. These are based on the notion that
 embeddings for words should be based on contexts in which they are used.

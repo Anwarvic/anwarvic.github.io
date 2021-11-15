@@ -3,7 +3,6 @@ title: "Reformer: Efficient Transformer"
 date: 2020-02-18
 ---
 
-# Reformer
 Reformer is an efficient version of the transformers proposed by Google
 Research in 2020 and published in this paper: "[Reformer: The efficient
 Transformer](https://arxiv.org/pdf/2001.04451.pdf)". The official code

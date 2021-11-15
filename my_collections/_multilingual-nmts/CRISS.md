@@ -3,7 +3,6 @@ title: "CRISS"
 date: 2020-10-26
 ---
 
-# CRISS
 CRISS stands for "**C**ross-lingual **R**etrieval for **I**terative
 **S**elf-**S**upervised Training" which was created by FacebookAI in
 2020 and published in this paper: "[Cross-lingual Retrieval for

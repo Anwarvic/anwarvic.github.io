@@ -3,7 +3,6 @@ title: "Deep Speech 2.0"
 date: 2015-12-08
 ---
 
-# Deep Speech 2
 Deep Speech 2 is a model created by Baidu in December 2015 (exactly one
 year after Deep Speech) and published in their paper: [Deep Speech 2:
 End-to-End Speech Recognition in English and

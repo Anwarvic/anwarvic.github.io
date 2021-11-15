@@ -3,7 +3,6 @@ title: "Subword Embedding"
 date: 2017-06-19
 ---
 
-# Subword Embedding
 Methods such as word2vec or GloVe ignore the internal structure of words
 and associate each word (or word sense) to a separate vector
 representation. For morphologically rich languages, there may be a

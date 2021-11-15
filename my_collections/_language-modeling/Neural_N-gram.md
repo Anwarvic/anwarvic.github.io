@@ -3,7 +3,6 @@ title: "Neural N-gram Language Model"
 date: 2003-02-09
 ---
 
-# Neural N-gram
 As we discussed before, the n-gram language model has a few problems
 like the data sparsity and the big storage need. That's why these
 problems were first tackled by Bengio et al in 2003 and published under

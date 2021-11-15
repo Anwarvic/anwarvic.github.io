@@ -3,7 +3,6 @@ title: "GPT-2"
 date: 2019-02-14
 ---
 
-# GPT-2
 GPT-2 stands for "Generative Pre-trained Transformer" which is a
 language model published in this paper: "[Language Models are
 Unsupervised Multitask

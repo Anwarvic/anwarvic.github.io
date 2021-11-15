@@ -3,7 +3,6 @@ title: "LAS"
 date: 2015-08-20
 ---
 
-# LAS
 LAS stands for "Listen, Attend and Spell". It's a model created by
 Google Brain in 2015 and published in this paper: [Listen, Attend and
 Spell](https://arxiv.org/pdf/1508.01211.pdf). It's an encoder-decoder

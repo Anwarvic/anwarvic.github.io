@@ -3,7 +3,6 @@ title: "Word2Vec"
 date: 2013-09-07
 ---
 
-# Word2Vec
 Word2Vec stands for "word-to-vector" is a model architecture created by
 Tomáš Mikolov from Google in 2013 and published in the paper: [Efficient
 Estimation of Word Representations in Vector

@@ -3,7 +3,6 @@ title: "De-biasing Word Vectors"
 date: 2016-07-21
 ---
 
-# De-biasing Word Vectors
 In this paper: [Man is to Computer Programmer as Woman is to Homemaker?
 Debiasing Word Embeddings](https://arxiv.org/pdf/1607.06520.pdf) published in
 2016, the researchers examined the gender biases that can be reflected in a

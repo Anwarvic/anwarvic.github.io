@@ -3,7 +3,6 @@ title: "Evaluation Metrics"
 date: 2020-01-01
 ---
 
-# Evaluation
 Machine Translation models translate a given sentence by searching for
 the sentence that best suits a given criterion. However, all approaches
 have to be evaluated to quantify the quality and accuracy of the

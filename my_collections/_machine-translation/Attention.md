@@ -3,7 +3,6 @@ title: "Attention Mechanism"
 date: 2016-05-19
 ---
 
-# Attention Mechanism
 A potential issue with the Seq2Seq approach is that a neural network
 needs to be able to compress all the necessary information of a source
 sentence into a fixed-length vector (context vector). This may make it

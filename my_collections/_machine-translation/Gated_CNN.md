@@ -3,7 +3,6 @@ title: "Gated CNN"
 date: 2017-09-08
 ---
 
-# Gated CNN
 One of the major defects of Seq2Seq models is that it can't process
 words in parallel. For a large corpus of text, this increases the time
 spent translating the text. CNNs can help us solve this problem. In this

@@ -3,7 +3,6 @@ title: "cMNMT: Complete MNMT"
 date: 2020-10-20
 ---
 
-# cMNMT
 cMNMT stands for "Complete Multilingual Neural Machine Translation"
 which is a multilingual NMT model proposed by Google Research in 2020
 and published in their paper: "[Complete Multilingual Neural Machine

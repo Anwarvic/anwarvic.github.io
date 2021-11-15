@@ -3,7 +3,6 @@ title: "wav2letter"
 date: 2016-09-13
 ---
 
-# Wav2Letter
 Wav2Letter is a model created by Facebook in 2016 and published in this
 paper: [Wav2Letter: an End-to-End ConvNet-based Speech Recognition
 System](https://arxiv.org/pdf/1609.03193.pdf). Wav2Letter is a fully 1D

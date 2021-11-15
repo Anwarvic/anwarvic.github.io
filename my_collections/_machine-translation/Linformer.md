@@ -3,7 +3,6 @@ title: "Linformer: Linear Transformer"
 date: 2020-06-14
 ---
 
-# Linformer
 Linformer is an efficient version of the transformers proposed by
 Facebook AI in 2020 and published in this paper: "[Linformer:
 Self-Attention with Linear

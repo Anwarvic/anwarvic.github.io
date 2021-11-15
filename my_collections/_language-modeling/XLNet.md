@@ -3,7 +3,6 @@ title: "XLNet"
 date: 2020-01-02
 ---
 
-# XLNet
 XLNet stands for "Extra-Long Net" which is a model that integrates both
 GPT and BERT introduced in 2020 by Google Brain and published in this
 paper: "[XLNet: Generalized Autoregressive Pretraining for Language

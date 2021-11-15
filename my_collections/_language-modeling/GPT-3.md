@@ -3,7 +3,6 @@ title: "GPT-3"
 date: 2020-07-22
 ---
 
-# GPT-3
 GPT-3 is an enormous model built on the transformer-decoder architecture
 published in 2020 by OpenAI in this paper: "[Language Models are
 Few-Shot Learners](https://arxiv.org/pdf/2005.14165.pdf)" whose title is

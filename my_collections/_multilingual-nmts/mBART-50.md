@@ -3,7 +3,6 @@ title: "mBART-50"
 date: 2020-08-02
 ---
 
-# mBART-50
 In this part, we are going to discuss this paper: [Multilingual
 Translation with Extensible Multilingual Pretraining and
 Finetuning](https://arxiv.org/pdf/2008.00401.pdf) (the official code:

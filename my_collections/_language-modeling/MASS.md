@@ -3,7 +3,6 @@ title: "MASS"
 date: 2019-06-21
 ---
 
-# MASS
 MASS, stands for "**Ma**sked **S**equence to **S**equence", is a
 pre-training scheme proposed by Microsoft in 2019 and published in this
 paper: "[MASS: Masked Sequence to Sequence Pre-training for Language

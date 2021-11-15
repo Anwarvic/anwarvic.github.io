@@ -3,7 +3,6 @@ title: "Sentence Embedding"
 date: 2014-05-22
 ---
 
-# Sentence Embedding
 Here, we are going to talk about an important issue that tried to use
 the Word Embedding to produce a sentence embedding. By sentence
 embedding, we mean to provide a vector of $d$ length that has the

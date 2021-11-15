@@ -3,7 +3,6 @@ title: "Transformer + Noisy Channel"
 date: 2019-08-15
 ---
 
-# Transformer + Noisy Channel
 Transformer model directly estimates the posterior probability of a
 target sequence $y$ given a source sequence $x$. The Noisy Channel model
 operates in the reverse direction. It estimates the likelihood

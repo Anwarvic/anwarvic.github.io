@@ -3,7 +3,6 @@ title: "Transformer-XL"
 date: 2019-07-28
 ---
 
-# Transformer-XL
 Transformer-XL, stands for "Transformer Extra Long", is a language model
 published in this paper: "[Language Models are Unsupervised Multitask
 Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)"

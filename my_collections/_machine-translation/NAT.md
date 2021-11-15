@@ -3,7 +3,6 @@ title: "NAT: Non-Autoregressive Transformer"
 date: 2018-03-09
 ---
 
-# NAT
 NAT, stands for "Non-Autoregressive Translation", is an NMT model that
 avoids the autoregressive property of the decoding and produces its
 outputs in parallel. NAT was created by Salesforce in 2018 and published

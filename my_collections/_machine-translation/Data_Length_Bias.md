@@ -3,7 +3,6 @@ title: "Dataset-Length Bias"
 date: 2021-09-13
 ---
 
-# Dataset-Length Bias
 Neural Machine Translation (NMT) is known to suffer from a beam-search
 problem: after a certain point, increasing beam size causes an overall
 drop in translation quality. This effect is especially in long

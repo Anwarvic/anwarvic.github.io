@@ -3,7 +3,6 @@ title: "Massively MNMT"
 date: 2019-07-02
 ---
 
-# Massively MNMT
 Massively MNMT is a multilingual many-to-many NMT model proposed by
 Google Research in 2019 and published in their paper: [Massively
 Multilingual Neural Machine

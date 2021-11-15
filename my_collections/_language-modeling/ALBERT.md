@@ -3,7 +3,6 @@ title: "ALBERT"
 date: 2020-02-09
 ---
 
-# ALBERT
 ALBERT, stands for "A Lite BERT", reduced version of BERT which is a
 smaller, faster, cheaper and easier to scale. ALBERT was created by
 Google & Toyota Technical Institute in February 2020 and published in

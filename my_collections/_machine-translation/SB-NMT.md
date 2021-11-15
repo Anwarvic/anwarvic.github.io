@@ -3,7 +3,6 @@ title: "SB-NMT: Synchronous Bidirectional NMT"
 date: 2019-05-13
 ---
 
-# SB-NMT
 SB NMT stands for "Synchronous Bi-directional Neural Machine
 Translation" which is a model proposed by the the University of Chinese
 Academy of Sciences in 2019 and published in their paper under the same

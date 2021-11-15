@@ -3,7 +3,6 @@ title: "ConvS2S"
 date: 2017-07-25
 ---
 
-# ConvS2S
 One of the major defects of Seq2Seq models is that it can't process
 words in parallel. For a large corpus of text, this increases the time
 spent translating the text. CNNs can help us solve this problem. In this

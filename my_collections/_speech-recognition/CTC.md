@@ -3,7 +3,6 @@ title: "CTC"
 date: 2006-06-25
 ---
 
-# CTC
 To show how CTC changed the game of ASR, let's consider the following
 scenario. We have a dataset of audio clips and corresponding
 transcripts. Unfortunately, we don't know how the characters in the

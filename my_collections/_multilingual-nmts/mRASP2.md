@@ -3,7 +3,6 @@ title: "mRASP2"
 date: 2021-07-22
 ---
 
-# mRASP2
 mRASP2 or mCOLT, "a **m**ultilingual **Co**ntrastive **L**earning
 framework for **T**ranslation", which is a framework defined to reduce
 the representation gap of different languages. This framework was

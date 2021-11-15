@@ -3,7 +3,6 @@ title: "GloVe"
 date: 2014-10-25
 ---
 
-# GloVe
 GloVe (Global Vectors for Word Representation) is a model released in
 2014 by Stanford NLP Group researchers **Jeffrey Pennington**, **Richard
 Socher**, and **Chris Manning** for learning word embedding and

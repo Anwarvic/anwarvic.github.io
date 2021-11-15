@@ -3,7 +3,6 @@ title: "wav2vec 2.0"
 date: 2020-10-22
 ---
 
-# wav2vec2.0
 Wav2Vec Unsupervised is a model created by Facebook AI Research in May
 2021 and published in this paper: [wav2vec 2.0: A Framework for
 Self-Supervised Learning of Speech

@@ -3,7 +3,6 @@ title: "Unsupervised Machine Translation with Monolingual Data"
 date: 2018-04-13
 ---
 
-# Unsupervised Machine Translation with Monolingual Data
 The second model proposed in this area was created by Facebook AI in
 2018 and published in this paper: "[Unsupervised Machine Translation
 Using Monolingual Corpora only](https://arxiv.org/pdf/1711.00043.pdf)".

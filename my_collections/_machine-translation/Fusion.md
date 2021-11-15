@@ -3,7 +3,6 @@ title: "Fusion"
 date: 2015-07-12
 ---
 
-# Fusion
 The fusion technique is proposed by the University of Montreal in 2015
 and published in this paper: "[On Using Monolingual Corpora in Neural
 Machine Translation](https://arxiv.org/pdf/1503.03535.pdf)". The idea

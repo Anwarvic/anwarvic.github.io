@@ -3,7 +3,6 @@ title: "Align & Translate with Transformers"
 date: 2019-09-04
 ---
 
-# Align & Translate
 In this part, we are going to take a deep look into this paper: [Jointly
 Learning to Align and Translate with Transformer
 Models](https://arxiv.org/pdf/1909.02074.pdf) which was published by

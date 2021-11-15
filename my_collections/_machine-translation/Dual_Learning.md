@@ -3,7 +3,6 @@ title: "Dual Learning for Machine Translation"
 date: 2016-11-01
 ---
 
-# Dual Learning for Machine Translation
 Dual learning is a RL mechanism used mainly for machine translation,
 proposed in 2016 by the University of Technology in China in
 collaboration with Microsoft and published in this paper: "[Dual

@@ -3,7 +3,6 @@ title: "mBART"
 date: 2020-01-23
 ---
 
-# mBART
 mBART stands for "Multilingual Bidirectional Auto-regressive
 Transformer" which is a multilingual NMT model proposed by FacebookAI in
 2020 and published in their paper: "[Multilingual Denoising Pre-training

@@ -3,7 +3,6 @@ title: "RNN: Recurrent Neural Networks"
 date: 1985-09-19
 ---
 
-# RNN
 The neural n-gram language model we\'ve seen earlier was trained using
 the a window-sized subset of the previous tokens. And this falls short
 with long sentences as where the contextual dependencies are longer than

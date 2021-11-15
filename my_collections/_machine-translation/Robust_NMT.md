@@ -3,7 +3,6 @@ title: "Robust NMT"
 date: 2019-06-06
 ---
 
-# Robust NMT
 Neural machine translation (NMT) often suffers from the vulnerability to
 noisy perturbation in the input. Google AI has proposed an approach to
 improving the robustness of NMT models called AdvGen published in 2019

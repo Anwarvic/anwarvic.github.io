@@ -1,9 +1,8 @@
 ---
-title: "DrNMT"
+title: "Dr. NMT"
 date: 2021-08-01
 ---
 
-# DrNMT
 DrNMT stands for "**D**iscriminative **R**eranking for **N**eural
 **M**achine **T**ranslation" which is a re-ranking framework created by
 Facebook AI in 2021 and published in this paper: [Discriminative

@@ -3,7 +3,6 @@ title: "DistilBERT"
 date: 2020-03-01
 ---
 
-# DistilBERT
 DistilBERT is a smaller, faster, cheaper and lighter version of BERT
 created by Hugging Face in March 2020 and published in this paper:
 "[DistilBERT, a distilled version of BERT: smaller, faster, cheaper and

@@ -3,7 +3,6 @@ title: "sense2vec"
 date: 2015-11-19
 ---
 
-# sense2vec
 One of the limits of word2vec is polysemy, which means that one word
 could have multiple meanings or senses. For example, the word "bank"
 could be a verb meaning "do financial work" or a noun meaning "financial
