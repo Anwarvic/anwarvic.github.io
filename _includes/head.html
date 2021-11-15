@@ -35,7 +35,7 @@
   <meta property="og:site_name" content="Anwarvic's Blog"/>
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | remove_first: page.title }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:image" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}images/avatar.png">
+  <meta property="og:image" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/avatar.png">
 
   <link rel="apple-touch-icon" sizes="57x57" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="72x72" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-72x72.png">
