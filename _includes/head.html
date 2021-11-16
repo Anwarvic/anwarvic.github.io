@@ -6,8 +6,21 @@
   <meta name="robots" content="{{ page.robots }}">
   {% endif %}
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <!-- Variables -->
+  {
+    <!-- Title -->
+    {% assign curr_title = "" %}
+    {% if page.title %}
+      curr_title: {{ page.title }}
+    {% else %}
+      curr_title: {{ site.title }}
+    {% endif %}
+
+    <!-- Description -->
+  }
+
+  <title>{{curr_title}}</title>
+  <meta name="title" content="{{curr_title}}">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html}}{% else %}{{ site.description }}{% endif %}">
   <meta name="author" content="{{ site.author.name }}">
   <meta name="HandheldFriendly" content="True">
@@ -17,7 +30,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta itemprop="name" content="{{curr_title}}">
   <meta itemprop="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html}}{% else %}{{ site.description }}{% endif %}">
   <meta itemprop="image" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/avatar.png">
 
@@ -25,19 +38,23 @@
   <meta property="og:url" content="{{ site.url }}">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Anwarvic's Blog"/>
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:title" content="{{curr_title}}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:image" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/avatar.png">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:title" content="{{curr_title}}">
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html}}{% else %}{{ site.description }}{% endif %}">
   {% if site.author.twitter_username %}
   <meta name="twitter:creator" content="{{ site.author.twitter_username }}">
   {% endif %}
   <meta name="twitter:image" content="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/avatar.png">
 
+  <!-- Handle not found pages-->
+  <!-- {% if page.url == "/404.html" %} -->
+    <!-- <meta http-equiv="refresh" content="5; url=/"> -->
+  <!-- {% endif %} -->
   <link rel="apple-touch-icon" sizes="57x57" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="72x72" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="76x76" href="{% if jekyll.environment == 'development' %}{{ site.baseurl }}{% else %}{{ site.url }}{% endif %}/images/favicons/apple-touch-icon-76x76.png">
