@@ -22,7 +22,7 @@
   {% if jekyll.environment == 'development' %}
     {% assign curr_baseurl = site.baseurl %}
   {% else %}
-    {% assign curr_baseurl = site.url/site.baseurl %}
+    {% assign curr_baseurl = site.baseurl | prepend: '/' | prepend: site.url%}
   {% endif %}
 
   <title>{{curr_title}}</title>
