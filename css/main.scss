@@ -65,8 +65,8 @@ pre.highlight code,
   background-color: #FFF;
 }
 
-.navigation--social{
-		margin-left: 0px; }
+// .navigation--social{
+// 		margin-left: 0px; }
 
 .gender-icon{
   font-size: 1.2em;
@@ -85,6 +85,9 @@ pre.highlight code,
 }
 
 form.search-bar input[type=text] {
+  background: transparent;
+  color: white;
+  font-family: "Raleway", sans-serif;
   margin-top:10px;
   max-width:300px;
   box-sizing: border-box;
@@ -97,8 +100,6 @@ form.search-bar input[type=text] {
   background-repeat: no-repeat;
   background-size: 18px 18px;
   background-position: 95% center;
-}
-
-form.search-bar ::selection{
-  background: #fae3df;
+} :focus{
+  border: 1px solid white;
 }
