@@ -6,7 +6,6 @@ cover: images/space.jpg
 baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
 disqus_shortname: 'anwarvic'
-# disable_landing_page: true
 
 author:
   name: 'Mohamed Anwar'
