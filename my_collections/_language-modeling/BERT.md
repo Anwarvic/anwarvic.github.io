@@ -171,7 +171,7 @@ The paper presents two model sizes for BERT:
 
 The following summarizes the difference between both models:
 
-<div align="center">
+<div align="center" class="inline-table">
 <table>
     <tr>
         <th style="text-align:center"></th>

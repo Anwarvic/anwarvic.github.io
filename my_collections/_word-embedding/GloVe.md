@@ -159,7 +159,7 @@ sub-task to evaluate our model. While Extrinsic methods try to get our
 model into a real-life task. Both have some pros and cons:
 
 
-<div align="center">
+<div align="center" class="inline-table">
 <table>
     <tr>
         <th></th>

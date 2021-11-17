@@ -226,7 +226,7 @@ We can calculate the chrF metric using the following steps:
 -   Calculate the unigram character for both reference and hypothesis:
 
 
-<div align="center">
+<div align="center" class="inline-table">
 <table>
     <tr>
         <th></th>

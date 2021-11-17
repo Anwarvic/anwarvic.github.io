@@ -431,12 +431,12 @@ when we want to build an RNN:
 In the following table, we are going to see different RNN architectures
 on different tasks:
 
-<div align="center">
+<div align="center" class="inline-table">
 <table>
     <tr>
         <th style="text-align:center"><strong>Task</strong></th>
         <th style="text-align:center"><strong>Cell</strong></th>
-        <th style="text-align:center"><strong>\#Layers</strong></th>
+        <th style="text-align:center"><strong>#Layers</strong></th>
         <th style="text-align:center"><strong>Layer Size</strong></th>
         <th style="text-align:center"><strong>Embedding Size</strong></th>
         <th style="text-align:center"><strong>Source</strong></th>

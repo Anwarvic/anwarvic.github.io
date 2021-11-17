@@ -120,8 +120,7 @@ which gives different flavors of the attention mechanism where:
 
 -   $n$: is the number of tokens in the encoder.
 
-<div align="center">
-
+<div align="center" class="inline-table">
 <table>
     <tr>
         <th style="text-align:center"><strong>Name</strong></th>
@@ -166,7 +165,6 @@ which gives different flavors of the attention mechanism where:
         <td><a href="https://arxiv.org/pdf/1508.04025.pdf">Luong et al.</a></td>
     </tr>
 </table>
-
 </div>
 
 **Notes:**
