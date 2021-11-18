@@ -4,9 +4,10 @@ layout: default
 ---
 
 <!-- Html Elements for Search -->
-<div id="search-container">
-    <input type="text" id="search-input" placeholder="search...">
-    <ul id="results-container"></ul>
+<div class="main-post-list">
+  <h1 class="page-heading">Search results for: </h1>
+  <ol class="post-list" id="results-container"></ol>
+  <hr class="post-list__divider ">
 </div>
 
 {% if jekyll.environment == 'development' %}
@@ -14,13 +15,21 @@ layout: default
 {% else %}
   {% assign curr_baseurl = site.baseurl | prepend: site.url%}
 {% endif %}
+
 <!-- Configuration -->
 <script>
     SimpleJekyllSearch({
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('results-container'),
       json: '{{curr_baseurl}}/js/search.json',
-      searchResultTemplate: '<div><a href="{url}"><h1>{title}</h1></a><span>{date}</span></div>'
-      // noResultsText ("No result found!")
+      searchResultTemplate: `<li>
+        <h2 class="post-list__post-title post-title"><a href="{url}">{title}</a></h2>
+        <div class="post-list__meta">
+          <div class="post-list__meta--date date"> Published on: {date} in {collection}</div>
+        </div>
+        <hr class="post-list__divider">
+      </li>`,
+      fuzzy: false,
+      limit: 100
     })
 </script>
