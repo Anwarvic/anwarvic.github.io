@@ -1,8 +1,6 @@
 <span class="mobile btn-mobile-menu">
-  <!-- <i class="icon icon-list btn-mobile-menu__icon"></i> -->
   <i class="extra-big-icon iconify-inline icon-list btn-mobile-menu__icon" data-icon="gg:menu-round"></i>
   <i class="extra-big-icon iconify-inline icon-x-circle btn-mobile-close__icon hidden" data-icon="ion:close-circle-outline"></i>
-  <!-- <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i> -->
 </span>
 
 <header class="panel-cover {% if site.disable_landing_page %}panel-cover--collapsed{% endif %}"
@@ -23,9 +21,9 @@
         </h6>
         {% include socials.html%}
         
-        <!-- {% include search-bar.html %} -->
+        {% include search-bar.html %}
 
-        <hr class="panel-cover__divider">
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
         
         <div class="navigation-wrapper">
           <p class="panel-cover__description">{{ site.description }}</p>
@@ -42,8 +40,8 @@
             </ul>
           </nav>
         </div>
-
-        <hr class="panel-cover__divider panel-cover__divider--secondary">
+        
+        <hr class="panel-cover__divider">
       </div>
 
     </div>
