@@ -1,0 +1,26 @@
+---
+layout: default
+<!-- permalink: /search-results/ -->
+---
+
+<!-- Html Elements for Search -->
+<div id="search-container">
+    <input type="text" id="search-input" placeholder="search...">
+    <ul id="results-container"></ul>
+</div>
+
+{% if jekyll.environment == 'development' %}
+  {% assign curr_baseurl = site.baseurl %}
+{% else %}
+  {% assign curr_baseurl = site.baseurl | prepend: site.url%}
+{% endif %}
+<!-- Configuration -->
+<script>
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '{{curr_baseurl}}/search.json',
+      searchResultTemplate: '<div><a href="{url}"><h1>{title}</h1></a><span>{date}</span></div>'
+      // noResultsText ("No result found!")
+    })
+</script>
