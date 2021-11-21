@@ -93,7 +93,7 @@ pre.highlight code,
   background: #0011ff9c;
 }
 
-form.search-bar input[type=text] {
+form.search-container input[type=search] {
   background: transparent;
   color: white;
   font-family: "Raleway", sans-serif;
@@ -109,10 +109,11 @@ form.search-bar input[type=text] {
   background-repeat: no-repeat;
   background-size: 18px 18px;
   background-position: 95% center;
-} :focus{
-  border: 1px solid white;
 }
 
+form.search-container input[type=search]:focus{
+  border: 1px solid white;
+}
 
 .inline-table{
   overflow-x:auto;
