@@ -23,7 +23,18 @@ $(document).ready(function () {
   if (window.location.pathname !== '{{ site.baseurl }}/' && window.location.pathname !== '{{ site.baseurl }}/index.html') {
     $('.panel-cover').addClass('panel-cover--collapsed')
     let id = window.location.pathname.split('/')[1];
-    activateButton(id);
+    if(id === "search"){
+      if (window.localStorage.getItem("searchQuery") !== null){
+        let element = document.getElementById('search-input')
+        element.value = window.localStorage.getItem("searchQuery");
+        setTimeout(function(){
+          element.dispatchEvent(new Event("input"))
+        }, 100);
+        window.localStorage.removeItem("searchQuery");
+      }
+    }else{
+      activateButton(id);
+    }
   }
 
   $('.btn-mobile-menu').click(function () {
@@ -40,6 +51,17 @@ $(document).ready(function () {
 
 })
 
+function searchTheArchives() {
+  if (window.location.pathname.replaceAll('/','') !== 'search'){
+    window.localStorage.setItem("searchQuery", document.getElementById('search-input').value);
+    window.location.href = '{{ site.baseurl }}/search';
+    return false;
+  }else{
+    // console.log("nothing!!");
+    return false;
+  }
+}
+
 function collapse() {
   currentWidth = $('.panel-cover').width()
   if (currentWidth < 960) {
@@ -54,7 +76,7 @@ function collapse() {
 // const maxwidth = 2000;
 // function expand() {
   //   $('.panel-cover').css('max-width', maxwidth)
-  //   $('.panel-cover').animate({ 'max-width': maxwidth, 'width': '100%' }, 500, swing = 'swing', function () { })
+  //   $('.panel-cover').animate({ 'max-width': maxwidth, 'width': '100%' }, 400, swing = 'swing', function () { })
   //   $('.panel-cover').removeClass('panel-cover--collapsed')
   // }
   
