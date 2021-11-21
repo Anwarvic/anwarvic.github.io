@@ -29,7 +29,7 @@ $(document).ready(function () {
         element.value = window.localStorage.getItem("searchQuery");
         setTimeout(function(){
           element.dispatchEvent(new Event("input"))
-        }, 100);
+        }, 1000);
         window.localStorage.removeItem("searchQuery");
       }
     }else{
