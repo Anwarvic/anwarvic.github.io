@@ -21,9 +21,9 @@
         </h6>
         {% include socials.html%}
         
-        <div class="search-container">
-          <input type="text" id="search-input" placeholder="Search.." style="padding-right: 40px;">
-        </div>
+        <form class="search-container" onsubmit="return searchTheArchives()" >
+          <input type="search" id="search-input" placeholder="Search.." autocomplete="off" style="padding-right: 40px;">
+        </form>
 
         <hr class="panel-cover__divider panel-cover__divider--secondary">
         
