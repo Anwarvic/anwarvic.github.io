@@ -169,6 +169,17 @@ pre {
 		background: none;
 		border: none; }
 
+.user-image {
+	margin-bottom: 1.2em;
+	position: relative;
+	width: auto;
+	height: auto;
+	max-width: 200px;
+	max-height: 200px;
+	border: 3px solid #fff;
+	border-radius:100%;
+}
+
 .date,
 .time,
 .author,
@@ -805,6 +816,10 @@ input[type="tel"] {
 	// 	margin: 0 0 .4em 0; }
 	}
 @media all and (max-width: 340px) {
+	.user-image {
+		width: 150px;
+		height: 150px;
+	}
 	.panel-main__inner {
 		padding: 0 5%; }
 
