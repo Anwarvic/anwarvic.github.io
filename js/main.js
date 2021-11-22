@@ -22,18 +22,25 @@ $(document).ready(function () {
 
   if (window.location.pathname !== '{{ site.baseurl }}/' && window.location.pathname !== '{{ site.baseurl }}/index.html') {
     $('.panel-cover').addClass('panel-cover--collapsed')
-    let id = window.location.pathname.split('/')[1];
-    if(id === "search"){
-      if (window.localStorage.getItem("searchQuery") !== null){
-        let element = document.getElementById('search-input')
-        element.value = window.localStorage.getItem("searchQuery");
-        setTimeout(function(){
-          element.dispatchEvent(new Event("input"))
-        }, 1000);
-        window.localStorage.removeItem("searchQuery");
-      }
+    let pathparts = window.location.pathname.split('/');
+    if(pathparts[1] === "search")
+      if (pathparts[2] === ''){
+        if (window.localStorage.getItem("searchQuery") !== null){
+          let element = document.getElementById('search-input')
+          element.value = window.localStorage.getItem("searchQuery");
+          setTimeout(function(){
+            element.dispatchEvent(new Event("input"))
+          }, 1000);
+          window.localStorage.removeItem("searchQuery");
+        }
+      }else{
+          window.location.href = "/404"
     }else{
-      activateButton(id);
+      if ((pathparts.length == 4 && pathparts[3] == '') || pathparts.length == 3){
+        activateButton(pathparts[1]);
+      }else{
+        window.location.href = "/404"
+      }
     }
   }
 
