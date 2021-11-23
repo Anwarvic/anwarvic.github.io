@@ -4,7 +4,7 @@ description: "I write about research papers in these topics"
 url: 'https://anwarvic.github.io'
 cover: images/space.jpg
 baseurl: ''
-# google_analytics: 'UA-XXXXXX-X'
+google_analytics: 'G-D53BTZQ94B'
 disqus_shortname: 'anwarvic'
 
 author:
