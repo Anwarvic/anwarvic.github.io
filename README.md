@@ -1,11 +1,12 @@
-# [anwarvic.github.io](anwarvic.github.io)
+# anwarvic.github.io
 
 This is the source code for my blog hosted in the following
-url: anwarvic.github.io. This source code was adapted from the
+url: https://anwarvic.github.io. This source code was adapted from the
 [Jekyll-Uno](https://github.com/joshgerdes/jekyll-uno) Theme.
 
 <div align="center">
-  <img src="/images/assets/peek.gif" width=750>
+  <img src="/images/assets/peek_web.gif" width=750>
+  <img src="/images/assets/peek_mobile.gif">
 </div>
 
 ## Dependencies
