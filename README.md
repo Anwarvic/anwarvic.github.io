@@ -1,4 +1,4 @@
-# anwarvic.github.io
+# [anwarvic.github.io](anwarvic.github.io)
 
 This is the source code for my blog hosted in the following
 url: anwarvic.github.io. This source code was adapted from the
@@ -73,5 +73,6 @@ features in this blog and how to customize them:
 ## Create New Collection
 
 ## Disqus
+
 
 ## Google Analytics
