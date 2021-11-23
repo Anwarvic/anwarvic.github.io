@@ -24,7 +24,7 @@ $(document).ready(function () {
     $('.panel-cover').addClass('panel-cover--collapsed')
     let pathparts = window.location.pathname.split('/');
     if(pathparts[1] === "search")
-      if (pathparts[2] === ''){
+      if (pathparts[2] == null || pathparts[2] == ''){
         if (window.localStorage.getItem("searchQuery") !== null){
           let element = document.getElementById('search-input')
           element.value = window.localStorage.getItem("searchQuery");
