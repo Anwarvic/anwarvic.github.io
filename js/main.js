@@ -39,7 +39,9 @@ $(document).ready(function () {
       if ((pathparts.length == 4 && pathparts[3] == '') || pathparts.length == 3){
         activateButton(pathparts[1]);
       }else{
-        window.location.href = "/404"
+        if (window.location.pathname.replaceAll('/','') != "404"){
+          window.location.href = "/404"
+        }
       }
     }
   }
