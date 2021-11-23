@@ -6,7 +6,7 @@ url: https://anwarvic.github.io. This source code was adapted from the
 
 <div align="center">
   <img src="/images/assets/peek_web.gif" width=750>
-  <img src="/images/assets/peek_mobile.gif">
+  <img src="/images/assets/peek_mobile.gif" height=350>
 </div>
 
 ## Dependencies
