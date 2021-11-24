@@ -184,8 +184,8 @@ features in this blog and how to customize them:
 
 ## MathJax
 
-MathJax is a JavaScript plugin used to render Latex mathematical formula in
-HTML, this was done easily by adding the following few lines in the
+MathJax is a JavaScript plugin used for rendering Latex mathematical formula in
+HTML. You can use MathJax easily by adding the following few lines in the
 `footer.html` file:
 ```HTML
 <!-- Adding MathJax -->
@@ -222,6 +222,10 @@ check the following three files:
 - `js/search.json`: This is the file responsible for generating the JSON
   database that will be used by the plugin to search.
 
+<div align="center">
+  <img src="/images/assets/peek_search.gif" width=750>
+</div>
+
 ## Create New Collection
 
 In this blog, you can see about five different collections which are:
@@ -251,7 +255,45 @@ follow the following three steps:
 
 ## Disqus
 
-Disqus is 
+You can use disqus plugin to enable comments on your blog. To customize it, you
+only need to add your disqus shortname to the `disqus_shortname` variable in
+the `_config.yml` file.
+
+The HTML for the disqus plugin, can be found in the `disqus.html` file.
+
+> **NOTE:**
+>
+> To disable the comments on a certain post, go to the post markdown file and
+> add the following line in the header just like so:
+> ```
+> ---
+> comments: false
+> ---
+> ```
+
+<div align="center">
+  <img src="/images/assets/disqus.png" width=750>
+</div>
 
 ## Google Analytics
 
+You can enable Google Analytics on your blog. To customize this, you only need
+to add your tracking ID to the `google_analytics` variable in the
+`_config.yml` file.
+
+If you want to check the Javascript code responsible for enabling Google
+Analytics, you can check the `footer.html` file. You will find the following
+code:
+```HTML
+<!-- Adding Google Analytics -->
+{% if site.google_analytics and jekyll.environment != "development" %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+{% endif %}
+```
