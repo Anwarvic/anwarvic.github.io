@@ -118,6 +118,11 @@ will load the `_config.yml` file and then launch the project on the
 http://localhost:4000 which will present the content of the `index.html` file.
 
 
+> **Note:**
+>
+> Any file that wasn't mentioned in the previous list is either deprecated or
+> not important at the current moment
+
 ## _config.yml
 
 `_config.yml` is a YAML file containing the configuration for the Jekyll server.
@@ -168,8 +173,6 @@ robots: noindex
 This means that the file will include the `default.html` layout found in the
 `_layouts` directory. And any thing added after these few lines will be used
 after importing the content of the `default.html` layout.
-
-
 
 
 ---
