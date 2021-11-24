@@ -112,8 +112,11 @@ order:
 - `speech-recognition.html`: The main page for the `/speech-recognition` route.
 - `word-embedding.html`: The main page for the `/word-embedding` route.
 
-Now, we have an idea about each single file of this repository. There is one
-file that we need to talk about in more details which is `_config.yml`:
+Now, we have an idea about each single file of this repository. Once you start
+the server using the `bundle exec jekyll serve --watch` command, the server
+will load the `_config.yml` file and then launch the project on the
+http://localhost:4000 which will present the content of the `index.html` file.
+
 
 ## _config.yml
 
@@ -162,9 +165,9 @@ layout: default
 robots: noindex
 ---
 ```
-This means that 
-
-
+This means that the file will include the `default.html` layout found in the
+`_layouts` directory. And any thing added after these few lines will be used
+after importing the content of the `default.html` layout.
 
 
 
