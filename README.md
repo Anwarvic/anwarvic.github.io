@@ -68,7 +68,7 @@ order:
   will be included by the HTML layout files defined in the `layout` directory.
   - `cover.html`: The blog cover! The part where the name, socials, and
     collection icons are found.
-  - `disqus.html`: For the disqus plugin, gonna talk about his [later]().
+  - `disqus.html`: For the disqus plugin, gonna talk about his [later](#Disqus).
   - `footer.html`: The footer for all pages in the blog.
   - `head.html`: The header for all pages in the blog.
   - `socials.html`: The HTML page for all social icons found on the cover.
@@ -139,7 +139,7 @@ Let's discuss a few of these global variables:
 - `cover`: The image relative path that will be used as a background.
 - `baseurl`: The baseurl of the blog. For example, if the `baseurl: 'anwarvic'`,
   this means that the blog will be accessed at http://localhost:4000/anwarvic.
-- `google_analytics`: The Google Analytics Tracking ID.
+- `google_analytics`: The Google Analytics Tracking ID or Measurement ID.
 - `disqus_shortname`: The shortname for the disqus plugin.
 - `author`: Personal information about the blog owner including his socials.
 - `collection_dir`: The directory where all the collections will be found. Mine
@@ -184,7 +184,7 @@ features in this blog and how to customize them:
 
 ## MathJax
 
-MathJax is a JavaScript plugin used for rendering Latex mathematical formula in
+MathJax is a JavaScript plugin used for rendering LaTeX mathematical formula in
 HTML. You can use MathJax easily by adding the following few lines in the
 `footer.html` file:
 ```HTML
@@ -278,8 +278,8 @@ The HTML for the disqus plugin, can be found in the `disqus.html` file.
 ## Google Analytics
 
 You can enable Google Analytics on your blog. To customize this, you only need
-to add your tracking ID to the `google_analytics` variable in the
-`_config.yml` file.
+to add your Tracking ID (or Measurement ID) to the `google_analytics` variable
+in the `_config.yml` file.
 
 If you want to check the Javascript code responsible for enabling Google
 Analytics, you can check the `footer.html` file. You will find the following
