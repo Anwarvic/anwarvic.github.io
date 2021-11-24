@@ -55,55 +55,57 @@ start by listing the files in this project and what each one does.
 The following are all the files found in this repository sorted in alphabetical
 order:
 
-- `css/`: directory containing `main.css` file which contains my preferred
+- `css/`: Directory containing `main.css` file which contains my preferred
   styles. This file overrides the properties found in `_scss` directory.
 
-- `_drafts/`: directory for drafts of your posts. This directory is excluded
+- `_drafts/`: Directory for drafts of your posts. This directory is excluded
   by default in Jekyll.
 
-- `images/`: directory containing images found only the cover of the blog.
+- `images/`: Directory containing images found only the cover of the blog.
   Posts images can be found in `my_collections` directory.
 
-- `_includes/`: directory containing relatively small HTML layout files that
+- `_includes/`: Directory containing relatively small HTML layout files that
   will be included by the HTML layout files defined in the `layout` directory.
   - `cover.html`: The blog cover! The part where the name, socials, and
     collection icons are found.
   - `disqus.html`: For the disqus plugin, gonna talk about his [later](#Disqus).
-  - `footer.html`: The footer for all pages in the blog.
-  - `head.html`: The header for all pages in the blog.
+  - `footer.html`: The footer for all pages in the blog where most of the
+    JavaScript plugins are defined.
+  - `head.html`: The header for all pages in the blog where most of the css
+    codes are defined.
   - `socials.html`: The HTML page for all social icons found on the cover.
 
-- `js/`: directory containing all JavaScript scripts in this blog.
+- `js/`: Directory containing all JavaScript scripts in this blog.
   - `jquery.v3.3.1.min.js`: JQuery v3.3.1 (included so I can work offline).
   - `main.js`: User-defined functions.
   - `search.json`: JSON file that creates blog database for the search
-    functionality. Gonna talk about in more detail later.
+    functionality. Gonna talk about in more detail [later](#Search).
   - `simple-blog-search.min.js`:
   [Simple Blog Search](https://github.com/SeraphRoy/SimpleBlogSearch)
   plugin used for the search functionality.
 
-- `_layouts/`: directory for the main HTML layouts used in the blog.
+- `_layouts/`: Directory for the main HTML layouts used in the blog.
   - `default.html`: The main (default) HTML layout for the blog.
   - `named_collection.html`: The HTML layout for enlisting all articles found
     in a certain collection.
   - `post.html`: The HTML layout for the article/post.
 
-- `my_collections/`: directory containing all articles I wrote for my blog. All
+- `my_collections/`: Directory containing all articles I wrote for my blog. All
   files in this directory are in Markdown format. Any images included in any
   article can be found here as well.
 
-- `_sass/`: directory containing all SCSS files.
-  - `animate.scss`: defines simple animation used in the blog; like the
+- `_sass/`: Directory containing all SCSS files.
+  - `animate.scss`: Defines simple animation used in the blog; like the
   collapse or bounce down.
-  - `monokai.scss`: defines the style of the inline code in posts.
-  - `tables.scss`: defines the style of tables in posts.
-  - `uno.scss`: defines the main style for the blog.
+  - `monokai.scss`: Defines the style of the inline code in posts.
+  - `tables.scss`: Defines the style of tables in posts.
+  - `uno.scss`: Defines the main style for the blog.
 
-- `404.md`: file for not-found pages.
+- `404.md`: File for not-found pages.
 - `_config.yml`: YAML configuration file for Jekyll.
-- `Gemfile`:
-- `Gemfile.lock`:
-- `index.html`: The home page.
+- `Gemfile`: File where you specify the ruby gems you want to use.
+- `Gemfile.lock`: File where Bundler records the exact versions that were installed.
+- `index.html`: The HTML file for the home page.
 - `language-modeling.md`: The main page for `/language-modeling` route.
 - `machine-translation.md`: The main page for `/machine-translation` route.
 - `multilingual-nmts.md`: The main page for `/multilingual-nmts` route.
@@ -160,10 +162,18 @@ Let's discuss a few of these global variables:
 - `exclude`: The files that should be excluded and not monitored by the Jekyll
   server.
 
+The following are some of the past variables shown in the blog:
+
+<div align="center">
+  <img src="/images/assets/cover-desc.png" height=500>
+</div>
+
 ## Index.html
 
 The index.html file is the main HTMl layout for this project. If you open this
-file in this project, you will find the following few lines:
+file in this project, you will find the following few lines. These few lines
+are called Front Matter, you can read more about them from
+[here](https://jekyllrb.com/docs/front-matter/).:
 ```
 ---
 layout: default
@@ -171,8 +181,8 @@ robots: noindex
 ---
 ```
 This means that the file will include the `default.html` layout found in the
-`_layouts` directory. And any thing added after these few lines will be used
-after importing the content of the `default.html` layout.
+`_layouts` directory. first thing. Then, any thing added after these few lines
+will be used after importing the content of the `default.html` layout.
 
 
 ---
@@ -199,17 +209,23 @@ HTML. You can use MathJax easily by adding the following few lines in the
     "SVG": { linebreaks: { automatic: true } },
   });
 </script>
-{% if jekyll.environment == "development" %}
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-{% else %}
-  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-{% endif %}
+  {% if jekyll.environment == "development" %}
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+  </script>
+  {% else %}
+  <script type="text/javascript" async
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+  </script>
 ```
 This code will do the following:
 
 - Load the latest version of MathJax.
 - Allow MathJax to render inline formula as well as ordinary formula.
 - Make the rendered math formula responsive.
+
+If you want to use MathJax offline, then follow the steps
+[here](https://docs.mathjax.org/en/v2.7-latest/start.html#installing-your-own-copy-of-mathjax).
 
 ## Search 
 To be able to customize the search functionality in this blog, you need to
