@@ -181,17 +181,77 @@ after importing the content of the `default.html` layout.
 Starting from this point, I'm going to walk you through the most important
 features in this blog and how to customize them:
 
-## Search 
 
+## MathJax
+
+MathJax is a JavaScript plugin used to render Latex mathematical formula in
+HTML, this was done easily by adding the following few lines in the
+`footer.html` file:
+```HTML
+<!-- Adding MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "tex2jax": {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    },
+    "HTML-CSS": { linebreaks: { automatic: true } },
+    "SVG": { linebreaks: { automatic: true } },
+  });
+</script>
+{% if jekyll.environment == "development" %}
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{% else %}
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{% endif %}
+```
+This code will do the following:
+
+- Load the latest version of MathJax.
+- Allow MathJax to render inline formula as well as ordinary formula.
+- Make the rendered math formula responsive.
+
+## Search 
+To be able to customize the search functionality in this blog, you need to
+check the following three files:
+
+- `search.html`: This is the HTML layout responsible for the search bar found
+  on the cover of the blog.
+- `js/simple-blog-search.min.js`: This is the Simple Blog Search plugin that
+  does the searching in the JSON database created at deployment.
+- `js/search.json`: This is the file responsible for generating the JSON
+  database that will be used by the plugin to search.
 
 ## Create New Collection
 
+In this blog, you can see about five different collections which are:
+"Language Modeling", "Machine Translation", "Multilingual NMTs",
+"Speech Recognition" and "Word Embedding". To be able to create a new one,
+follow the following three steps:
+
+- Create a new entry at the collection list in the `_config.yml` file like so:
+  ```yaml
+  [COLLECTION-NAME]: #this is for the URL
+    output: true
+    permalink: /:collection/:path
+    title: "[COLLECTION-TITLE]" #this is for the button
+  ```
+- Create a new file at the root named `[COLLECTION-NAME].md` with the following
+  written inside:
+  ```
+  ---
+  layout: named_collection
+  collection_name: [COLLECTION-NAME]
+  title: Machine [COLLECTION-title]
+  permalink: /[COLLECTION-NAME]/
+  ---
+  ```
+- Create a new directory named `_[COLLECTION-NAME]` inside the `my_collection`
+  directory. Notice the underscore `_` at the beginning of the name!
 
 ## Disqus
 
+Disqus is 
 
 ## Google Analytics
-
-
-## MathJax
 
