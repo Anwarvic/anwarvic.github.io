@@ -48,7 +48,12 @@ build the blog offline on your machine:
 # How It works
 
 In this part, I will try to explain how things work in this repository. Let's
-start by listing the files in this project and what each one does:
+start by listing the files in this project and what each one does.
+
+## Files
+
+The following are all the files found in this repository sorted in alphabetical
+order:
 
 - `css/`: directory containing `main.css` file which contains my preferred
   styles. This file overrides the properties found in `_scss` directory.
@@ -107,16 +112,64 @@ start by listing the files in this project and what each one does:
 - `speech-recognition.html`: The main page for the `/speech-recognition` route.
 - `word-embedding.html`: The main page for the `/word-embedding` route.
 
+Now, we have an idea about each single file of this repository. There is one
+file that we need to talk about in more details which is `_config.yml`:
+
+## _config.yml
+
+`_config.yml` is a YAML file containing the configuration for the Jekyll server.
+You can consider this file as the start-point of the whole project. In this
+file, you can define global variables of the whole project. Any file in this
+project whether it's an HTML, CSS, JavaScript or even markdown can access these
+global variables.
+
+Let's discuss a few of these global variables:
+
+- `title`: The title of the blog.
+- `description`: The description of the blog.
+- `url`: The url of the deployment.
+- `cover`: The image relative path that will be used as a background.
+- `baseurl`: The baseurl of the blog. For example, if the `baseurl: 'anwarvic'`,
+  this means that the blog will be accessed at http://localhost:4000/anwarvic.
+- `google_analytics`: The Google Analytics Tracking ID.
+- `disqus_shortname`: The shortname for the disqus plugin.
+- `author`: Personal information about the blog owner including his socials.
+- `collection_dir`: The directory where all the collections will be found. Mine
+  is `my_collections`, so there should be a directory at the root of the project
+  with the same name.
+- `collections`: A list of all collections in this blog. Each collection is a
+  topic; such as "Machine Translation", "Language Modeling", ...etc. Each
+  collection has the following properties:
+    - `output: true`: This means there will be output for this collection.
+    - `permalink`: This is the route of this collection.
+    - `title`: The title of the collection.
+- `defaults`: All default options can be defined here. Here, I defined the
+  default layout for all of my collections; which is `post.html`.
+- `destination`: The directory where the project will be built. Mine is `_site`,
+  so after starting the server, a new directory called `_site` will be created
+  in the root directory.
+- `markdown`: The Markdown Flavor used in the project.
+- `exclude`: The files that should be excluded and not monitored by the Jekyll
+  server.
+
+## Index.html
+
+The index.html file is the main HTMl layout for this project. If you open this
+file in this project, you will find the following few lines:
+```
+---
+layout: default
+robots: noindex
+---
+```
+This means that 
 
 
 
 
 
 
-
-
-
-
+---
 # Features
 
 Starting from this point, I'm going to walk you through the most important
