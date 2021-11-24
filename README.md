@@ -295,7 +295,8 @@ The HTML for the disqus plugin, can be found in the `disqus.html` file.
 
 You can enable Google Analytics on your blog. To customize this, you only need
 to add your Tracking ID (or Measurement ID) to the `google_analytics` variable
-in the `_config.yml` file.
+in the `_config.yml` file. To know how to get this ID, check out the following
+[page](https://support.google.com/analytics/answer/9304153?utm_campaign=2021-q1-onboarding-ga&utm_source=google-growth&utm_medium=email&utm_content=gold-welcome-0).
 
 If you want to check the Javascript code responsible for enabling Google
 Analytics, you can check the `footer.html` file. You will find the following
