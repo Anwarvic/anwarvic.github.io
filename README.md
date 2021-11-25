@@ -140,7 +140,7 @@ Let's discuss a few of these global variables:
 - `url`: The url of the deployment.
 - `cover`: The image relative path that will be used as a background.
 - `baseurl`: The baseurl of the blog. For example, if the `baseurl: 'anwarvic'`,
-  this means that the blog will be accessed at http://localhost:4000/anwarvic.
+  this means that the blog will be reached at http://localhost:4000/anwarvic.
 - `google_analytics`: The Google Analytics Tracking ID or Measurement ID.
 - `disqus_shortname`: The shortname for the disqus plugin.
 - `author`: Personal information about the blog owner including his socials.
