@@ -209,7 +209,7 @@ HTML. You can use MathJax easily by adding the following few lines in the
     "SVG": { linebreaks: { automatic: true } },
   });
 </script>
-  {% if jekyll.environment == "development" %}
+  {% if jekyll.environment != "development" %}
   <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
   </script>
