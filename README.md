@@ -109,6 +109,7 @@ order:
 - `language-modeling.md`: The main page for `/language-modeling` route.
 - `machine-translation.md`: The main page for `/machine-translation` route.
 - `multilingual-nmts.md`: The main page for `/multilingual-nmts` route.
+- `robots.txt`: A file used by the search engine crawlers.
 - `search.html`: The main page for the `/search` route.
 - `sitemap.xml`: A Sitemap is an XML file that lists the URLs for a site.
 - `speech-recognition.html`: The main page for the `/speech-recognition` route.
