@@ -110,7 +110,7 @@ order:
 - `machine-translation.md`: The main page for `/machine-translation` route.
 - `multilingual-nmts.md`: The main page for `/multilingual-nmts` route.
 - `search.html`: The main page for the `/search` route.
-- `sitemap.xml`: 
+- `sitemap.xml`: A Sitemap is an XML file that lists the URLs for a site.
 - `speech-recognition.html`: The main page for the `/speech-recognition` route.
 - `word-embedding.html`: The main page for the `/word-embedding` route.
 
@@ -129,11 +129,11 @@ http://localhost:4000 which will present the content of the `index.html` file.
 
 `_config.yml` is a YAML file containing the configuration for the Jekyll server.
 You can consider this file as the start-point of the whole project. In this
-file, you can define global variables of the whole project. Any file in this
-project whether it's an HTML, CSS, JavaScript or even markdown can access these
-global variables.
+file, you can define the global variables for the whole project. Any file in
+this project whether it's an HTML, CSS, JavaScript or even a markdown can
+access these global variables.
 
-Let's discuss a few of these global variables:
+Now, let's discuss a few of these global variables:
 
 - `title`: The title of the blog.
 - `description`: The description of the blog.
@@ -334,4 +334,47 @@ following `<meta>` tag to the page header (`head.html`):
 {% if page.robots %}
   <meta name="robots" content="{{ page.robots }}">
 {% endif %}
+```
+
+## Sitemap
+
+A Sitemap is an XML file that lists the URLs for a site. It allows webmasters
+to include additional information about each URL; such as:
+- When it was last updated.
+- How often it changes
+- How important it is in relation to other URLs of the site.
+- etc.
+
+You can see the sitemap at the following URL: `http://localhost:4000/sitemap.xml`
+or `https://[USERNAME].github.io/sitemap.xml`.
+
+You can change the **priority** and **frequency** of a certain
+post/page in your blog by adding the following few lies in the Front Matter of
+that post/page:
+```
+...
+sitemap:
+  priority: 0.7
+  changefreq: weekly 
+```
+
+> Note:
+>
+> The default frequency is `monthly` while the default priority for any *post*
+> is `0.5` while it's `0.3` for any *page*. A page is any file that isn't HTML
+> while a post is the HTML or markdown files. 
+
+You can exclude a *post* from the sitemap by adding the following line in the
+Front Matter of that post:
+```
+...
+published: false
+```
+
+While you can exclude a *page* from the sitemap by adding the following line
+in the Front Matter of that page:
+```
+...
+sitemap:
+  exclude: true
 ```
