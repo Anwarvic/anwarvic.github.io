@@ -233,10 +233,11 @@ check the following three files:
 
 - `search.html`: This is the HTML layout responsible for the search bar found
   on the cover of the blog.
-- `js/simple-blog-search.min.js`: This is the Simple Blog Search plugin that
-  does the searching in the JSON database created at deployment.
 - `js/search.json`: This is the file responsible for generating the JSON
-  database that will be used by the plugin to search.
+  database that will be used by the search plugin.
+- `js/simple-blog-search.min.js`: This is the
+  [Simple Blog Search](https://github.com/SeraphRoy/SimpleBlogSearch) plugin
+  that does the searching using the JSON database created at deployment.
 
 <div align="center">
   <img src="/images/assets/peek_search.gif" width=750>
@@ -262,7 +263,7 @@ follow the following three steps:
   ---
   layout: named_collection
   collection_name: [COLLECTION-NAME]
-  title: Machine [COLLECTION-title]
+  title: [COLLECTION-title]
   permalink: /[COLLECTION-NAME]/
   ---
   ```
@@ -305,12 +306,12 @@ code:
 <!-- Adding Google Analytics -->
 {% if site.google_analytics and jekyll.environment != "development" %}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', '{{ site.google_analytics }}');
-  </script>
+  gtag('config', '{{ site.google_analytics }}');
+</script>
 {% endif %}
 ```
