@@ -32,7 +32,7 @@ build the blog offline on your machine:
   ```
   git clone https://github.com/Anwarvic/anwarvic.github.io.git
   ```
-- Install Ruby gems:
+- Install gems found in `Gemfile`:
   ```
   bundle install
   ```
