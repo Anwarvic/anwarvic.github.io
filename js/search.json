@@ -1,4 +1,6 @@
 ---
+sitemap:
+  exclude: 'yes'
 ---
 [
   {% for collection in site.collections %}
