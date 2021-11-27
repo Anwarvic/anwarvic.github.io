@@ -90,21 +90,20 @@ function collapse() {
   // }
   
 // only zero or one button should be active
-window.activeButtons = [];
+window.activeButton = "";
 function activateButton(id) {
   const elem = $('#'+id);
   // deactivate
-  if (window.activeButtons.includes(id)) {
-    elem.removeClass('clicked');
-    window.activeButtons.pop();
+  if (window.activeButton == id) {
+    // elem.removeClass('clicked');
     // expand();
   }
   // activate
   else {
-    if (window.activeButtons.length > 0) {
-      $('#'+window.activeButtons.pop()).removeClass("clicked");
+    if (window.activeButton != "") {
+      $('#'+window.activeButton).removeClass("clicked");
     }
-    window.activeButtons.push(id);
+    window.activeButton = id;
     elem.addClass('clicked');
     collapse();
   }
