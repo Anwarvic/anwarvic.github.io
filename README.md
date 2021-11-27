@@ -168,21 +168,21 @@ The following are some of the past variables shown in the blog:
   <img src="/images/assets/cover-desc.png" height=500>
 </div>
 
-## Index.html
+## index.html
 
 The index.html file is the main HTMl layout for this project. If you open this
 file in this project, you will find the following few lines. These few lines
 are called Front Matter, you can read more about them from
-[here](https://jekyllrb.com/docs/front-matter/).:
+[here](https://jekyllrb.com/docs/front-matter/):
 ```
 ---
 layout: default
-robots: noindex
 ---
 ```
 This means that the file will include the `default.html` layout found in the
-`_layouts` directory. first thing. Then, any thing added after these few lines
-will be used after importing the content of the `default.html` layout.
+`_layouts` directory first thing. Then, any thing added in the `index.html`
+file after these few lines will be used after importing the content of the
+`default.html` layout.
 
 
 ---
@@ -194,9 +194,9 @@ features in this blog and how to customize them:
 
 ## MathJax
 
-MathJax is a JavaScript plugin used for rendering LaTeX mathematical formula in
-HTML. You can use MathJax easily by adding the following few lines in the
-`footer.html` file:
+[MathJax](https://www.mathjax.org/) is a JavaScript plugin used for rendering
+LaTeX mathematical formula in HTML. You can use MathJax easily by adding the
+following few lines in the `footer.html` file:
 ```HTML
 <!-- Adding MathJax -->
 <script type="text/x-mathjax-config">
@@ -209,22 +209,23 @@ HTML. You can use MathJax easily by adding the following few lines in the
     "SVG": { linebreaks: { automatic: true } },
   });
 </script>
-  {% if jekyll.environment != "development" %}
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
-  </script>
-  {% else %}
-  <script type="text/javascript" async
-    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
-  </script>
+{% if jekyll.environment != "development" %}
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+{% else %}
+<script type="text/javascript" async
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+</script>
 ```
 This code will do the following:
 
 - Load the latest version of MathJax.
 - Allow MathJax to render inline formula as well as ordinary formula.
-- Make the rendered math formula responsive.
+- Make the rendered math formula responsive with the window size.
 
-If you want to use MathJax offline, then follow the steps
+For MathJax to work, you need to be connected to the internet. If you want to
+use it offline, then follow the steps found
 [here](https://docs.mathjax.org/en/v2.7-latest/start.html#installing-your-own-copy-of-mathjax).
 
 ## Search 
@@ -313,5 +314,24 @@ code:
 
   gtag('config', '{{ site.google_analytics }}');
 </script>
+{% endif %}
+```
+
+## robots
+
+If you have a page that you want to make it not accessible to search engines,
+you can add the following line in the Front Matter of that page. Just like so:
+```
+---
+...
+robots: noindex
+---
+```
+
+This will make the page not accessible to search engines by activating the
+following `<meta>` tag to the page header (`head.html`):
+```html
+{% if page.robots %}
+  <meta name="robots" content="{{ page.robots }}">
 {% endif %}
 ```
