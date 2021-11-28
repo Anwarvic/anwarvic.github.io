@@ -7,7 +7,7 @@ sitemap:
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for collection in site.collections %}
     {% for post in site[collection.label] %}
-      {% unless post.published == false %}
+      {% unless post.sitemap.exclude == "yes" or page.robots contains "noindex" %}
       <url>
         <loc>{{ site.url }}{{ post.url }}</loc>
         {% if post.sitemap.lastmod %}
