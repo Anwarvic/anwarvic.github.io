@@ -363,17 +363,10 @@ sitemap:
 >
 > The default frequency is `monthly` while the default priority for any *post*
 > is `0.5` while it's `0.3` for any *page*. A page is any file that isn't HTML
-> while a post is the HTML or markdown files. 
+> while a post is an HTML or a markdown files. 
 
-You can exclude a *post* from the sitemap by adding the following line in the
-Front Matter of that post:
-```
-...
-published: false
-```
-
-While you can exclude a *page* from the sitemap by adding the following line
-in the Front Matter of that page:
+You can exclude a post/page from the sitemap by adding the following
+line in the Front Matter of that post/page:
 ```
 ...
 sitemap:
