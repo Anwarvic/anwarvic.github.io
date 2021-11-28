@@ -13,7 +13,7 @@ layout: default
                 <div class="main-post-list">
                     {% assign prevYear = 0 %}
                     <ol class="post-list">
-                    {% assign sorted_posts = site[collection_name] | sort: 'date' %}
+                    {% assign sorted_posts = site[collection_name] | sort: 'date' | reverse%}
                     {% for post in sorted_posts %}
                         {% assign currYear = post.date | date: "%Y" %}
                         {%- if currYear != prevYear -%}
