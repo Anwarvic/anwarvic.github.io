@@ -2,7 +2,8 @@
 
 This is the source code for my blog hosted in the following
 url: https://anwarvic.github.io. This source code was adapted from the
-[Jekyll-Uno](https://github.com/joshgerdes/jekyll-uno) Theme.
+[Jekyll-Uno](https://github.com/joshgerdes/jekyll-uno) theme created by
+Josh Gerdes.
 
 <div align="center">
   <img src="/images/assets/peek_web.gif" width=750>
