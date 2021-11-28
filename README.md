@@ -320,8 +320,9 @@ code:
 
 ## robots
 
-If you have a page that you want to make it not accessible to search engines,
-you can add the following line in the Front Matter of that page. Just like so:
+If you have a page <u>**with a layout**</u> that you want to make it not
+accessible to search engines, you can add the following line in the Front Matter
+of that page:
 ```
 ---
 ...
@@ -337,6 +338,10 @@ following `<meta>` tag to the page header (`head.html`):
 {% endif %}
 ```
 
+> **Note:**
+>
+> This is only for pages that has layout. In other words, its layout can NOT be
+> `layout: null`
 ## Sitemap
 
 A Sitemap is an XML file that lists the URLs for a site. It allows webmasters
