@@ -94,7 +94,7 @@ performance:
     <img src="media/BART/image3.png" width=750>
 </div>
 
-**Note:**\
+> **Note:**\
 These noising functions can be combined as seen in the last entry of
 the above table.
 
