@@ -61,7 +61,7 @@ sentence pairs in the IWSLT17).
     <img src="media/CRISS/image3.png" width=750>
 </div>
 
-**Note:**\
+> **Note:**\
 This is a very important discover! This means that in order to train a
 multilingual model that can translate between N languages, we don't need
 to fine-tune it all $N(N - 1)$ language pairs, but only a subset of
