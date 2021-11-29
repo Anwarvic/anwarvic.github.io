@@ -67,7 +67,7 @@ warm-up step of 4000 is used. And the model was pre-trained for a total
 of 150000 steps. Also, a subword vocabulary of 64,808 tokens were
 created using BPE.
 
-**Note:**\
+> **Note:**\
 To distinguish from different translation pairs, they simply added
 language tokens. For instance, the following En→Fr sentence "**How are
 you? → Comment vas tu?**" is transformed to "**\<en\> How are you? →
