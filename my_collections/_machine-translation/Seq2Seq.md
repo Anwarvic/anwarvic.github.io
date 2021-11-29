@@ -21,7 +21,7 @@ similar context vector.
     <img src="media/Seq2Seq/image1.png" width=750>
 </div>
 
-**Note:**\
+> **Note:**\
 We should know that the input to both the encoder and the decoder are
 word-embedding and not the word itself. So, when translating from one
 language to another, you need to have two sets of word embedding.
@@ -40,9 +40,9 @@ the vocabulary.
     <img src="media/Seq2Seq/image2.png" width=750>
 </div>
 
-**Notes:**
-
--   One of the tricks that we usually use in Machine Translation, and it
+> **Notes:**
+>
+> - One of the tricks that we usually use in Machine Translation, and it
     helps to improve the performance, is to reverse the input sentence
     when training the model. So, if the (English, Foreign) pair is "a b
     c" → "α β γ", then we reverse the source sentence and keep the
@@ -50,29 +50,29 @@ the vocabulary.
     β γ". This increases the performance as the distance between the
     associated words become lower than before and the average distance
     between corresponding words in the source and target is unchanged.
-
-<div align="center">
-    <img src="media/Seq2Seq/image3.png" width=750>
-</div>
-
--   The trend in NMT is not using so much epochs in training. The
+>
+> <div align="center">
+>     <img src="media/Seq2Seq/image3.png" width=750>
+> </div>
+>
+> - The trend in NMT is not using so much epochs in training. The
     seq2seq paper mentioned before uses 7.5 epochs for training $12$
     million sentences containing 348 million English words and 304
     million French words. And the "[Effective Approaches to
     Attention-based Neural Machine
     Translation](https://arxiv.org/pdf/1508.04025.pdf)" paper used about
     12 epochs.
-
--   There is a trick we can use that doubles the training speed which is
+>
+> - There is a trick we can use that doubles the training speed which is
     when creating mini-batches, we batch the short sentences (\< 30
     words) together and the long sentences together. Padding is also
     added per batch.
-
--   Some people would train the encoder and the decoder separately. You
+>
+> - Some people would train the encoder and the decoder separately. You
     can do that with no problem, but it's preferable to train them
     altogether as an end-to-end solution.
-
--   One of the biggest problems we should avoid when creating such a
+> 
+> - One of the biggest problems we should avoid when creating such a
     model is to avoid the greedy approach when dealing with the
     generated sentence. By greedy approach, I mean choosing every word
     based on current word probability without putting into consideration
