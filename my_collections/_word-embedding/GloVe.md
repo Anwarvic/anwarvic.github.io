@@ -216,7 +216,7 @@ we have to start with the intrinsic method and change only one
 parameter. And don't confirm this change unless it's evaluated by the
 Extrinsic method.
 
-**Note:**\
+> **Note:**\
 We can use a pre-trained GloVe word embedding freely from the Stanford
 GloVe official website. We can know a lot about these pre-trained models
 from the name, for example the pre-trained model "glove.6B.50d", it's
