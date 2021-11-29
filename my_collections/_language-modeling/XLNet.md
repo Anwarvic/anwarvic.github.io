@@ -184,7 +184,7 @@ mechanism.
     <img src="media/XLNet/image5.png" width=450>
 </div>
 
-**Note:**\
+> **Note:**\
 The content stream is the same as the standard self-attention found in
 the vanilla transformer architecture.
 
