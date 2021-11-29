@@ -146,7 +146,7 @@ completely:
     <img src="media/mBART/image6.png" width=450>
 </div>
 
-**Note:**\
+> **Note:**\
 In the paper, they tried using back-translation with low-resource
 language and mBART25 and it did improve.
 
