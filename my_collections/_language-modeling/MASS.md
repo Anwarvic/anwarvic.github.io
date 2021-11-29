@@ -31,7 +31,7 @@ steps:
     next token prediction, better facilitating the joint training
     between encoder and decoder.
 
-**Note:**\
+> **Note:**\
 While this method works for any neural network based encoder-decoder
 frameworks, they chose Transformer considering that it achieves
 state-of-theart performances in multiple sequence to sequence learning
