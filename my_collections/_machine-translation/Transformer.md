@@ -259,7 +259,7 @@ $$x_{l + 1} = \text{LayerNorm}\left( x_{l} + F_{l}(x_{l}) \right)$$
 
 $$x_{l + 1} = x_{l} + F_{l}\left( \text{LayerNorm}(x_{l}) \right)$$
 
-<u><strong>Very Important Note:</strong></u>
+> <u><strong>Very Important Note:</strong></u>
 In the paper, they found out that post-normalization works best
 with high-resource languages while pre-normalization works best with
 low-resource languages.
@@ -352,7 +352,7 @@ pruning strategies:
 
 $$p = 1 - \frac{r}{N}$$
 
-**Note:**
+> **Note:**
 In the paper, they used a LayerDrop rate of $p = 0.2$ for all their
 experiments. However, they recommend using $p = 0.5$ to obtain very
 small models at inference time.
