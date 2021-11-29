@@ -37,7 +37,7 @@ For model fine-tuning, they created a development set by uniformly sampling
 from a concatenation of all the individual language pair development sets,
 resulting in 13k development examples.
 
-**Note:**\
+> **Note:**\
 In this paper, the baseline models in the following tables are
 bilingual models, each trained for a specific language-pair.
 
