@@ -65,7 +65,7 @@ The layers in both the encoder and context networks consist of a
 causal convolution with 512 channels, a group normalization layer
 and a ReLU non-linearity.
 
-**Note:**\
+> **Note:**\
 For training on larger datasets, they used a model variant ("wav2vec
 large") with increased capacity, using two additional linear
 transformations in the encoder and a considerably larger context
