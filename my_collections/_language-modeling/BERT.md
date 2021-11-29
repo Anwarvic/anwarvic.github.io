@@ -82,7 +82,7 @@ The BERT loss function takes into consideration only the prediction of
 the masked values and ignores the prediction of the non-masked words. As
 a consequence, the model converges slower than directional models.
 
-**Note:**\
+> **Note:**\
 There is a new token \[CLS\] added to the start of the input sentence
 when passed to BERT. \[CLS\] stands for classification and this is just
 a way to tell BERT we are using your architecture for classification.
