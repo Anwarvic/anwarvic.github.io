@@ -162,25 +162,24 @@ $$penalty = 0.5\left( \frac{c}{u_{m}} \right)^{3} = 0.5\left( \frac{2}{6} \right
 
 $$M = F_{\text{mean}}\left( 1 - penalty \right) = 0.9836\left( 1 - 0.0185 \right) = 0.9654$$
 
-**Notes:**
-
--   If there are two alignments with the same number of mappings, the
+> **Notes:**
+>
+> - If there are two alignments with the same number of mappings, the
     alignment is chosen with the fewest crosses/intersections. From
     the two alignments shown below, the alignment on the left would be
     selected at this point:
-
-<div align="center">
-    <img src="media/Evaluation/image7.png" width=750>
-</div>
-
-
--   The highest value for METEOR metric is 1 unlike BLEU.
-
--   To calculate a score over a whole corpus, the aggregate values for
+>
+> <div align="center">
+>     <img src="media/Evaluation/image7.png" width=750>
+> </div>
+>
+> - The highest value for METEOR metric is 1 unlike BLEU.
+>
+> - To calculate a score over a whole corpus, the aggregate values for
     **P**, **R** and **penalty** are taken and then combined using the
     same formula.
-
--   METEOR also works for comparing a candidate translation against more
+>
+> - METEOR also works for comparing a candidate translation against more
     than one reference translations. In this case the algorithm
     compares the candidate against each of the references and selects
     the highest score.
@@ -307,7 +306,7 @@ $$c\text{hr}F_{\beta} = \left( 1 + \beta^{2} \right).\frac{chrP + chrR}{\beta^{2
     when n=1 till n=6. So, we will do the same when n=2,3,4,5,6 and
     then average the f-score.
 
-**Note:**\
+> **Note:**\
 You can use `nltk.chrf_score()` function for this metric.
 
 Edit-Distance-Based Metrics
@@ -373,20 +372,20 @@ consider this an exact match as:
 
 $$TER = \frac{4}{13} = 30.77\%$$
 
-**Important Notes:**
-
--   Since we are concerned with the minimum number of edits needed to
+> **Important Notes:**
+> 
+> - Since we are concerned with the minimum number of edits needed to
     modify the hypothesis, we only measure the number of edits to the
     closest reference.
-
--   TER assumes that all edits (insertion, deletion, \...etc.) have the
+>
+> - TER assumes that all edits (insertion, deletion, \...etc.) have the
     same cost.
-
--   Punctuations are treated as normal words.
-
--   Mis-capitalization is counted as an edit.
-
--   In the paper, T(1) denoted that TER was used on just one reference
+>
+> - Punctuations are treated as normal words.
+>
+> - Mis-capitalization is counted as an edit.
+>
+> - In the paper, T(1) denoted that TER was used on just one reference
     sentence while T(4) was used on four different reference sentences.
 
 ### CharacTER
