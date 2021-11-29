@@ -1,6 +1,7 @@
 ---
 title: "UT: Universal Transformer"
 date: 2021-08-06
+cover: /image1.png
 ---
 
 
@@ -224,6 +225,6 @@ Transformer with approximately the same number of parameters:
     <img src="media/Seq2Seq/image4.png" width=750>
 </div>
 
-**Note:**\
+> **Note:**\
 The $Transition()$ function used here is a fully-connected recurrent
 transition function. Also, the dynamic ACT halting wasn't used.
