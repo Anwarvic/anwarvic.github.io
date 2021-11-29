@@ -97,16 +97,16 @@ There are different types of RNN:
     <img src="media/RNN/image3.png" width=450>
 </div>
 
-**Notes:**
-
--   At one-to-many RNNs, we take the output and insert it back as input.
+> **Notes:**
+>
+> - At one-to-many RNNs, we take the output and insert it back as input.
     This operation is called "Sampling".
-
-<div align="center">
-    <img src="media/RNN/image4.png" width=750>
-</div>
-
--   At machine translation RNN models, we divide the RNN into two parts,
+>
+> <div align="center">
+>     <img src="media/RNN/image4.png" width=750>
+> </div>
+>
+> - At machine translation RNN models, we divide the RNN into two parts,
     the first is the "encoder" part which takes the original sentence.
     The second part is the "decoder" part which returns the translated
     sentence. This architecture is called the "Autoencoding
@@ -288,7 +288,7 @@ $$\Gamma_{o}^{\left\langle t \right\rangle} = \sigma\left( W_{o}\left\lbrack a^{
     the output $a^{\left\langle t \right\rangle}$. If one of the
     features is $0$, then it won't use this feature.
 
-**Note:**\
+> **Note:**\
 Some researchers have found out that the parameter
 $c^{\left\langle t - 1 \right\rangle}$ needs to be concatenated in the
 forget gate. So, instead of using just
@@ -297,8 +297,8 @@ $a^{\left\langle t \right\rangle}$ in the forget gate, we need also to
 use $c^{\left\langle t - 1 \right\rangle}$ as shown in the following
 equation which could increase the accuracy. This is known as the
 "peephole connections":
-
-$$\Gamma_{f}^{\left\langle t \right\rangle} = \sigma\left( W_{f}\left\lbrack c^{\left\langle t - 1 \right\rangle},a^{\left\langle t - 1 \right\rangle},x^{\left\langle t \right\rangle} \right\rbrack + b_{f} \right)$$
+> 
+> $$\Gamma_{f}^{\left\langle t \right\rangle} = \sigma\left( W_{f}\left\lbrack c^{\left\langle t - 1 \right\rangle},a^{\left\langle t - 1 \right\rangle},x^{\left\langle t \right\rangle} \right\rbrack + b_{f} \right)$$
 
 This [link](https://skymind.ai/wiki/lstm#long) states some interesting
 facts about LSTM, give it a read!!!
@@ -387,7 +387,7 @@ $$\Gamma_{r}^{\left\langle t \right\rangle} = \sigma\left( W_{r}x^{\left\langle 
     for $c^{\left\langle t \right\rangle}$. If one of the features is
     $1$, then it will keep the information.
 
-**Note:**\
+> **Note:**\
 As a rule of thumb, use LSTM cells in your model unless you care much
 about the size of the model or the memory needed. GRUs have fewer
 parameters to compute
