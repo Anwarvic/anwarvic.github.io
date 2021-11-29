@@ -42,7 +42,7 @@ language-independent as you can see in the following figure:
     <img src="media/multilinguality_in_transformers/image1.png" width=450>
 </div>
 
-**Note:**\
+> **Note:**\
 Even though most important heads are language-independent, in the
 paper they showed that it is possible to find the rare heads specific to
 a language pair via the extensive SBS (sequential backward selection)
