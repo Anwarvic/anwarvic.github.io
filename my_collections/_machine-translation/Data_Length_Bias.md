@@ -42,16 +42,16 @@ increases the average length of the dataset.
     <img src="media/Data_Length_Bias/image2.png" width=750>
 </div>
 
-**Note:**
-
--   MSR performed the augmentation process on both the source-side and
+> **Note:**
+>
+> - MSR performed the augmentation process on both the source-side and
     the target-side of the data.
-
--   Knowing the average length of examples in a dataset $L$, the average
+>
+> - Knowing the average length of examples in a dataset $L$, the average
     length of examples in the new dataset can be approximately
     calculated as:
-
-$$avg\_ new\_ length \cong \sum_{n = 1}^{N}\frac{\text{L.n}}{N} = L.\frac{N + 1}{2}$$
+> 
+> $$avg\_ new\_ length \cong \sum_{n = 1}^{N}\frac{\text{L.n}}{N} = L.\frac{N + 1}{2}$$
 
 The following figure illustrates how the train examples length
 distribution changes in IWSLT17 Fr-En dataset for N from 2 to 5. With
