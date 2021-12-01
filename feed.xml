@@ -13,11 +13,11 @@ layout: null
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     <image>
-      <title>ِAnwarvic's Blog</title>
+      <title>{{ site.title | xml_escape }}</title>
       <link>{{ site.url }}{{ site.baseurl }}/</link>
       <link>{{ "/images/avatar.png" | prepend: site.baseurl | prepend: site.url }}</link>
       <width>70</width>
-      <height>55</height>
+      <height>70</height>
     </image>
     {% for collection in site.collections %}
       {% for post in site[collection.label] limit:2%}
