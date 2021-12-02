@@ -1,6 +1,7 @@
 ---
 title: "DistilBERT"
 date: 2020-03-01
+cover: /image0.png
 ---
 
 DistilBERT is a smaller, faster, cheaper and lighter version of BERT
@@ -11,6 +12,8 @@ used knowledge distillation to reduce the size of a BERT by 40%, while
 retaining 97% of its language understanding capabilities and being 60%
 faster. This was possible by using a triple loss function that combines
 language modeling, distillation and cosine-distance losses.
+
+
 
 The following figure shows a simple comparison between DistilBERT and
 other models with respect to the number of parameters; which shows that
