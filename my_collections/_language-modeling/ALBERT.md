@@ -1,16 +1,23 @@
 ---
 title: "ALBERT"
 date: 2020-02-09
+cover: /image1.png
 ---
 
 ALBERT, stands for "A Lite BERT", reduced version of BERT which is a
 smaller, faster, cheaper and easier to scale. ALBERT was created by
 Google & Toyota Technical Institute in February 2020 and published in
 this paper: "[ALBERT: A Lite Bert For Self-Supervised Learning Of
-Language Representations](https://arxiv.org/pdf/1909.11942.pdf)" and you
-can access the official code from
-[here](https://github.com/google-research/ALBERT). ALBERT incorporates
-two parameter reduction techniques and one new loss function:
+Language Representations](https://arxiv.org/pdf/1909.11942.pdf)" and you can fine the official code for this paper in Google Research’s official GitHub repository:
+[google-research/ALBERT](https://github.com/google-research/ALBERT).
+
+<div align="center">
+    <img src="media/ALBERT/image1.png" width=450>
+</div>
+
+ALBERT incorporates two parameter reduction techniques that act as a form of
+regularization that stabilizes the training and helps with generalization; and
+one new loss function:
 
 -   Factorized Embedding Parameterization
 
@@ -28,7 +35,7 @@ configuration similar to BERT-large has 18x fewer parameters and can
 be trained about 1.7x faster as shown in the following table:
 
 <div align="center">
-    <img src="media/ALBERT/image1.png" width=750>
+    <img src="media/ALBERT/image2.png" width=750>
 </div>
 
 And since longer training usually leads to better performance, the
@@ -37,7 +44,7 @@ ALBERT after the same training time which shows that ALBERT still
 performs better:
 
 <div align="center">
-    <img src="media/ALBERT/image2.png" width=750>
+    <img src="media/ALBERT/image3.png" width=750>
 </div>
 
 Factorized Embedding Parameterization
@@ -80,7 +87,7 @@ network parameters. Although there is a drop for both metrics compared
 to BERT, they nevertheless do not converge to 0 even after 24 layers.
 
 <div align="center">
-    <img src="media/ALBERT/image3.png" width=750>
+    <img src="media/ALBERT/image4.png" width=750>
 </div>
 
 Sentence-Order Prediction (SOP)
@@ -99,7 +106,7 @@ it turns out that NSP cannot solve the SOP task at all, while SOP can
 solve the NSP task to a reasonable degree.
 
 <div align="center">
-    <img src="media/ALBERT/image4.png" width=350>
+    <img src="media/ALBERT/image5.png" width=350>
 </div>
 
 Hyper-parameters
@@ -118,7 +125,7 @@ hyper-parameters on ALBERT:
     decline.
 
 <div align="center">
-    <img src="media/ALBERT/image5.png" width=750>
+    <img src="media/ALBERT/image6.png" width=750>
 </div>
 
 -   **Network Width (hidden size):**\
@@ -128,7 +135,7 @@ hyper-parameters on ALBERT:
     significantly:
 
 <div align="center">
-    <img src="media/ALBERT/image6.png" width=750>
+    <img src="media/ALBERT/image7.png" width=750>
 </div>
 
 -   **Dropout:**\
@@ -137,7 +144,7 @@ hyper-parameters on ALBERT:
     ALBERT models didn't overfit the data.
 
 <div align="center">
-    <img src="media/ALBERT/image7.png" width=750>
+    <img src="media/ALBERT/image8.png" width=750>
 </div>
 
 -   **Data:**\
@@ -146,5 +153,5 @@ hyper-parameters on ALBERT:
     are negatively affected by out-of-domain training material).
 
 <div align="center">
-    <img src="media/ALBERT/image8.png" width=750>
+    <img src="media/ALBERT/image9.png" width=750>
 </div>
