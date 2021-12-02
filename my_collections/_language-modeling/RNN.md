@@ -1,6 +1,7 @@
 ---
 title: "RNN: Recurrent Neural Networks"
 date: 1985-09-19
+cover: /image3.png
 ---
 
 The neural n-gram language model we\'ve seen earlier was trained using
