@@ -1,6 +1,7 @@
 ---
 title: "BERT"
 date: 2019-05-24
+cover: /image3.png
 ---
 
 BERT stands for "Bidirectional Encoder Representations from
