@@ -1,6 +1,7 @@
 ---
 title: "BART"
 date: 2019-10-29
+cover: /image1.png
 ---
 
 BART stands for "Bidirectional Auto-regressive Transformer" which is a
@@ -40,7 +41,6 @@ we discussed with NMT with a few differences:
     distribution.
 
 -   BART is pre-trained.
-
 <div align="center">
     <img src="media/BART/image1.png" width=450>
 </div>
