@@ -1,6 +1,7 @@
 ---
 title: "Tree Recursive Neural Network"
 date: 2011-07-28
+cover: /image7.png
 ---
 
 Tree Recursive Neural Network is a model created by Richard Socher et al.
