@@ -1,6 +1,7 @@
 ---
 title: "MASS"
 date: 2019-06-21
+cover: /image1.png
 ---
 
 MASS, stands for "**Ma**sked **S**equence to **S**equence", is a
