@@ -1,6 +1,7 @@
 ---
 title: "XLNet"
 date: 2020-01-02
+cover: /image1.png
 ---
 
 XLNet stands for "Extra-Long Net" which is a model that integrates both
