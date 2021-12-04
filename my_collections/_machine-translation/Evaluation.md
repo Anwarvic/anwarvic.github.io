@@ -1,6 +1,7 @@
 ---
 title: "Evaluation Metrics"
 date: 2020-01-01
+cover: /image10.png
 ---
 
 Machine Translation models translate a given sentence by searching for
