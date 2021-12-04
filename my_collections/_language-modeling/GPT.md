@@ -1,6 +1,7 @@
 ---
 title: "GPT"
 date: 2018-06-11
+cover: /image1.png
 ---
 
 Transform is a state-of-the-art architecture for machine translation.
