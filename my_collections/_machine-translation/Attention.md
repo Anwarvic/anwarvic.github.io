@@ -1,6 +1,7 @@
 ---
 title: "Attention Mechanism"
 date: 2016-05-19
+cover: /image3.png
 ---
 
 A potential issue with the Seq2Seq approach is that a neural network
