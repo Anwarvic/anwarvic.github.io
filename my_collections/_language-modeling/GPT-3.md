@@ -1,6 +1,7 @@
 ---
 title: "GPT-3"
 date: 2020-07-22
+cover: /image0.png
 ---
 
 GPT-3 is an enormous model built on the transformer-decoder architecture
@@ -21,7 +22,7 @@ schemes and how they are different from fine-tuning:
     It's the setting where the model is given K (usually from 10
     to 100) examples of the task at inference time as conditioning,
     but no weight updates are allowed. As we can see in the following
-    figure, GPT-3 was given [three]{.ul} different examples along with
+    figure, GPT-3 was given <u>three</u> different examples along with
     the task description:
 
 <div align="center">
