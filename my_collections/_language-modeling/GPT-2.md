@@ -1,6 +1,7 @@
 ---
 title: "GPT-2"
 date: 2019-02-14
+cover: /image0.png
 ---
 
 GPT-2 stands for "Generative Pre-trained Transformer" which is a
