@@ -1,6 +1,7 @@
 ---
 title: "Seq2Seq"
 date: 2014-12-14
+cover: /image1.png
 ---
 
 Sequence-to-sequence (seq2seq) models or encoder-decoder architecture,
