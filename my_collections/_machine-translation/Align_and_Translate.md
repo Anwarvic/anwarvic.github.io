@@ -1,6 +1,7 @@
 ---
 title: "Align & Translate with Transformers"
 date: 2019-09-04
+cover: /image1.png
 ---
 
 In this part, we are going to take a deep look into this paper: [Jointly
