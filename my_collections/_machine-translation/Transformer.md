@@ -1,6 +1,7 @@
 ---
 title: "Transformers"
 date: 2017-12-06
+cover: /image1.png
 ---
 
 Transformers were introduced in 2017 by Google in the "[Attention is all
