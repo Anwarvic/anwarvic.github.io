@@ -1,6 +1,7 @@
 ---
 title: "NAT: Non-Autoregressive Transformer"
 date: 2018-03-09
+cover: /image1.png
 ---
 
 NAT, stands for "Non-Autoregressive Translation", is an NMT model that
