@@ -1,6 +1,7 @@
 ---
 title: "Back-translation"
 date: 2016-06-03
+cover: /image1.png
 ---
 
 Back-translation is a semi-supervised mechanism proposed in this paper:
