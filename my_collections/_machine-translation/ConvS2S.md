@@ -1,6 +1,7 @@
 ---
 title: "ConvS2S"
 date: 2017-07-25
+cover: /image2.png
 ---
 
 One of the major defects of Seq2Seq models is that it can't process
