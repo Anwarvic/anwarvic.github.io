@@ -1,6 +1,7 @@
 ---
 title: "Dr. NMT"
 date: 2021-08-01
+cover: /image1.png
 ---
 
 DrNMT stands for "**D**iscriminative **R**eranking for **N**eural
@@ -33,8 +34,8 @@ embeddings, to help the model represent tokens that are shared between
 the two languages. The final hidden state corresponding to the start of
 sentence token $\left\langle s \right\rangle$ is a one hidden
 feed-forward network with $d$ hidden units with
-$\text{tanh\ }$activation. It serves as the joint representation for
-$(x,\ u)$:
+$\text{tanh}$ activation. It serves as the joint representation for
+$(x, u)$:
 
 <div align="center">
     <img src="media/DrNMT/image1.png" width=750>
