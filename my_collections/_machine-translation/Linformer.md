@@ -1,6 +1,7 @@
 ---
 title: "Linformer: Linear Transformer"
 date: 2020-06-14
+cover: /image1.png
 ---
 
 Linformer is an efficient version of the transformers proposed by
