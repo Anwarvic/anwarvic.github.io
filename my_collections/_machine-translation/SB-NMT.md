@@ -1,6 +1,7 @@
 ---
 title: "SB-NMT: Synchronous Bidirectional NMT"
 date: 2019-05-13
+cover: /image1.png
 ---
 
 SB NMT stands for "Synchronous Bi-directional Neural Machine
