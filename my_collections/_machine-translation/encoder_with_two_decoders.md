@@ -1,6 +1,7 @@
 ---
 title: "Encoder with 2 Decoders"
 date: 2018-02-26
+cover: /image1.png
 ---
 
 The first model proposed in this area was created under the supervision
