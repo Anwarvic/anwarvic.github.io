@@ -1,6 +1,7 @@
 ---
 title: "Fusion"
 date: 2015-07-12
+cover: /image1.png
 ---
 
 The fusion technique is proposed by the University of Montreal in 2015
