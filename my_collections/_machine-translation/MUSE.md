@@ -1,6 +1,7 @@
 ---
 title: "MUSE"
 date: 2018-01-30
+cover: /image5.png
 ---
 
 MUSE or "Multilingual Unsupervised and Supervised Embeddings" is a
