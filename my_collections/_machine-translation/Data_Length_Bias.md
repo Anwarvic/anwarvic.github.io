@@ -1,6 +1,7 @@
 ---
 title: "Dataset-Length Bias"
 date: 2021-09-13
+cover: /image3.png
 ---
 
 Neural Machine Translation (NMT) is known to suffer from a beam-search
