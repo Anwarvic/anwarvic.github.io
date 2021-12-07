@@ -1,6 +1,7 @@
 ---
 title: "Unsupervised Machine Translation with Monolingual Data"
 date: 2018-04-13
+cover: /image2.png
 ---
 
 The second model proposed in this area was created by Facebook AI in
