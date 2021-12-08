@@ -1,6 +1,7 @@
 ---
 title: "mRASP2"
 date: 2021-07-22
+cover: /image1.png
 ---
 
 mRASP2 or mCOLT, "a **m**ultilingual **Co**ntrastive **L**earning
