@@ -1,6 +1,7 @@
 ---
 title: "mRASP"
 date: 2021-01-22
+cover: /image1.png
 ---
 
 mRASP stands for "multilingual Random Aligned Substitution Pre-training"
