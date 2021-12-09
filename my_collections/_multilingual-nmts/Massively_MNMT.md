@@ -1,6 +1,7 @@
 ---
 title: "Massively MNMT"
 date: 2019-07-02
+cover: /image0.png
 ---
 
 Massively MNMT is a multilingual many-to-many NMT model proposed by
