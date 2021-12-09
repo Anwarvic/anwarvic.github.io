@@ -1,6 +1,7 @@
 ---
 title: "mBART"
 date: 2020-01-23
+cover: /image1.png
 ---
 
 mBART stands for "Multilingual Bidirectional Auto-regressive
