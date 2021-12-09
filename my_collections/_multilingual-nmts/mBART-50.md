@@ -1,6 +1,7 @@
 ---
 title: "mBART-50"
 date: 2020-08-02
+cover: /image0.png
 ---
 
 In this part, we are going to discuss this paper: [Multilingual
