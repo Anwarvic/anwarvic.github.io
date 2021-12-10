@@ -1,6 +1,7 @@
 ---
 title: "LAS"
 date: 2015-08-20
+cover: /image1.png
 ---
 
 LAS stands for "Listen, Attend and Spell". It's a model created by
