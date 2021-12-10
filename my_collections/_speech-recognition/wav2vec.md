@@ -1,6 +1,7 @@
 ---
 title: "wav2vec"
 date: 2019-09-11
+cover: /image1.png
 ---
 
 Wav2Vec is a model created by Facebook AI Research in 2019 and published
