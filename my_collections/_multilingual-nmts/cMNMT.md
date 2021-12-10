@@ -1,6 +1,7 @@
 ---
 title: "cMNMT: Complete MNMT"
 date: 2020-10-20
+cover: /image1.png
 ---
 
 cMNMT stands for "Complete Multilingual Neural Machine Translation"
