@@ -1,6 +1,7 @@
 ---
 title: "Deep Speech"
 date: 2014-12-19
+cover: /image1.png
 ---
 
 Deep Speech is a model created by Baidu in December 2014 and published
