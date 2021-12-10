@@ -1,6 +1,7 @@
 ---
 title: "Multilinguality in Transformers"
 date: 2021-05-31
+cover: /image1.png
 ---
 
 The following paper: [Do Multilingual Neural Machine Translation Models
