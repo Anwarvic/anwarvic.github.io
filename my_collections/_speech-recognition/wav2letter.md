@@ -1,6 +1,7 @@
 ---
 title: "wav2letter"
 date: 2016-09-13
+cover: /image1.png
 ---
 
 Wav2Letter is a model created by Facebook in 2016 and published in this
