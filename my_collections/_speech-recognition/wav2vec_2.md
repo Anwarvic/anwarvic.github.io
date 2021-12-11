@@ -1,6 +1,7 @@
 ---
 title: "wav2vec 2.0"
 date: 2020-10-22
+cover: /image1.png
 ---
 
 Wav2Vec Unsupervised is a model created by Facebook AI Research in May
