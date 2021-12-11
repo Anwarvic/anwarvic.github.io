@@ -1,6 +1,7 @@
 ---
 title: "vq-wav2vec"
 date: 2020-02-16
+cover: /image1.png
 ---
 
 vq-wav2vec stands for "vector-quantized wav2vec" which is a model
