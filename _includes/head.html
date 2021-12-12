@@ -17,12 +17,29 @@
     {% assign curr_description = page.excerpt | strip_html %}
   {% else %}
     {% assign curr_description = site.description %}
+    {% for collection in site.collections %}
+      {% if collection.label != "posts" %}
+        {% if forloop.first == false and forloop.last == false%}
+          {% assign curr_description = curr_description | append: ', ' %}
+        {% endif %}
+        {% if forloop.last %}
+          {% assign curr_description = curr_description | append: ', and ' %}
+        {% endif %}
+        {% assign curr_description = curr_description | append: ' ' | append: collection.title %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
-
+  
   {% if jekyll.environment == 'development' %}
-    {% assign curr_baseurl = site.baseurl %}
+  {% assign curr_baseurl = site.baseurl %}
   {% else %}
-    {% assign curr_baseurl = site.baseurl | prepend: site.url%}
+  {% assign curr_baseurl = site.baseurl | prepend: site.url%}
+  {% endif %}
+  
+  {% if page.cover %}
+    {% assign curr_cover = page.collection | append: "/media/" | append: page.slug | append: page.cover %}
+  {% else %}
+    {% assign curr_cover = "/images/avatar.png" %}
   {% endif %}
 
   <title>{{curr_title}}</title>
@@ -38,7 +55,7 @@
   <!-- Google / Search Engine Tags -->
   <meta itemprop="name" content="{{curr_title}}">
   <meta itemprop="description" content="{{curr_description}}">
-  <meta itemprop="image" content="{{curr_baseurl}}/images/avatar.png">
+  <meta itemprop="image" content="{{curr_baseurl}}/{{curr_cover}}">
 
   <!-- OpenGraph Meta Tags -->
   <meta property="og:url" content="{{ site.url }}">
@@ -46,7 +63,7 @@
   <meta property="og:site_name" content="Anwarvic's Blog"/>
   <meta property="og:title" content="{{curr_title}}">
   <meta property="og:description" content="{{curr_description}}">
-  <meta property="og:image" content="{{curr_baseurl}}/images/avatar.png">
+  <meta property="og:image" content="{{curr_baseurl}}/{{curr_cover}}">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary">
@@ -55,7 +72,7 @@
   {% if site.author.twitter_username %}
   <meta name="twitter:creator" content="{{ site.author.twitter_username }}">
   {% endif %}
-  <meta name="twitter:image" content="{{curr_baseurl}}/images/avatar.png">
+  <meta name="twitter:image" content="{{curr_baseurl}}/{{curr_cover}}">
 
   <link rel="apple-touch-icon" sizes="57x57" href="{{curr_baseurl}}/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="72x72" href="{{curr_baseurl}}/images/favicons/apple-touch-icon-72x72.png">
