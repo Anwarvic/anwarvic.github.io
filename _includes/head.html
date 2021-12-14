@@ -37,7 +37,7 @@
   {% endif %}
   
   {% if page.cover %}
-    {% assign curr_cover = page.collection | append: "/media/" | append: page.slug | append: page.cover %}
+    {% assign curr_cover = page.cover | prepend: page.slug | prepend: "/media/" | prepend: page.collection %}
   {% else %}
     {% assign curr_cover = "/images/avatar.png" %}
   {% endif %}
