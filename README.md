@@ -186,6 +186,23 @@ This means that the file will include the `default.html` layout found in the
 file after these few lines will be used after importing the content of the
 `default.html` layout.
 
+# Create New Post
+
+Creating a new post is pretty straight-forward. You can do it by going into
+the directory of the collection to which the post belong. For example, if you
+want to write a new `Machine Translation` post, you can do it by following
+these steps:
+- Go to the `my_collections/_machine-translation` directory.
+- Create a new Markdown file with the name of the post.
+- Add the Front Matter to the file.
+    ```
+    ---
+    title: # Title of the post
+    date:  # Date of the post
+    cover: # Relative path to the post's cover image
+    ---
+    ```
+- Add the content of the post using Markdown.
 
 ---
 # Features
