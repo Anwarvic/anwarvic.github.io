@@ -200,6 +200,7 @@ these steps:
     title: # Title of the post
     date:  # Date of the post
     cover: # Relative path to the post's cover image
+    comments: # Whether or not the post will have comments (default: true)
     ---
     ```
 - Add the content of the post using Markdown.
