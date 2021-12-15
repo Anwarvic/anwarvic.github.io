@@ -8,3 +8,5 @@ _site
 Gemfile.lock
 _drafts
 images/wallpaper
+tags.md
+categories.md
