@@ -186,7 +186,7 @@ This means that the file will include the `default.html` layout found in the
 file after these few lines will be used after importing the content of the
 `default.html` layout.
 
-# Create New Post
+## Create New Post
 
 Creating a new post is pretty straight-forward. You can do it by going into
 the directory of the collection to which the post belong. For example, if you
