@@ -11,9 +11,9 @@ layout: default
           {{ words | divided_by: 250 | plus: 1 }} mins read
         </span>
       </p>
-      <time datetime="{{ page.date | date: '%Y-%m-%d %H:%M' }}" class="post-meta__body date">The original research paper was published on: {{ page.date | date: "%-d %b %Y" }}</time>
-      {% if page.tags.size > 0 %}
-      &#8226; <span class="post-meta__tags">on {% for tag in page.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}</span>
+      <time datetime="{{ page.date | date: '%Y-%m-%d %H:%M' }}" class="post-meta__body date">Published on: {{ page.date | date: "%-d %b %Y" }}</time>
+      {% if page.labs.size > 0 %}
+      <p class="post-meta__tags">Published by: {% for lab in page.labs %}<a href="{{ site.baseurl }}/labs/#{{ lab }}">{{ lab }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}</p>
       {% endif %}
     </div>
   </header>
