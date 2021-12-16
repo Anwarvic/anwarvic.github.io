@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{% assign all_labs = "" | split: '' %}
+{% assign all_researchers = "" | split: '' %}
+{% for collection in site.collections %}
+  {% for post in site[collection.label] %}
+    {% if post.labs %}
+      {% assign all_labs = all_labs | concat: post.labs %}
+    {% endif %}
+    {% if post.researchers %}
+      {% assign all_researchers = all_researchers | concat: post.researchers %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% assign all_labs = all_labs | uniq | sort %}
+
+
+<h2>Labs:</h2>
+<div class="tags">
+  {% for labname in all_labs  %} 
+  <a href="#{{ labname }}">{{  labname }}</a>
+  {% endfor %}
+</div>
+
+{% for labname in all_labs %} 
+  <div id="{{ labname }}">  
+    <h3> {{ labname }} </h3>
+
+    <ul>
+      {% for collection in site.collections %}
+        {% for post in site[collection.label] %}
+          {% if post.labs contains labname %} 
+          <li>
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
