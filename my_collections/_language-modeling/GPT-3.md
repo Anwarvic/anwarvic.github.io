@@ -1,7 +1,8 @@
 ---
 title: "GPT-3"
-date: 2020-07-22
+date: 2020-05-28
 cover: /image0.png
+labs: ["Open AI"]
 ---
 
 GPT-3 is an enormous model built on the transformer-decoder architecture
