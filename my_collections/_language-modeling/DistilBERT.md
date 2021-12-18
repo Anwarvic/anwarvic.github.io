@@ -2,6 +2,7 @@
 title: "DistilBERT"
 date: 2020-03-01
 cover: /image0.png
+labs: ["Hugging Face"]
 ---
 
 DistilBERT is a smaller, faster, cheaper and lighter version of BERT
