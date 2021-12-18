@@ -1,15 +1,17 @@
 ---
 title: "ALBERT"
-date: 2020-02-09
-cover: /image1.png
+date: 2019-09-26
+cover: /image0.png
+labs: ["Google Research", "Toyota Technological Institute at Chicago"]
 ---
 
 ALBERT, stands for "A Lite BERT", reduced version of BERT which is a
 smaller, faster, cheaper and easier to scale. ALBERT was created by
-Google & Toyota Technical Institute in February 2020 and published in
+Google & Toyota Technical Institute in February 2019 and published in
 this paper: "[ALBERT: A Lite Bert For Self-Supervised Learning Of
-Language Representations](https://arxiv.org/pdf/1909.11942.pdf)" and you can fine the official code for this paper in Google Research’s official GitHub repository:
-[google-research/ALBERT](https://github.com/google-research/ALBERT).
+Language Representations](https://arxiv.org/pdf/1909.11942.pdf)" and you can
+fine the official code for this paper in Google Research’s official GitHub
+repository: [google-research/ALBERT](https://github.com/google-research/ALBERT).
 
 <div align="center">
     <img src="media/ALBERT/image1.png" width=450>
