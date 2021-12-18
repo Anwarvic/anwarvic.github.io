@@ -1,13 +1,14 @@
 ---
 title: "BERT"
-date: 2019-05-24
+date: 2018-10-11
 cover: /image3.png
+labs: ["Google AI Language"]
 ---
 
 BERT stands for "Bidirectional Encoder Representations from
 Transformers" which is a model published by researchers at Google in
 this paper: "[BERT: Pre-training of Deep Bidirectional Transformers for
-Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)" in 2019.
+Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)" in 2018.
 It has caused a stir in the NLP community by presenting state-of-the-art
 results in a wide variety of NLP tasks, including Question Answering
 (SQuAD v1.1), Natural Language Inference (MNLI), and others.
