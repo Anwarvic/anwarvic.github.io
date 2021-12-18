@@ -1,11 +1,13 @@
 ---
 title: "SpanBERT"
-date: 2020-01-18
-cover: /image1.png
+date: 2019-07-24
+cover: /image0.png
+labs: ["Princeton University", "Allen Institute of Artificial Intelligence",
+"Facebook AI"]
 ---
 
 SpanBERT is a model created by Facebook AI and Allen Institute in
-January 2020 and published in this paper "[SpanBERT: Improving
+January 2019 and published in this paper "[SpanBERT: Improving
 Pre-training by Representing and Predicting
 Spans](https://arxiv.org/pdf/1907.10529.pdf)". SpanBERT is just an
 extension to BERT where it better represents and predict continuous
