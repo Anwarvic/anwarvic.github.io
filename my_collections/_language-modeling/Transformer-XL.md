@@ -2,6 +2,7 @@
 title: "Transformer-XL"
 date: 2019-07-28
 cover: /image0.png
+labs: ["Open AI"]
 ---
 
 Transformer-XL, stands for "Transformer Extra Long", is a language model
