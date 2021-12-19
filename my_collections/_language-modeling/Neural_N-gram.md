@@ -2,6 +2,7 @@
 title: "Neural N-gram Language Model"
 date: 2003-02-09
 cover: /image1.png
+labs: ["University of Montreal"]
 ---
 
 As we discussed before, the n-gram language model has a few problems
