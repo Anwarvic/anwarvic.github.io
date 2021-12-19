@@ -1,7 +1,8 @@
 ---
 title: "MASS"
-date: 2019-06-21
-cover: /image1.png
+date: 2019-05-07
+cover: /image0.png
+labs: ["Microsoft Research"]
 ---
 
 MASS, stands for "**Ma**sked **S**equence to **S**equence", is a
