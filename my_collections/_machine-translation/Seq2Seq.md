@@ -1,7 +1,8 @@
 ---
 title: "Seq2Seq"
-date: 2014-12-14
+date: 2014-09-10
 cover: /image1.png
+labs: ["Google Research"]
 ---
 
 Sequence-to-sequence (seq2seq) models or encoder-decoder architecture,
