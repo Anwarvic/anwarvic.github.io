@@ -1,7 +1,8 @@
 ---
 title: "Transformers"
-date: 2017-12-06
+date: 2017-06-12
 cover: /image1.png
+labs: ["Google Brain", "Google Research", "University of Toronto"]
 ---
 
 Transformers were introduced in 2017 by Google in the "[Attention is all
