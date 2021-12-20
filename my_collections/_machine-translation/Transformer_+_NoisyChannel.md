@@ -1,6 +1,7 @@
 ---
 title: "Transformer + Noisy Channel"
 date: 2019-08-15
+labs: ["FAIR", "Google Brain"]
 ---
 
 Transformer model directly estimates the posterior probability of a
