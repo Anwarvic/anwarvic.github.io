@@ -1,7 +1,8 @@
 ---
 title: "UT: Universal Transformer"
-date: 2021-08-06
+date: 2018-07-10
 cover: /image1.png
+labs: ["University of Amsterdam", "Deep Mind", "Google Brain"]
 ---
 
 
@@ -9,7 +10,7 @@ In "Universal Transformers", the researchers from Google extended the
 standard Transformer architecture to be computationally universal
 (Turing complete) using a novel, efficient flavor of parallel-in-time
 recurrence which yields stronger results across a wider range of tasks.
-This model was proposed by Google AI in 2019 and published in their
+This model was proposed by Google AI in 2018 and published in their
 paper: [Universal Transformers](https://arxiv.org/pdf/1807.03819.pdf).
 The official code of this paper can be found on the Tensor2Tensor
 official GitHub repository:
