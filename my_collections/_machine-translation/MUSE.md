@@ -1,11 +1,12 @@
 ---
 title: "MUSE"
-date: 2018-01-30
+date: 2017-10-11
 cover: /image5.png
+labs: ["Facebook AI", "University of Le Mans", "Sorbonne Universites"]
 ---
 
 MUSE or "Multilingual Unsupervised and Supervised Embeddings" is a
-framework created by Facebook AI in 2018 and published in this paper:
+framework created by Facebook AI in 2017 and published in this paper:
 [Word Translation Without Parallel
 Data](https://arxiv.org/pdf/1710.04087.pdf). The official implementation
 of the framework can be found in this GitHub repository:
