@@ -1,7 +1,8 @@
 ---
 title: "Fusion"
-date: 2015-07-12
+date: 2015-03-11
 cover: /image1.png
+labs: ["University of Montreal", "The University of Maine"]
 ---
 
 The fusion technique is proposed by the University of Montreal in 2015
