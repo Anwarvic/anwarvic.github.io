@@ -2,6 +2,7 @@
 title: "Robust NMT"
 date: 2019-06-06
 cover: /image0.png
+labs: ["Google AI"]
 ---
 
 Neural machine translation (NMT) often suffers from the vulnerability to
