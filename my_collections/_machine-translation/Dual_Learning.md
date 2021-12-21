@@ -2,6 +2,8 @@
 title: "Dual Learning for Machine Translation"
 date: 2016-11-01
 cover: /image1.png
+labs: ["University of Science and Technology of China", "Peking University",
+"Microsoft Research"]
 ---
 
 Dual learning is a RL mechanism used mainly for machine translation,
