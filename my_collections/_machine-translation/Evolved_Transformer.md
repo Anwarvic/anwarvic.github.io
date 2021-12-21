@@ -1,6 +1,7 @@
 ---
 title: "The Evolved Transformer"
-date: 2019-05-17
+date: 2019-01-30
+labs: ["Google Brain"]
 ---
 
 The Evolved Transformer (ET) ia an evolved version of the Transformer
