@@ -1,7 +1,8 @@
 ---
 title: "Dr. NMT"
 date: 2021-08-01
-cover: /image1.png
+cover: /image0.png
+labs: ["Facebook AI"]
 ---
 
 DrNMT stands for "**D**iscriminative **R**eranking for **N**eural
