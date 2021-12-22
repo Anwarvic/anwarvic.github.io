@@ -1,7 +1,8 @@
 ---
 title: "Reformer: Efficient Transformer"
-date: 2020-02-18
+date: 2020-01-13
 cover: /image1.png
+labs: ["U.C. Berkeley", "Google Reserach"]
 ---
 
 Reformer is an efficient version of the transformers proposed by Google
