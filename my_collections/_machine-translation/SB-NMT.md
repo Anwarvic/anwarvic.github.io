@@ -2,6 +2,8 @@
 title: "SB-NMT: Synchronous Bidirectional NMT"
 date: 2019-05-13
 cover: /image1.png
+labs: ["1National Laboratory of Pattern Recognition",
+"CAS Center for Excellence in Brain Science and Intelligence Technology"]
 ---
 
 SB NMT stands for "Synchronous Bi-directional Neural Machine
