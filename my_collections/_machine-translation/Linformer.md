@@ -1,7 +1,8 @@
 ---
 title: "Linformer: Linear Transformer"
-date: 2020-06-14
+date: 2020-06-08
 cover: /image1.png
+labs: ["Facebook AI"]
 ---
 
 Linformer is an efficient version of the transformers proposed by
