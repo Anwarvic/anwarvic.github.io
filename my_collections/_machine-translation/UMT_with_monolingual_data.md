@@ -1,11 +1,12 @@
 ---
 title: "Unsupervised Machine Translation with Monolingual Data"
-date: 2018-04-13
-cover: /image2.png
+date: 2017-10-31
+cover: /image0.png
+labs: ["FAIR", "Sorbonne University"]
 ---
 
 The second model proposed in this area was created by Facebook AI in
-2018 and published in this paper: "[Unsupervised Machine Translation
+2017 and published in this paper: "[Unsupervised Machine Translation
 Using Monolingual Corpora only](https://arxiv.org/pdf/1711.00043.pdf)".
 The proposed system follows a standard encoder-decoder architecture with
 standard attention mechanism assisted by a back-translation procedure
