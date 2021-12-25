@@ -1,12 +1,13 @@
 ---
 title: "mRASP"
-date: 2021-01-22
-cover: /image1.png
+date: 2020-10-07
+cover: /image0.png
+labs: ["ByteDance AI Lab", "Fudan University"]
 ---
 
 mRASP stands for "multilingual Random Aligned Substitution Pre-training"
 which is a pre-training method for multilingual NMT models proposed by
-ByteDance AI Lab in 2021 and published in their paper: "[Pre-training
+ByteDance AI Lab in 2020 and published in their paper: "[Pre-training
 Multilingual Neural Machine Translation by Leveraging Alignment
 Information](https://arxiv.org/pdf/2010.03142.pdf)". The official code
 for this paper can be found on this GitHub repository:
