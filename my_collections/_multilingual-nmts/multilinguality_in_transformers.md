@@ -1,7 +1,8 @@
 ---
 title: "Multilinguality in Transformers"
 date: 2021-05-31
-cover: /image1.png
+cover: /image0.png
+labs: ["NAVER LABS Europe", "Université Grenoble Alpes"]
 ---
 
 The following paper: [Do Multilingual Neural Machine Translation Models
