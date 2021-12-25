@@ -1,7 +1,8 @@
 ---
 title: "CRISS"
-date: 2020-10-26
-cover: /image1.png
+date: 2020-06-16
+cover: /image0.png
+labs: ["FAIR"]
 ---
 
 CRISS stands for "**C**ross-lingual **R**etrieval for **I**terative
