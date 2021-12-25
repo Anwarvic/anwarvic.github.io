@@ -1,7 +1,8 @@
 ---
 title: "cMNMT: Complete MNMT"
 date: 2020-10-20
-cover: /image1.png
+cover: /image0.png
+labs: ["Google Research"]
 ---
 
 cMNMT stands for "Complete Multilingual Neural Machine Translation"
