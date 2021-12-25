@@ -1,7 +1,8 @@
 ---
 title: "mRASP2"
-date: 2021-07-22
+date: 2021-05-20
 cover: /image1.png
+labs: ["ByteDance AI Lab"]
 ---
 
 mRASP2 or mCOLT, "a **m**ultilingual **Co**ntrastive **L**earning
