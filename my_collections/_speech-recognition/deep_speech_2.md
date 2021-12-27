@@ -2,6 +2,7 @@
 title: "Deep Speech 2.0"
 date: 2015-12-08
 cover: /image1.png
+labs: ["Baidu Research"]
 ---
 
 Deep Speech 2 is a model created by Baidu in December 2015 (exactly one
