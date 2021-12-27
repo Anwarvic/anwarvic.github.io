@@ -1,7 +1,8 @@
 ---
 title: "CTC"
 date: 2006-06-25
-cover: /image1.png
+cover: /image0.png
+labs: ["The Swiss AI Lab", "Munich University"]
 ---
 
 To show how CTC changed the game of ASR, let's consider the following
