@@ -1,7 +1,8 @@
 ---
 title: "LAS"
-date: 2015-08-20
+date: 2015-08-05
 cover: /image1.png
+labs: ["Carnegie Mellon University", "Google Brain"]
 ---
 
 LAS stands for "Listen, Attend and Spell". It's a model created by
