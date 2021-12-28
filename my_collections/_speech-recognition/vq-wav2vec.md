@@ -1,11 +1,12 @@
 ---
 title: "vq-wav2vec"
-date: 2020-02-16
-cover: /image1.png
+date: 2019-10-12
+cover: /image0.png
+labs: ["FAIR", "University of Tubingen"]
 ---
 
 vq-wav2vec stands for "vector-quantized wav2vec" which is a model
-created by Facebook AI Research in 2020 and published in this paper:
+created by Facebook AI Research in 2019 and published in this paper:
 [vq-wav2vec: Self-Supervised Learning of Discrete Speech
 Representations](https://arxiv.org/pdf/1910.05453.pdf). As we can see,
 the title is pretty vague, so let's clear it out:
