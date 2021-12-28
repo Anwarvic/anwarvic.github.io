@@ -1,6 +1,7 @@
 ---
 title: "Wav2text"
 date: 2017-09-22
+labs: ["Nara Institute of Science and Technology"]
 ---
 
 Wav2Text is a model that was created by Nara Institute of Science and
