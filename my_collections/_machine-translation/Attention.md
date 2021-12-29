@@ -124,12 +124,14 @@ which gives different flavors of the attention mechanism where:
 
 <div align="center" class="inline-table">
 <table>
-    <tr>
-        <th style="text-align:center"><strong>Name</strong></th>
-        <th style="text-align:center"><strong>Function</strong></th>
-        <th style="text-align:center"><strong>Parameters</strong></th>
-        <th style="text-align:center"><strong>Reference</strong></th>
-    </tr>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Function</th>
+            <th>Parameters</th>
+            <th>Reference</th>
+        </tr>
+    </thead>
     <tr>
         <td>Concat (additive)</td>
         <td>$$v_{a}^T.tanh\left( W_{a}\left\lbrack s_{j};h_{i} \right\rbrack \right)$$</td>
