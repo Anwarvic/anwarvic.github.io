@@ -2,7 +2,7 @@
 title: "Dr. NMT"
 date: 2021-08-01
 cover: /image0.png
-labs: ["Facebook AI"]
+labs: ["FAIR"]
 ---
 
 DrNMT stands for "**D**iscriminative **R**eranking for **N**eural
@@ -112,8 +112,8 @@ The following are the models used in the previous table:
 
 In the paper, they also examined the effect of training the reranker
 with different sizes of the n-best list. And they found out that;
-**[as the size of the n-best list during test time increases, the
-performance of all rerankers and NCD improve]{.ul}**. The following
+<u><strong>as the size of the n-best list during test time increases, the
+performance of all rerankers and NCD improve</strong></u>. The following
 figure shows the performance of DrNMT on De-En validation sets from
 four re-rankers trained with 5, 10, 20 and 50 hypotheses,
 respectively:
