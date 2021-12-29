@@ -2,7 +2,7 @@
 title: "ConvS2S"
 date: 2017-05-08
 cover: /image2.png
-labs: ["Facebook AI"]
+labs: ["FAIR"]
 ---
 
 One of the major defects of Seq2Seq models is that it can't process
