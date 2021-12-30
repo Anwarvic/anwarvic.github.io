@@ -2,7 +2,7 @@
 title: "MUSE"
 date: 2017-10-11
 cover: /image5.png
-labs: ["Facebook AI", "University of Le Mans", "Sorbonne Universites"]
+labs: ["FAIR", "University of Le Mans", "Sorbonne University"]
 ---
 
 MUSE or "Multilingual Unsupervised and Supervised Embeddings" is a
