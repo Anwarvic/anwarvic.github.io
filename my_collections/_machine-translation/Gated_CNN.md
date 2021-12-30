@@ -1,7 +1,7 @@
 ---
 title: "Gated CNN"
 date: 2016-12-23
-labs: ["Facebook AI"]
+labs: ["FAIR"]
 ---
 
 One of the major defects of Seq2Seq models is that it can't process
