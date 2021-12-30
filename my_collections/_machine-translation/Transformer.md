@@ -5,23 +5,44 @@ cover: /image1.png
 labs: ["Google Brain", "Google Research", "University of Toronto"]
 ---
 
-Transformers were introduced in 2017 by Google in the "[Attention is all
-you need](https://arxiv.org/pdf/1706.03762.pdf)" paper. Transformer
-architecture was created in attempt to combine all good things from
-Seq2Seq architecture and ConvS2S with attention mechanisms. So, it deals
-with the text data in an encoder-decoder architecture the same as
-Seq2Seq and tries to parallelize the input data the same as CNNs.
+Transformer architecture is a novel architecture for encoder-decoder
+paradigm created in an attempt to combine all good things from
+[Seq2Seq](https://anwarvic.github.io/machine-translation/Seq2Seq)
+architecture and
+[ConvS2S](https://anwarvic.github.io/machine-translation/ConvS2S) with
+attention mechanisms. Transformer was proposed by a team from Google
+Research and Google Brain in 2017 and published in a paper under the
+name: "[Attention is all you
+need](https://arxiv.org/pdf/1706.03762.pdf)". The official code for this
+paper can be found on the Tensor2Tensor official GitHub repository:
+[tensor2tensor](t https:/github.com/tensorflow/tensor2tensor).
 
-In this paper, the Transformer architecture consists of six layers of
-encoder and six layers of decoder. The following image represents the
-transformer architecture in just one layer:
+Transformer architecture deals with the input text data in an
+encoder-decoder manner the same as Seq2Seq and tries to parallelize the
+input data the same as ConvS2S. In this paper, the Transformer
+architecture consists of six layers of encoder and six layers of decoder
+as shown in the following figure:
 
 <div align="center">
     <img src="media/Transformer/image1.png" width=750>
 </div>
 
-In this transformer architecture, there are three different attention
-mechanisms used:
+Architecture
+------------
+
+Most competitive machine translation models have an encoder-decoder
+structure where the encoder maps an input sequence of symbol
+representations $X = \left( x_{1},\ ...x_{n} \right)$ to a sequence of
+continuous representations $Z = \left( z_{1},\ ...z_{n} \right)$. Given
+$Z$, the decoder then generates an output sequence
+$Y = \left( y_{1},\ ...y_{m} \right)$ of symbols in an autoregressive
+manner (one token at a time).
+
+The most critical and influential part of the Transformer is the
+attention mechanism which takes a quadratic time and space over the
+input sequence which makes training Transformer takes longer time that
+Seq2Seq and ConvS2S models. In this transformer architecture, there are
+three different attention mechanisms used:
 
 -   Attention between the input tokens (self-attention).
 
@@ -29,6 +50,7 @@ mechanisms used:
 
 -   Attention between the input and the output tokens
 
+> **Note:**\
 The attention between the input (or output) tokens is called
 **self-attention** because the attention is between the same parameters.
 
@@ -60,8 +82,8 @@ Encoder
 </div>
 
 
-We are going to focus on the encoder part
-of the transformer architecture which consists of different modules:
+We are going to focus on the encoder part of the transformer architecture
+which consists of different modules:
 
 -   **Embedding:** where we map words into vectors representing their
     meaning such that similar words will have similar vectors.
@@ -71,9 +93,9 @@ of the transformer architecture which consists of different modules:
     the embedding vector that gives context based on word-position in a
     sentence. This can be done by applying following equation:
 
-$$\text{PE}_{\left( \text{pos},\ 2i \right)} = \sin\left( \frac{\text{pos}}{10000^{\frac{2i}{d}}} \right)$$
-
-$$\text{PE}_{\left( \text{pos},\ 2i + i \right)} = \cos\left( \frac{\text{pos}}{10000^{\frac{2i}{d}}} \right)$$
+$$\text{PE}_{\left( \text{pos},\ 2i \right)} = \sin\left( \frac{\text{pos}}{10000^{\frac{2i}{d}}} \right)
+\ \ \ \ \ 
+\text{PE}_{\left( \text{pos},\ 2i + i \right)} = \cos\left( \frac{\text{pos}}{10000^{\frac{2i}{d}}} \right)$$
 
 &emsp;&emsp;&emsp;&emsp;Where "pos" is the word position/index (starting from zero). "i" is
 the $i^{th}$ value of the word embedding and "d" is the size of the word
@@ -115,6 +137,8 @@ when you type a <u><strong>query</strong></u> on Google to search for, this quer
 will be mapped to a set of results <u><strong>keys</strong></u> to score each
 result. And the highest results will be the <u><strong>values</strong></u> you
 were looking for.
+
+$$\text{Attention}\left( Q,\ K,\ V \right) = softmax\left( \frac{QK^{T}}{\sqrt{d_{k}}} \right)V$$
 
 &emsp;&emsp;&emsp;So, we are going to perform a dot product of Q and K to get a score
 matrix that scores the relation between each word in the input and
@@ -165,36 +189,52 @@ talk about in a second.
     <img src="media/Transformer/image10.png" width=750>
 </div>
 
+$$\text{MultiHead}\left( Q,\ K,\ V \right) = Concat\left( \text{head}_{1},...\text{head}_{h} \right)\ W^{O}$$
+
+&emsp;&emsp;&emsp;Where $Q,\ K,\ V \in \mathbb{R}^{n \times d_{m}}$ are input
+embedding matrices, $n$ is sequence length, $d_{m}$ is the embedding dimension,
+and $h$ is the number of heads. Each head is defined as:
+
+$$\text{head}_{i} = \text{Attention}\left( QW_{i}^{Q},KW_{i}^{K},VW_{i}^{V} \right)$$
+
+$$\ \ \ \ \ \ \ \ \ \ \  = \text{softmax}\left\lbrack \frac{QW_{i}^{Q}\left( KW_{i}^{K} \right)^{T}}{\sqrt{d_{k}}} \right\rbrack VW_{i}^{V}$$
+
+&emsp;&emsp;&emsp; Where
+$W_{i}^{Q},W_{i}^{K} \in \mathbb{R}^{d_{m} \times d_{k}},W_{i}^{V} \in \mathbb{R}^{d_{m} \times d_{v}},W_{i}^{O} \in \mathbb{R}^{h d_v \times d_m}$
+are learned matrices.
+
 -   **Residual Connection & Normalization**:
-    After the multi-head self-attention, we have output vectors, we add
-    the positional input embedding to the output vectors which is known
-    as a residual connection. The main use for these residual
-    connections is to prevent the vanishing gradient problem.
+    After the multi-head self-attention, the positional input embedding
+    is added to the output vectors. This is known as a "residual
+    connection" which is mainly used to prevent gradient from vanishing.
+    After that, a layer normalization is applied:
 
 <div align="center">
     <img src="media/Transformer/image11.png" width=550>
+    <!-- <img src="media/Transformer/image12.png" width=150> -->
 </div>
+
+$$x_{l + 1} = \text{LayerNorm}\left( x_{l} + F_{l}(x_{l}) \right)$$
+
 
 &emsp;&emsp;&emsp;Then, we apply a batch or layer normalization. The difference is
 pretty subtle where the batch normalization normalizes over all data in the
 batch and the layer normalization normalizes over all weights in the layer.
 
-<div align="center">
-    <img src="media/Transformer/image12.png" width=150>
-</div>
 
--   **Feed-forward & Residual & Norm**:
+-   **Feed-forward**:
     Now, the normalization output gets fed to the feed-forward network
     for further processing. The feed-forward network is just a couple of
-    linear layers with a ReLU in between as shown in the attached
-    figure.
+    linear layers with a $\text{ReLU}$ activation function in between.
+    The dimension of the feed-forward network is defined by the
+    $d_{\text{ff}}$ parameter.
 
-&emsp;&emsp;&emsp;Then, the input is added to the output as a residual connection,
-then we apply some kind of normalization either layer of batch.
+$$\text{FFN}\left( x \right) = \text{ReLU}\left( xW_{1} + b_{1} \right)W_{2} + b_{2}$$
 
 <div align="center">
     <img src="media/Transformer/image13.png" width=350>
 </div>
+
 
 Decoder
 -------
@@ -231,6 +271,102 @@ when applying the Softmax.
     and the values will be the output of the masked multi-head block.
 
 
+Training
+--------
+
+Before training, sentences were encoded using byte-pair encoding with a
+shared source-target vocabulary of about $37,000$ tokens for WMT
+English-German and 32,000 for English-French.
+
+For training, each training batch contained approximately $25,000$
+tokens. They used Adam optimizer with
+$\beta_{1} = 0.9,\ \beta_{2} = 0.98$ and $\epsilon = 10^{- 9}$. Learning
+rate was varied over the course of training, according to the following
+formula:
+
+$$lr = d_{\text{model}}^{- 0.5}.\min\left( {step\_ num}^{- 0.5},\ step\_ num*{warmup\_ steps}^{- 1.5} \right)$$
+
+This corresponds to increasing the learning rate linearly for the first
+$\text{warmup\_steps}$ training steps, and decreasing it thereafter
+proportionally to the inverse square root of the $\text{step\_num}$. They used
+$\text{warmup\_steps} = 4000$.
+
+For regularization, they used dropout to the output of each sub-layer,
+before it is added to the sub-layer input and normalized. In addition,
+they applied dropout to the sums of the embeddings and the positional
+encodings in both the encoder and decoder stacks. Also, label smoothing
+$\epsilon_{l_{s}} = 0.1$ was used.
+
+There were two variants of the Transformer configurations found in the
+paper, Transformer-base and Transformer-big configurations which can be
+summarized in the following table:
+
+<div align="center" class="inline-table">
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>$$N$$</th>
+            <th>$$d_{m}$$</th>
+            <th>$$d_{\text{ff}}$$</th>
+            <th>$$h$$</th>
+            <th>$$d_{k}$$</th>
+            <th>$$d_{v}$$</th>
+            <th>$$P_{\text{dropout}}$$</th>
+            <th>$$\epsilon_{l_{s}}$$</th>
+            <th># parameters</th>
+            <th>train steps</th>
+        </tr>
+    </thead>
+    <tr>
+        <td><strong>Base</strong></td>
+        <td>6</td>
+        <td>512</td>
+        <td>2048</td>
+        <td>8</td>
+        <td>64</td>
+        <td>64</td>
+        <td>0.1</td>
+        <td>0.1</td>
+        <td>65 M</td>
+        <td>100k</td>
+    </tr>
+    <tr>
+        <td><strong>Large</strong></td>
+        <td>6</td>
+        <td>1024</td>
+        <td>4096</td>
+        <td>16</td>
+        <td>64</td>
+        <td>64</td>
+        <td>0.3</td>
+        <td>0.1</td>
+        <td>213 M</td>
+        <td>300k</td>
+    </tr>
+</table>
+</div>
+
+
+For decoding, they used beam search with a $\text{beam size} = 4$ and length
+penalty $\alpha = 0.6$.
+
+The following table shows that the big transformer model achieves
+state-of-the-art performance on the WMT 2014 English-German translation
+task and English-French translation:
+
+<div align="center">
+    <img src="media/Transformer/image20.png" width=750>
+</div>
+
+The base models score was obtained by averaging the last 5 checkpoints,
+which were written at 10-minute intervals. For the big models, the last
+20 checkpoints were averaged.
+
+> **Note:**\
+For the English-French dataset, the big transformer used
+$P_{\text{dropout}} = 0.1$, instead of $P_{\text{dropout}} = 0.3$.
+
 Layer Normalization
 -------------------
 
@@ -261,7 +397,7 @@ $$x_{l + 1} = \text{LayerNorm}\left( x_{l} + F_{l}(x_{l}) \right)$$
 
 $$x_{l + 1} = x_{l} + F_{l}\left( \text{LayerNorm}(x_{l}) \right)$$
 
-> <u><strong>Very Important Note:</strong></u>
+> <u><strong>Very Important Note:</strong></u>\
 In the paper, they found out that post-normalization works best
 with high-resource languages while pre-normalization works best with
 low-resource languages.
@@ -275,7 +411,7 @@ normalization:
     parameters $\gamma,\ \beta$ in layer normalization with one global
     learned scalar $g$:
 
-$$S\text{caleNorm}\left( x;g \right) = g\frac{x}{\left\| x \right\|}$$
+$$\text{ScaleNorm}\left( x;g \right) = g\frac{x}{\left\| x \right\|}$$
 
 -   <u><strong>Scale-Norm + Fix-Norm:</strong></u>
     Fix-Norm is applied to the word embeddings. It looks exactly like
@@ -354,7 +490,7 @@ pruning strategies:
 
 $$p = 1 - \frac{r}{N}$$
 
-> **Note:**
+> **Note:**\
 In the paper, they used a LayerDrop rate of $p = 0.2$ for all their
 experiments. However, they recommend using $p = 0.5$ to obtain very
 small models at inference time.
