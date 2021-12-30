@@ -228,21 +228,23 @@ We can calculate the chrF metric using the following steps:
 
 <div align="center" class="inline-table">
 <table>
-    <tr>
-        <th></th>
-        <th style="text-align:center"><strong>a</strong></th>
-        <th style="text-align:center"><strong>c</strong></th>
-        <th style="text-align:center"><strong>e</strong></th>
-        <th style="text-align:center"><strong>h</strong></th>
-        <th style="text-align:center"><strong>i</strong></th>
-        <th style="text-align:center"><strong>k</strong></th>
-        <th style="text-align:center"><strong>l</strong></th>
-        <th style="text-align:center"><strong>o</strong></th>
-        <th style="text-align:center"><strong>s</strong></th>
-        <th style="text-align:center"><strong>t</strong></th>
-        <th style="text-align:center"><strong>v</strong></th>
-        <th style="text-align:center"><strong>y</strong></th>
-    </tr>
+    <thead>
+        <tr>
+            <th></th>
+            <th>a</th>
+            <th>c</th>
+            <th>e</th>
+            <th>h</th>
+            <th>i</th>
+            <th>k</th>
+            <th>l</th>
+            <th>o</th>
+            <th>s</th>
+            <th>t</th>
+            <th>v</th>
+            <th>y</th>
+        </tr>
+    </thead>
     <tr>
         <td><strong>Reference</strong></td>
         <td>1</td>
@@ -358,16 +360,16 @@ Here, the hypothesis (HYP) is fluent and means the same thing (except
 for missing "American") as the reference (REF). However, TER does not
 consider this an exact match as:
 
--   The phrase "this week" is "shifted" (this counts as **[one]{.ul}**
-    shift). Shifts have a cost of one no matter how far this phrase
-    moves.
+-   The phrase "this week" is "shifted" (this counts as <u><strong>one
+    </strong></u> shift). Shifts have a cost of one no matter how far this
+    phrase moves.
 
 -   The phrase "Saudi Arabia" in the reference appears as "the Saudis"
-    in the hypothesis (this counts as **[two]{.ul}** separate
+    in the hypothesis (this counts as <u><strong>two</strong></u> separate
     substitutions).
 
 -   The word "American" appears only in the reference (this counts as
-    **[one]{.ul}** insertion).
+    <u><strong>one</strong></u> insertion).
 
     Then, the TER score is:
 
@@ -405,8 +407,8 @@ normalized by the length of the hypothesis sentence:
 $$CharacTER = \frac{shift\ cost\  + \ edit\ distance}{\#\ characters\ in\ the\ hypothesis\ sentence}$$
 
 CharacTer calculates shift edit on word level; two words are considered
-to be matched if [they are exactly the same]{.ul}, or if [the edit
-distance between them is below a threshold value]{.ul}.
+to be matched if <u>they are exactly the same</u>, or if <u>the edit
+distance between them is below a threshold value</u>.
 
 ### EED
 
