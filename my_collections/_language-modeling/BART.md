@@ -2,7 +2,7 @@
 title: "BART"
 date: 2019-10-29
 cover: /image0.png
-labs: ["Facebook AI"]
+labs: ["FAIR"]
 ---
 
 BART stands for "Bidirectional Auto-regressive Transformer" which is a
