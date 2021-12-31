@@ -2,7 +2,7 @@
 title: "BERT"
 date: 2018-10-11
 cover: /image3.png
-labs: ["Google AI Language"]
+labs: ["Google AI"]
 ---
 
 BERT stands for "Bidirectional Encoder Representations from
@@ -175,11 +175,13 @@ The following summarizes the difference between both models:
 
 <div align="center" class="inline-table">
 <table>
-    <tr>
-        <th style="text-align:center"></th>
-        <th style="text-align:center"><strong>BERT BASE</strong></th>
-        <th style="text-align:center"><strong>BERT LARGE</strong></th>
-    </tr>
+    <thead>
+        <tr>
+            <th></th>
+            <th>BERT BASE</th>
+            <th>BERT LARGE</th>
+        </tr>
+    </thead>
     <tr>
         <td><strong>Transformer Blocks</strong></td>
         <td>12</td>
