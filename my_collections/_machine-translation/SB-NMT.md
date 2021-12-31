@@ -2,7 +2,7 @@
 title: "SB-NMT: Synchronous Bidirectional NMT"
 date: 2019-05-13
 cover: /image1.png
-labs: ["1National Laboratory of Pattern Recognition",
+labs: ["National Laboratory of Pattern Recognition",
 "CAS Center for Excellence in Brain Science and Intelligence Technology"]
 ---
 
@@ -15,8 +15,8 @@ for this paper can be found on the following GitHub repository:
 [sb-nmt](https://github.com/wszlong/sb-nmt).
 
 SB-NMT architecture is the same as the standard Transformer with the
-exception that the decoder has a **[Synchronous Bi-directional
-Attention]{.ul}** sub-layer instead of the Multi-head Self-attention one
+exception that the decoder has a <u><strong>Synchronous Bi-directional
+Attention</strong></u> sub-layer instead of the Multi-head Self-attention one
 which enable the decoder to predict its outputs using left-to-right and
 right-to-left decoding simultaneously and interactively, in order to
 leverage both of the history and future information at the same time.
@@ -25,4 +25,4 @@ leverage both of the history and future information at the same time.
     <img src="media/SB-NMT/image1.png" width=750>
 </div>
 
-TO BE CONTINUED
+TO BE CONTINUED...
