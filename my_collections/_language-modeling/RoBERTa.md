@@ -2,7 +2,7 @@
 title: "RoBERTa"
 date: 2019-07-26
 cover: /image0.png
-labs: ["Facebook AI"]
+labs: ["FAIR"]
 ---
 
 RoBERTa, stands for "**R**obustly **o**ptimized **BERT** **a**pproach",
