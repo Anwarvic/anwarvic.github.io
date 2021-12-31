@@ -2,7 +2,7 @@
 title: "UT: Universal Transformer"
 date: 2018-07-10
 cover: /image1.png
-labs: ["University of Amsterdam", "Deep Mind", "Google Brain"]
+labs: ["University of Amsterdam", "DeepMind", "Google Brain"]
 ---
 
 
