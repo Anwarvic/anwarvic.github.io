@@ -226,7 +226,7 @@ Now, let's get into these three gates in more details:
 
     -   This gate <u><strong>controls how much of the information of the
         previous cell state
-        $c^{\left\langle t - 1 \right\rangle}$ <u><strong>should be forgot or
+        $c^{\left\langle t - 1 \right\rangle}$ should be forgot or
         kept while calculating the current cell state
         $c^{\left\langle t \right\rangle}$.</strong></u>
 
@@ -250,7 +250,7 @@ $$\Gamma_{f}^{\left\langle t \right\rangle} = \sigma\left( W_{f}\left\lbrack a^{
     -   Similar to the forget gate, this gate <u><strong>controls how much of
         the information of the current input state
         $\left\lbrack a^{\left\langle t - 1 \right\rangle},x^{\left\langle t \right\rangle} \right\rbrack$
-        <u><strong>should be used while calculating the current cell
+        should be used while calculating the current cell
         $c^{\left\langle t \right\rangle}$ state matter now.</strong></u>
 
 $$\Gamma_{u}^{\left\langle t \right\rangle} = \sigma\left( W_{u}\left\lbrack a^{\left\langle t - 1 \right\rangle},x^{\left\langle t \right\rangle} \right\rbrack + b_{u} \right)$$
@@ -434,14 +434,16 @@ on different tasks:
 
 <div align="center" class="inline-table">
 <table>
-    <tr>
-        <th style="text-align:center"><strong>Task</strong></th>
-        <th style="text-align:center"><strong>Cell</strong></th>
-        <th style="text-align:center"><strong>#Layers</strong></th>
-        <th style="text-align:center"><strong>Layer Size</strong></th>
-        <th style="text-align:center"><strong>Embedding Size</strong></th>
-        <th style="text-align:center"><strong>Source</strong></th>
-    </tr>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Cell</th>
+            <th>#Layers</th>
+            <th>Layer Size</th>
+            <th>Embedding Size</th>
+            <th>Source</th>
+        </tr>
+    </thead>
     <tr>
         <td>Speech Recognition (500K vocabulary)</td>
         <td>LSTM</td>
