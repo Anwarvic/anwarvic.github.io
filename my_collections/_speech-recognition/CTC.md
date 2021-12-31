@@ -117,8 +117,8 @@ where:
 -   $\prod_{t = 1}^{T}\ $: is the probability for a single alignment
     $a_{t}$ step-by-step over all $T$ steps.
 
-As we can see, we can summarize the objective function as **[the sum of
-all possible true alignments for the given input]{.ul}**. To understand
+As we can see, we can summarize the objective function as <u><strong>the sum of
+all possible true alignments for the given input</strong></u>. To understand
 what that means and how the objective function is calculated, let's take
 a simple example where the input
 $X = \left\lbrack x_{1},x_{2},x_{4},x_{4},x_{5},x_{6} \right\rbrack$ and
@@ -139,7 +139,7 @@ using the following steps:
     <img src="media/CTC/image4.png" width=750>
 </div>
 
--   Define all the [possible alignments]{.ul} of the previous CTC network:
+-   Define all the <u>possible alignments</u> of the previous CTC network:
 
 <div align="center">
     <img src="media/CTC/image5.png" width=750>
@@ -183,12 +183,12 @@ time-step greedily. This is called "Greedy Search" and it works well for
 many applications. However, this approach can sometimes miss easy to
 find outputs with much higher probability.
 
-A better approach is to use "Beam Search". A **[standard/vanilla]{.ul}**
-beam search computes a new set of hypotheses at each input time-step.
-The new set of hypotheses is generated from the previous set by
-extending each hypothesis with all possible output characters and
-keeping only the top few candidates which is known as "beam size". The
-following example uses a beam size of 3.
+A better approach is to use "Beam Search". A <u><strong>standard/vanilla
+</strong></u> beam search computes a new set of hypotheses at each input
+time-step. The new set of hypotheses is generated from the previous set by
+extending each hypothesis with all possible output characters and keeping only
+the top few candidates which is known as "beam size". The following example
+uses a beam size of 3.
 
 <div align="center">
     <img src="media/CTC/image6.png" width=750>
@@ -213,8 +213,8 @@ Now, the paths will be:
     represent anything but noise. So, it's very different than the space
     character " ".
 
--   CTC works **[only]{.ul}** when the output sequence Y is shorter than
-    the input sequence X.
+-   CTC works <u><strong>only</strong></u> when the output sequence Y is
+    shorter than the input sequence X.
 
 -   CTC assumes conditional independence which means that the output at
     time $t$ is independent of the output at time $t - 1$, given the
