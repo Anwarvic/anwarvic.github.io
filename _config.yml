@@ -2,7 +2,7 @@
 title: "Anwarvic's Blog"
 description: "I write about research papers in these topics:"
 url: 'https://anwarvic.github.io'
-cover: images/space.jpg
+cover: images/forest.jpg
 baseurl: ''
 google_analytics: 'G-D53BTZQ94B'
 disqus_shortname: 'anwarvic'
@@ -17,9 +17,7 @@ author:
   hackerrank: anwarvic
   leetcode: anwarvic
 
-
 collections_dir: my_collections
-
 collections:
   language-modeling:
     output: true
@@ -29,18 +27,22 @@ collections:
     output: true
     permalink: /:collection/:path
     title: "Machine Translation"
-  multilingual-nmts:
+  multilingual-nmt:
     output: true
     permalink: /:collection/:path
-    title: "Multilingual NMTs"
-  word-embedding:
+    title: "Multilingual NMT"
+  cross-lingual-lm:
     output: true
     permalink: /:collection/:path
-    title: "Word Embedding"
+    title: "Cross-lingual LM"
   speech-recognition:
     output: true
     permalink: /:collection/:path
     title: "Speech Recognition"
+  # word-embedding:
+  #   output: true
+  #   permalink: /:collection/:path
+  #   title: "Word Embedding"
 
 defaults:
   -
