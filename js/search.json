@@ -10,12 +10,10 @@ sitemap:
       {% assign inner_last_idx = forloop.length %}
       {% assign inner_idx = forloop.index %}
       {
-        "title"     : "{{ post.title | escape }}",
         "collection": "{{ collection.title }}",
+        "title"     : "{{ post.title | escape }}",
         "url"       : "{{ site.baseurl }}{{ post.url }}",
-        "category"  : "{{ post.category }}",
-        "tags"      : "{{ post.tags | join: ', ' }}",
-        "date"      : "{{ post.date | date: '%-d %b %Y'}}",
+        "date"      : "{{ post.date | date: '%d/%m/%Y'}}",
         "content": {{ post.content | strip_html | escape | jsonify}}
       }{% unless outer_idx == outer_last_idx and inner_idx == inner_last_idx %},{% endunless %}
     {% endfor %}
