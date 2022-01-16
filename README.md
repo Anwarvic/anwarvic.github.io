@@ -6,8 +6,8 @@ url: https://anwarvic.github.io. This source code was adapted from the
 Josh Gerdes.
 
 <div align="center">
-  <img src="/images/assets/peek_web.gif" width=750>
-  <img src="/images/assets/peek_mobile.gif" height=500>
+  <img src="images/assets/peek_web.gif" width=750>
+  <img src="images/assets/peek_mobile.gif" height=500>
 </div>
 
 ## Dependencies
@@ -60,7 +60,7 @@ order:
   styles. This file overrides the properties found in `_scss` directory.
 
 - `_drafts/`: Directory for drafts of your posts. This directory is excluded
-  by default in Jekyll.
+  when building by default in Jekyll.
 
 - `images/`: Directory containing images found only the cover of the blog.
   Posts images can be found in `my_collections` directory.
@@ -90,6 +90,8 @@ order:
   - `named_collection.html`: The HTML layout for enlisting all articles found
     in a certain collection.
   - `post.html`: The HTML layout for the article/post.
+  - `labs.html`: The HTML labs for `/labs` route showing list of labs published
+    papers mentioned in the blog.
 
 - `my_collections/`: Directory containing all articles I wrote for my blog. All
   files in this directory are in Markdown format. Any images included in any
@@ -107,14 +109,15 @@ order:
 - `Gemfile`: File where you specify the ruby gems you want to use.
 - `Gemfile.lock`: File where Bundler records the exact versions that were installed.
 - `index.html`: The HTML file for the home page.
+- `labs.md`: The main page for `\labs` route.
 - `language-modeling.md`: The main page for `/language-modeling` route.
 - `machine-translation.md`: The main page for `/machine-translation` route.
 - `multilingual-nmts.md`: The main page for `/multilingual-nmts` route.
-- `robots.txt`: A file used by the search engine crawlers.
+- `robots.txt`: A file used by search engine crawlers.
 - `search.html`: The main page for the `/search` route.
 - `sitemap.xml`: A Sitemap is an XML file that lists the URLs for a site.
-- `speech-recognition.html`: The main page for the `/speech-recognition` route.
-- `word-embedding.html`: The main page for the `/word-embedding` route.
+- `speech-recognition.md`: The main page for the `/speech-recognition` route.
+- `word-embedding.md`: The main page for the `/word-embedding` route.
 
 Now, we have an idea about each single file of this repository. Once you start
 the server using the `bundle exec jekyll serve --watch` command, the server
@@ -125,7 +128,7 @@ http://localhost:4000 which will present the content of the `index.html` file.
 > **Note:**
 >
 > Any file that wasn't mentioned in the previous list is either deprecated or
-> not important at the current moment
+> not important at the current moment!
 
 ## _config.yml
 
@@ -167,7 +170,7 @@ Now, let's discuss a few of these global variables:
 The following are some of the past variables shown in the blog:
 
 <div align="center">
-  <img src="/images/assets/cover-desc.png" height=500>
+  <img src="images/assets/cover-desc.png" height=500>
 </div>
 
 ## index.html
@@ -197,10 +200,11 @@ these steps:
 - Add the Front Matter to the file.
     ```
     ---
-    title: # Title of the post
-    date:  # Date of the post
-    cover: # Relative path to the post's cover image
-    comments: # Whether or not the post will have comments (default: true)
+    title:    # Title of the post.
+    date:     # Date of the post.
+    cover:    # Relative path to the post's cover image.
+    labs:     # Labs that published this paper.
+    comments: # Whether or not the post will have comments. (default: true)
     ---
     ```
 - Add the content of the post using Markdown.
@@ -261,8 +265,34 @@ check the following three files:
   that does the searching using the JSON database created at deployment.
 
 <div align="center">
-  <img src="/images/assets/peek_search.gif" width=750>
+  <img src="images/assets/peek_search.gif" width=750>
 </div>
+
+## Minutes to Read
+
+One of the most important features implemented here is to show the number of
+minutes an average reader would take to read a certain article. You can find
+this piece of information at the first line of any article.
+
+<div align="center">
+  <img src="images/assets/to_read.png" width=750>
+</div>
+
+The piece of code responsible for this feature can be found in the `post.html`
+layout file. In particular, the following few lines:
+```html
+<span id="reading-time">
+  {% assign words = page.content | strip_html | number_of_words %}
+  {{ words | divided_by: 250 | plus: 1 }} mins read
+</span>
+```
+
+> **Note:**
+>
+> This code assume that the average person is able to read **250** words per
+minute which is the universal value for English. If this number changes for
+other languages, don't forget to change it here.
+
 
 ## Create New Collection
 
@@ -299,7 +329,7 @@ the `_config.yml` file.
 
 The HTML for the disqus plugin, can be found in the `disqus.html` file.
 
-> **NOTE:**
+> **Note:**
 >
 > To disable the comments on a certain post, go to the post markdown file and
 > add the following line in the header just like so:
@@ -310,7 +340,7 @@ The HTML for the disqus plugin, can be found in the `disqus.html` file.
 > ```
 
 <div align="center">
-  <img src="/images/assets/disqus.png" width=750>
+  <img src="images/assets/disqus.png" width=750>
 </div>
 
 ## Google Analytics
@@ -383,7 +413,7 @@ sitemap:
   changefreq: weekly 
 ```
 
-> Note:
+> **Note:**
 >
 > The default frequency is `monthly` while the default priority for any *post*
 > is `0.5` while it's `0.3` for any *page*. A page is any file that isn't HTML
