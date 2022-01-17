@@ -15,28 +15,31 @@ layout: default
 {% endfor %}
 {% assign all_labs = all_labs | uniq | sort %}
 
+<div class="main">
+  <h2>Labs:</h2>
+  <div class="tags">
+    {% for labname in all_labs  %} 
+    <a href="#{{ labname }}">{{ labname }}</a>
+    {% endfor %}
+  </div>
 
-<h2>Labs:</h2>
-<div class="tags">
-  {% for labname in all_labs  %} 
-  <a href="#{{ labname }}">{{  labname }}</a>
+  <hr class="post-list__divider">
+
+  {% for labname in all_labs %} 
+    <div id="{{ labname }}">  
+      <h4> {{ labname }} </h4>
+
+      <ul>
+        {% for collection in site.collections %}
+          {% for post in site[collection.label] %}
+            {% if post.labs contains labname %} 
+            <li>
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
   {% endfor %}
 </div>
-
-{% for labname in all_labs %} 
-  <div id="{{ labname }}">  
-    <h3> {{ labname }} </h3>
-
-    <ul>
-      {% for collection in site.collections %}
-        {% for post in site[collection.label] %}
-          {% if post.labs contains labname %} 
-          <li>
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </li>
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
-    </ul>
-  </div>
-{% endfor %}
