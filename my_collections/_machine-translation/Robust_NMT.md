@@ -79,7 +79,7 @@ Formally, let $z$ be the decoder input for the sentence pair $(x,\ y)$.
 Using the same AdvGen function, we will generate an adversarial target
 input $z'$ from $z$ by:
 
-$$z' = \text{AdvGen}\left( z,\ Q_{\text{trg}},\ D_{\text{trg}},\  - \log\text{\ P}\left( y \middle| x' \right) \right)$$
+$$z' = \text{AdvGen}\left( z,\ Q_{\text{trg}},\ D_{\text{trg}},\  - \log P\left( y \middle| x' \right) \right)$$
 
 Note that:
 
@@ -125,7 +125,7 @@ standard Transformer model.
 
 Accordingly, we compute the robustness loss on $S$ as:
 
-$$\mathcal{L}_{\text{robust}}\left( \theta_{\text{nmt}} \right) = \frac{1}{\left| S \right|}\sum_{\left( x,y \right) \in S}^{}{- \log\text{\ P}\left( y \middle| x',\ z';\ \theta_{\text{nmt}} \right)}$$
+$$\mathcal{L}_{\text{robust}}\left( \theta_{\text{nmt}} \right) = \frac{1}{\left| S \right|}\sum_{\left( x,y \right) \in S}^{}{- \log P\left( y \middle| x',\ z';\ \theta_{\text{nmt}} \right)}$$
 
 And the final loss will be a combination of four loss functions:
 
