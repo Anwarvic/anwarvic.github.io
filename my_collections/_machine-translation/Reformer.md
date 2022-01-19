@@ -16,7 +16,7 @@ efficiency of Transformers while keeping the same great performance.
 -   They replaced the dot-product attention by one that uses
     locality-sensitive hashing, changing its complexity from
     $O\left( N^{2} \right)$ to
-    $O\left( N\text{log}\left( N \right) \right)$, where $N$ is the
+    $O\left( N \text{log}\left( N \right) \right)$, where $N$ is the
     length of the sequence.
 
 -   They used reversible residual layers instead of the standard
@@ -80,7 +80,7 @@ Before getting into the First, let's recap the standard attention used
 in the original Transformer paper which was the scaled dot-product
 attention:
 
-$$A\text{ttention}\left( Q,\ K,\ V \right) = softmax\left( \frac{QK^{T}}{\sqrt{d_{k}}} \right)V$$
+$$\text{Attention}\left( Q,\ K,\ V \right) = softmax\left( \frac{QK^{T}}{\sqrt{d_{k}}} \right)V$$
 
 As we can see from the previous formula, the input consists of queries
 $Q$, keys $K$ and values $V$. These matrices are obtained by projecting
