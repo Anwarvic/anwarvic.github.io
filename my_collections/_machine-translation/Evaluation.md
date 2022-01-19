@@ -206,7 +206,7 @@ evaluation](https://aclanthology.org/W15-3049.pdf)". This metric depends
 on the character-level n-gram since it correlates very well with human
 judgments. The general formula for the CHRF score is:
 
-$$c\text{hr}F_{\beta} = \left( 1 + \beta^{2} \right).\frac{chrP + chrR}{\beta^{2}.chrP + chrR}$$
+$$\text{chr}F_{\beta} = \left( 1 + \beta^{2} \right).\frac{chrP + chrR}{\beta^{2}.chrP + chrR}$$
 
 Where $\text{chrP}$ and $\text{chrR}$ are the n-gram precision and
 recall respectively averaged over all character n-grams. And and $\beta$
@@ -286,12 +286,12 @@ We can calculate the chrF metric using the following steps:
 
 $$tp = 7$$
 
--   $t\text{pfp}$ (True Positive + False Positive): count of characters
+-   $\text{tpfp}$ (True Positive + False Positive): count of characters
     found in hypothesis.
 
 $$tpfp = 11$$
 
--   $t\text{pfn}$ (True Positive + False Negative): count of characters
+-   $\text{tpfn}$ (True Positive + False Negative): count of characters
     found in reference.
 
 $$tpfn = 13$$
@@ -303,7 +303,7 @@ $$\text{chr}P = \frac{\text{tp}}{\text{tpfp}} = \frac{7}{11},\ \ \ \ \ chrR = \f
 
 -   Now, we can calculate the character f-score:
 
-$$c\text{hr}F_{\beta} = \left( 1 + \beta^{2} \right).\frac{chrP + chrR}{\beta^{2}.chrP + chrR}$$
+$$\text{chr}F_{\beta} = \left( 1 + \beta^{2} \right).\frac{chrP + chrR}{\beta^{2}.chrP + chrR}$$
 
 -   All of that for unigram character model. In the paper, they did that
     when n=1 till n=6. So, we will do the same when n=2,3,4,5,6 and
@@ -434,7 +434,7 @@ as a dashed line:
 EED utilizes the idea of jumps as an extension of the edit distance. EED
 operates at character level and is defined as follows:
 
-$$EED = min\left( \frac{\left( e + \alpha\text{.j} \right) + \rho\text{.v}}{\left| r \right| + \rho\text{.v}},\ 1 \right),\ \ \ \text{EED} \in \left\lbrack 0,\ 1 \right\rbrack$$
+$$EED = min\left( \frac{\left( e + \alpha \text{.j} \right) + \rho \text{.v}}{\left| r \right| + \rho \text{.v}},\ 1 \right),\ \ \ \text{EED} \in \left\lbrack 0,\ 1 \right\rbrack$$
 
 Where:
 
@@ -539,7 +539,7 @@ $$F_{\text{BERT}} = \frac{2P_{\text{BERT}}.R_{\text{BERT}}}{P_{\text{BERT}} + R_
     sentences $\left[ x^{\left( i \right)} \right]_{i = 1}^{M}$, the
     idf score of a word-piece token $w$ is:
 
-$$i\text{df}\left( w \right) = - \log\left( \frac{1}{M}\sum_{i = 1}^{M}{\mathbb{I}\left\lbrack w \in x^{\left( i \right)} \right\rbrack} \right)$$
+$$\text{idf}\left( w \right) = - \log\left( \frac{1}{M}\sum_{i = 1}^{M}{\mathbb{I}\left\lbrack w \in x^{\left( i \right)} \right\rbrack} \right)$$
 
 &emsp;&emsp;&emsp;Where $\mathbb{I}\left\lbrack . \right\rbrack$ is an indicator function.
 
