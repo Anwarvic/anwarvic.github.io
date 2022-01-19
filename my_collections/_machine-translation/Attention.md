@@ -164,7 +164,7 @@ which gives different flavors of the attention mechanism where:
     </tr>
     <tr>
         <td>Location-based</td>
-        <td>$$s\text{oftmax}\left( W_{a}.h_{i}^{T} \right)$$</td>
+        <td>$$\text{softmax}\left( W_{a}.h_{i}^{T} \right)$$</td>
         <td>$$W_{a}$$</td>
         <td><a href="https://arxiv.org/pdf/1508.04025.pdf">Luong et al.</a></td>
     </tr>
