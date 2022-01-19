@@ -141,7 +141,7 @@ metric proposed by the authors as a comparison metric between two
 different language embeddings. Given a mapped source word embedding
 $Wx_{s}$ and a target embedding $y_{t}$, the CSLS can be formulated as:
 
-$$C\text{SLS}\left( Wx_{s},\ y_{t} \right) = 2\cos\left( Wx_{s},\ y_{t} \right) - r_{T}\left( Wx_{s} \right) - r_{S}\left( y_{t} \right)$$
+$$\text{CSLS}\left( Wx_{s},\ y_{t} \right) = 2\cos\left( Wx_{s},\ y_{t} \right) - r_{T}\left( Wx_{s} \right) - r_{S}\left( y_{t} \right)$$
 
 $$r_{T}\left( Wx_{s} \right) = \frac{1}{K}\sum_{y_{t} \in \mathcal{N}_{T}\left( Wx_{s} \right)}^{}{\cos\left( Wx_{s},\ y_{t} \right)}$$
 
