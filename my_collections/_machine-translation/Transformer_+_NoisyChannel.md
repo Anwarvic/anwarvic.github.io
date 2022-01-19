@@ -80,7 +80,7 @@ will collect $k_{2}$ possible next words extensions from the direct
 model for each beam. The, we will score the resulting
 $k_{1} \times k_{2}$ according to the following equation:
 
-$$\frac{1}{t}\log\text{\ p}\left( y \middle| x \right) + \frac{\lambda}{s}\left( \log\text{\ p}\left( x \middle| y \right) + \log\text{\ p}\left( y \right) \right)$$
+$$\frac{1}{t}\log p\left( y \middle| x \right) + \frac{\lambda}{s}\left( \log p\left( x \middle| y \right) + \log p\left( y \right) \right)$$
 
 Where $t$ is the length of the target prefix $y$, $s$ is the source
 sentence length and $\lambda$ is a tunable weight.
