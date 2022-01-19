@@ -25,7 +25,7 @@ which allows the model to jointly attend to information at different
 positions from different representation sub-spaces. The multi-head
 self-attention is defined as:
 
-$$M\text{ultiHead}\left( Q,\ K,\ V \right) = Concat\left( \text{head}_{1},...\text{head}_{h} \right)\ W^{O}$$
+$$\text{MultiHead}\left( Q,\ K,\ V \right) = Concat\left( \text{head}_{1},...\text{head}_{h} \right)\ W^{O}$$
 
 Where $Q,\ K,\ V \in \mathbb{R}^{n \times d_{m}}$ are input embedding
 matrices, $n$ is sequence length, $d_{m}$ is the embedding dimension,
