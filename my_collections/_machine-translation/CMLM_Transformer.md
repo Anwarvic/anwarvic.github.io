@@ -95,9 +95,9 @@ $$Y_{\text{obs}}^{\left( t \right)} = Y\backslash Y_{\text{mask}}^{\left( t \rig
     the highest probability for each masked token $y_i ∈ Y(t)$ mask and
     unmask them by update its probability score:
 
-$$y_{i}^{\left( t \right)} = \underset{w}{\text{arg }m\text{ax}}{P\left( y_{i} = w \middle| X,\ Y_{\text{obs}}^{\left( t \right)} \right)}$$
+$$y_{i}^{\left( t \right)} = \underset{w}{\text{arg }\text{max}}{P\left( y_{i} = w \middle| X,\ Y_{\text{obs}}^{\left( t \right)} \right)}$$
 
-$$p_{i}^{\left( t \right)} = \underset{w}{m\text{ax}}{P\left( y_{i} = w \middle| X,\ Y_{\text{obs}}^{\left( t \right)} \right)}$$
+$$p_{i}^{\left( t \right)} = \underset{w}{\text{max}}{P\left( y_{i} = w \middle| X,\ Y_{\text{obs}}^{\left( t \right)} \right)}$$
 
 The following example is from the WMT'14 German→English validation set
 that illustrates how mask-predict generates text. At each iteration, the
