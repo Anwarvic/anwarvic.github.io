@@ -60,7 +60,7 @@ $$P_{i,2j + 1}^{t} = \cos\left( \frac{i}{10000^{\frac{2j}{d}}} \right) + \cos\le
     standard Transformer paper: [Attention is all you
     need](https://arxiv.org/pdf/1706.03762.pdf):
 
-$$M\text{ultiHead}\left( H^{t} \right) = Concat\left( \text{head}_{1},...\text{head}_{k} \right)\ W^{O}$$
+$$\text{MultiHead}\left( H^{t} \right) = Concat\left( \text{head}_{1},...\text{head}_{k} \right)\ W^{O}$$
 
 $$\text{head}_{i} = \text{Attention}\left( H^{t}W_{i}^{Q},H^{t}W_{i}^{K},H^{t}W_{i}^{V} \right) = \text{softmax}\left\lbrack \frac{H^{t}W_{i}^{Q}\left( H^{t}W_{i}^{K} \right)^{T}}{\sqrt{d}} \right\rbrack H^{t}W_{i}^{V}$$
 
@@ -72,7 +72,7 @@ where $d$ is the embedding size and $k$ is the number of heads.
 -   The multi-headed self-attention is followed by a dropout and a
     residual connection:
 
-$$\text{Dropout}\left( M\text{ultiHead}\left( H^{t - 1} + P^{t} \right) \right)$$
+$$\text{Dropout}\left( \text{MultiHead}\left( H^{t - 1} + P^{t} \right) \right)$$
 
 -   Then, the dropped-out multi-headed self-attention block is followed
     by a layer normalization accompanied by a transition function as
@@ -80,7 +80,7 @@ $$\text{Dropout}\left( M\text{ultiHead}\left( H^{t - 1} + P^{t} \right) \right)$
 
 $$H^{t} = \text{LayerNorm}\left( A^{t} + \text{Dropout}\left( \text{Transition}\left( A^{t} \right) \right) \right)$$
 
-$$A^{t} = \text{LayerNorm}\left( \left( H^{t - 1} + P^{t} \right) + \text{Dropout}\left( M\text{ultiHead}\left( H^{t - 1} + P^{t} \right) \right) \right)$$
+$$A^{t} = \text{LayerNorm}\left( \left( H^{t - 1} + P^{t} \right) + \text{Dropout}\left( \text{MultiHead}\left( H^{t - 1} + P^{t} \right) \right) \right)$$
 
 -   In the paper, they used one of two different $Transition()$
     functions:
