@@ -396,9 +396,9 @@ $$TER = \frac{4}{13} = 30.77\%$$
 CharacTER is a Translation Edit Rate (TER) on Character evaluation
 metric for machine translation proposed by Aachen University in 2016 and
 published in this paper: "[CharacTER: Translation Edit Rate on Character
-Level](https://aclanthology.org/W16-2342.pdf)" and the official
-repository for that metric can be found on
-[GitHub](https://github.com/rwth-i6/CharacTER).
+Level](https://aclanthology.org/W16-2342.pdf)" and the official code for
+this metric can be found on this GitHub repository:
+[CharacTER](https://github.com/rwth-i6/CharacTER).
 
 CharacTer is defined as the minimum number of character edits required
 to adjust a hypothesis until it completely matches the reference,
@@ -416,8 +416,8 @@ EED, stands for "**E**xtended **E**dit **D**istance", is an evaluation
 metric for machine translation proposed by Aachen University in 2019 and
 published in this paper: "[EED: Extended Edit Distance Measure for
 Machine Translation](https://aclanthology.org/W19-5359.pdf)". The
-official code for this metric can be found in the following [GitHub
-repository](https://github.com/rwth-i6/ExtendedEditDistance).
+official code for this metric can be found in the following GitHub
+repository: [ExtendedEditDistance](https://github.com/rwth-i6/ExtendedEditDistance).
 
 This paper proposes an extension of the Levenshtein edit distance, which
 achieves better human correlation whilst remaining fast, flexible and
@@ -468,8 +468,9 @@ data.
 
 Check the paper: [YiSi - A unified semantic MT quality evaluation and
 estimation metric for languages with different levels of available
-resources](https://aclanthology.org/W19-5358.pdf). The official
-repository is [here](https://github.com/chikiulo/yisi).
+resources](https://aclanthology.org/W19-5358.pdf). The official code for
+this paper can be found on this GitHub repository:
+[yisi](https://github.com/chikiulo/yisi).
 
 TO BE CONTINUED...
 
@@ -575,8 +576,8 @@ BLEURT is an automatic evaluation metric for text generation proposed by
 Google Research in 2020 and published in their paper: [BLEURT: Learning
 Robust Metrics for Text
 Generation](https://arxiv.org/pdf/2004.04696.pdf). The official
-repository for this paper can be found on
-[bleur](https://github.com/google-research/bleurt) repository.
+code for this paper can be found on Google Research's official GitHub
+repository: [bleur](https://github.com/google-research/bleurt).
 
 TO BE CONTINUED...
 
@@ -586,8 +587,8 @@ BLEURT is an automatic evaluation metric for machine translation
 proposed by Unbabel AI in 2020 and published in their paper: [COMET: A
 Neural Framework for MT
 Evaluation](https://arxiv.org/pdf/2009.09025.pdf). The official
-repository for this paper can be found on
-[COMET](https://github.com/Unbabel/COMET) repository.
+repository for this paper can be found on this GitHub repository: 
+[COMET](https://github.com/Unbabel/COMET).
 
 TO BE CONTINUED...
 
@@ -597,7 +598,7 @@ Prism is an automatic evaluation metric for machine translation proposed
 by John Hopkins Unversity in 2020 and published in their paper:
 [Automatic Machine Translation Evaluation in Many Languages via
 Zero-Shot Paraphrasing](https://arxiv.org/pdf/2004.14564.pdf). The
-official repository for this paper can be found on
-[prism](https://github.com/thompsonb/prism) repository.
+official code for this paper can be found on this GitHub repository:
+[prism](https://github.com/thompsonb/prism).
 
 TO BE CONTINUED...
