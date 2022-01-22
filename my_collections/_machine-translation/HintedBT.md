@@ -1,7 +1,7 @@
 ---
 title: "Hinted Back-Translation"
 date: 2021-09-09
-cover: /image6.png
+cover: /image1.png
 labs: ["Google Research"]
 ---
 
