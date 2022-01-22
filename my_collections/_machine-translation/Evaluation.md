@@ -11,7 +11,7 @@ produced translations. Naturally, the best method would be to have human
 experts rate each produced translation (Candidate) in order to evaluate
 the whole MT system based on the reference translations.
 
-This is quite a costly process and is not viable for development of MT systems.
+This is a quite costly process and is not viable for development of MT systems.
 For this reason a number of metrics exist that automate the process and use
 different scoring methods to automatically evaluate the produced translation
 based on a reference sentence. The evaluation metrics objective is to be as
@@ -202,9 +202,13 @@ ChrF, stands for "character F-score" is another count-based metric for
 evaluating machine translation models. ChrF was proposed by Maja
 Popovic´at the Humboldt University of Berlin in 2015 and published in
 this paper: "[CHRF: character n-gram F-score for automatic MT
-evaluation](https://aclanthology.org/W15-3049.pdf)". This metric depends
-on the character-level n-gram since it correlates very well with human
-judgments. The general formula for the CHRF score is:
+evaluation](https://aclanthology.org/W15-3049.pdf)".
+
+> **Note:**\
+You can use `nltk.chrf_score()` function for this metric.
+
+This metric depends on the character-level n-gram since it correlates very well
+with human judgments. The general formula for the CHRF score is:
 
 $$\text{chr}F_{\beta} = \left( 1 + \beta^{2} \right).\frac{chrP + chrR}{\beta^{2}.chrP + chrR}$$
 
@@ -308,9 +312,6 @@ $$\text{chr}F_{\beta} = \left( 1 + \beta^{2} \right).\frac{chrP + chrR}{\beta^{2
 -   All of that for unigram character model. In the paper, they did that
     when n=1 till n=6. So, we will do the same when n=2,3,4,5,6 and
     then average the f-score.
-
-> **Note:**\
-You can use `nltk.chrf_score()` function for this metric.
 
 Edit-Distance-Based Metrics
 ---------------------------
