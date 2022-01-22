@@ -108,6 +108,8 @@ order:
 - `_config.yml`: YAML configuration file for Jekyll.
 - `Gemfile`: File where you specify the ruby gems you want to use.
 - `Gemfile.lock`: File where Bundler records the exact versions that were installed.
+- `googleb6210f0379e386f0.html`: File that Google search engine uses to to
+prove my ownership to the domain.
 - `index.html`: The HTML file for the home page.
 - `labs.md`: The main page for `\labs` route.
 - `language-modeling.md`: The main page for `/language-modeling` route.
