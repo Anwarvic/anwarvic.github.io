@@ -24,7 +24,7 @@ metrics used for importance are three:
 -   **Confidence:**\
     It is the mean of its maximum attention weights.
 
-$$c\text{onf}\left( \text{head} \right) = \frac{1}{\left| I \right|}\sum_{i \in I}^{}{\max_{j \in J}\alpha_{i,j}}$$
+$$\text{conf}\left( \text{head} \right) = \frac{1}{\left| I \right|}\sum_{i \in I}^{}{\max_{j \in J}\alpha_{i,j}}$$
 
 -   **Variance:**\
     It's measured by how much each individual position $i$ is away from
@@ -35,7 +35,7 @@ $$\text{var}\left( \text{head} \right) = - \sum_{i \in I}^{}{\sum_{j \in J}^{}{\
 -   **Coverage:**\
     It measures the amount of attention a source token has received.
 
-$$c\text{ov}\left( \text{head} \right) = \sum_{j \in J}^{}\left( \sum_{i \in I}^{}\alpha_{i,j} \right)^{2}$$
+$$\text{cov}\left( \text{head} \right) = \sum_{j \in J}^{}\left( \sum_{i \in I}^{}\alpha_{i,j} \right)^{2}$$
 
 According to the paper, the most important heads are
 language-independent as you can see in the following figure:
