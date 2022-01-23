@@ -103,7 +103,7 @@ additional functions used. Let's understand them one-by-one:
     considered cosine score normalized by average distances. The margin
     scoring function is defined below:
 
-$$s\text{core}\left( x,y \right) = \frac{\cos\left( x,y \right)}{\sum_{z \in N_{x}}^{}\frac{\cos\left( x,z \right)}{2k} + \sum_{z \in N_{y}}^{}\frac{\cos\left( z,y \right)}{2k}}$$
+$$\text{score}\left( x,y \right) = \frac{\cos\left( x,y \right)}{\sum_{z \in N_{x}}^{}\frac{\cos\left( x,z \right)}{2k} + \sum_{z \in N_{y}}^{}\frac{\cos\left( z,y \right)}{2k}}$$
 
 Using this algorithm enables us to create bi-text data in an
 unsupervised manner. Now, let's get to how to use this mined bi-text
