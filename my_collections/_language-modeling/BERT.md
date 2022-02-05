@@ -178,22 +178,26 @@ The following summarizes the difference between both models:
     <thead>
         <tr>
             <th></th>
+            <th>BERT SMALL</th>
             <th>BERT BASE</th>
             <th>BERT LARGE</th>
         </tr>
     </thead>
     <tr>
         <td><strong>Transformer Blocks</strong></td>
+        <td>4</td>
         <td>12</td>
         <td>24</td>
     </tr>
     <tr>
         <td><strong>Feed-Forward hidden neurons</strong></td>
+        <td>312</td>
         <td>768</td>
         <td>1024</td>
     </tr>
     <tr>
         <td><strong>Attention Heads</strong></td>
+        <td>12</td>
         <td>12</td>
         <td>16</td>
     </tr>
@@ -201,19 +205,23 @@ The following summarizes the difference between both models:
         <td><strong>Input Tokens</strong></td>
         <td>512</td>
         <td>512</td>
+        <td>512</td>
     </tr>
     <tr>
         <td><strong>Parameters</strong></td>
+        <td>14.5 million</td>
         <td>110 million</td>
         <td>345 million</td>
     </tr>
     <tr>
         <td><strong>Hardware for Training</strong></td>
+        <td>-</td>
         <td>4 TPU + 4 days</td>
         <td>16 TPU + 4 days</td>
     </tr>
     <tr>
         <td><strong>Hardware for Inference</strong></td>
+        <td>-</td>
         <td>1 GPU</td>
         <td>1 TPU</td>
     </tr>
