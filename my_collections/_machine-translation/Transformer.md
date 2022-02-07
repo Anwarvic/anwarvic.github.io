@@ -105,10 +105,10 @@ $$\text{PE}_{\left( \text{pos},\ 2i \right)} = \sin\left( \frac{\text{pos}}{1000
 \ \ \ \ \ 
 \text{PE}_{\left( \text{pos},\ 2i + i \right)} = \cos\left( \frac{\text{pos}}{10000^{\frac{2i}{d}}} \right)$$
 
-&emsp;&emsp;&emsp;&emsp;Where "pos" is the word position/index (starting from zero). "i" is
-the $i^{th}$ value of the word embedding and "d" is the size of the word
-embedding. So, if "i" is even, then we are going to apply the first
-equation and if "i" is odd, then we are going to apply the second
+&emsp;&emsp;&emsp;&emsp;Where $pos$ is the word position/index (starting from
+zero). $i$ is the $i^{th}$ value of the word embedding and $d$ is the size of
+the word embedding. So, if $i$ is even, then we are going to apply the first
+equation; and if $i$ is odd, then we are going to apply the second
 equation. After getting the **positional vectors**, we add them to the
 original embedding vector to get context vector:
 
