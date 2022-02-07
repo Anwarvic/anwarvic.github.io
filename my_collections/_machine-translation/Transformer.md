@@ -133,9 +133,9 @@ look into this [article](https://towardsdatascience.com/master-positional-encodi
     Self-attention allows the encoder to associate each input word to
     other words in the input. To achieve self-attention, we feed the
     input into three different linear fully-connected layers to produce
-    three different vectors which are **query** Q, **key** K, and
-    **value** V. The size of them all is the same size as the word
-    embedding "$d$".
+    three different matrices which are **query** $Q \in \mathbb{R}^{n \times d_k}$,
+    **key** $K \in \mathbb{R}^{n \times d_k}$, and **value**
+    $V \in \mathbb{R}^{n \times d_k}$.
 
 <div align="center">
     <img src="media/Transformer/image5.png" width=350>
