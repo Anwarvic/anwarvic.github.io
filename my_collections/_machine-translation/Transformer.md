@@ -73,6 +73,12 @@ loss.
     <img src="media/Transformer/image2.png" width=550>
 </div>
 
+> **Note:**
+In [fairseq](https://github.com/pytorch/fairseq) framework, padding is done
+randomly at either the beginning of the sentence or at the end. Also, the pad
+token `<p>` has an index of `1` while index `0` is reserved for the beginning
+of the sentence token `<s>`.
+
 
 Encoder
 -------
@@ -87,9 +93,11 @@ which consists of different modules:
 
 -   **Embedding:** where we map words into vectors representing their
     meaning such that similar words will have similar vectors.
+    The embedding matrix have a size of $\mathbb{R}^{n \times d}$ where $n$
+    is the input length and $d$ is the embedding dimension.
 
 -   **Positional Encoding:** Word meaning differs based on its position
-    in the sentence. Positional vector is a vector of the same size as
+    in the sentence. A positional vector is a vector of the same size as
     the embedding vector that gives context based on word-position in a
     sentence. This can be done by applying following equation:
 
