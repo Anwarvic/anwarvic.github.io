@@ -119,14 +119,15 @@ original embedding vector to get context vector:
 
 
 I know these functions don't make sense and the original paper says the
-following: "We tried to encode position into word embedding using sinusoidal
+following:
+
+> "We tried to encode position into word embedding using sinusoidal
 functions and using learned positional embeddings, and we found that the two
-versions produced nearly identical results. But in case you wanted to dig
-deeper in this part, check this
+versions produced nearly identical results."
+
+But in case you wanted to dig deeper in this part, check this YouTube
 [video](https://www.youtube.com/watch?v=dichIcUZfOw). It's a good start. Also,
-look into the
-"[Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)" paper and this
-[article](https://towardsdatascience.com/master-positional-encoding-part-i-63c05d90a0c3).
+look into this [article](https://towardsdatascience.com/master-positional-encoding-part-i-63c05d90a0c3).
 
 -   **Single-Head Self-Attention:**\
     Self-attention allows the encoder to associate each input word to
