@@ -93,7 +93,7 @@ which consists of different modules:
 
 -   **Embedding:** where we map words into vectors representing their
     meaning such that similar words will have similar vectors.
-    The embedding matrix have a size of $\mathbb{R}^{n \times d}$ where $n$
+    The embedding matrix have a size of $\mathbb{R}^{n \times d_m}$ where $n$
     is the input length and $d$ is the embedding dimension.
 
 -   **Positional Encoding:** Word meaning differs based on its position
@@ -101,12 +101,12 @@ which consists of different modules:
     the embedding vector that gives context based on word-position in a
     sentence. This can be done by applying following equation:
 
-$$\text{PE}_{\left( \text{pos},\ 2i \right)} = \sin\left( \frac{\text{pos}}{10000^{\frac{2i}{d}}} \right)
+$$\text{PE}_{\left( \text{pos},\ 2i \right)} = \sin\left( \frac{\text{pos}}{10000^{\frac{2i}{d_m}}} \right)
 \ \ \ \ \ 
-\text{PE}_{\left( \text{pos},\ 2i + i \right)} = \cos\left( \frac{\text{pos}}{10000^{\frac{2i}{d}}} \right)$$
+\text{PE}_{\left( \text{pos},\ 2i + i \right)} = \cos\left( \frac{\text{pos}}{10000^{\frac{2i}{d_m}}} \right)$$
 
 &emsp;&emsp;&emsp;&emsp;Where $pos$ is the word position/index (starting from
-zero). $i$ is the $i^{th}$ value of the word embedding and $d$ is the size of
+zero). $i$ is the $i^{th}$ value of the word embedding and $d_m$ is the size of
 the word embedding. So, if $i$ is even, then we are going to apply the first
 equation; and if $i$ is odd, then we are going to apply the second
 equation. After getting the **positional vectors**, we add them to the
@@ -131,11 +131,16 @@ look into this [article](https://towardsdatascience.com/master-positional-encodi
 
 -   **Single-Head Self-Attention:**\
     Self-attention allows the encoder to associate each input word to
-    other words in the input. To achieve self-attention, we feed the
-    input into three different linear fully-connected layers to produce
-    three different matrices which are **query** $Q \in \mathbb{R}^{n \times d_k}$,
-    **key** $K \in \mathbb{R}^{n \times d_k}$, and **value**
-    $V \in \mathbb{R}^{n \times d_k}$.
+    other words in the input. To achieve self-attention, we feed the\
+    embedded input $X \in \mathbb{R}^{n \times d_{m}}$ into three
+    different linear fully-connected layers
+    $W^{Q},W^{K} \in \mathbb{R}^{d_{m} \times d_{k}},\ W^{V} \in \mathbb{R}^{d_{m} \times d_{v}}$
+    producing three different matrices respectively; which are **query**
+    $Q \in \mathbb{R}^{n \times d_{k}}$, **key**
+    $K \in \mathbb{R}^{n \times d_{k}}$, and **value**
+    $V \in \mathbb{R}^{n \times d_{v}}$.
+
+$$Q = XW^{Q},\ \ \ \ K = XW^{K},\ \ \ \ V = XW^{V}\ $$
 
 <div align="center">
     <img src="media/Transformer/image5.png" width=350>
@@ -182,9 +187,10 @@ weight is, the higher it contributes to the output vector.
     <img src="media/Transformer/image9.png" width=350>
 </div>
 
+> **Note:**
 You should know that the **concat** and **Linear** blocks at the end of
-the mechanism aren't related to the multi-head which we are going to
-talk about in a second.
+the mechanism are related to the multi-head which we are going to
+talk about next.
 
 -   **Multi-Head Self-Attention:**\
     A multi-head self-attention is just performing the single-head
