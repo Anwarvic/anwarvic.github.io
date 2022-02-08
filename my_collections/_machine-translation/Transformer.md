@@ -146,11 +146,8 @@ $$Q = XW^{Q},\ \ \ \ K = XW^{K},\ \ \ \ V = XW^{V}\ $$
     <img src="media/Transformer/image5.png" width=350>
 </div>
     
-&emsp;&emsp;&emsp;The name of these three vectors comes from retrieval systems. So,
-when you type a <u><strong>query</strong></u> on Google to search for, this query
-will be mapped to a set of results <u><strong>keys</strong></u> to score each
-result. And the highest results will be the <u><strong>values</strong></u> you
-were looking for.
+&emsp;&emsp;&emsp;Now, the attention mechanism will attend the resulting three matrices
+via the following equation:
 
 $$\text{Attention}\left( Q,\ K,\ V \right) = softmax\left( \frac{QK^{T}}{\sqrt{d_{k}}} \right)V$$
 
@@ -188,35 +185,29 @@ weight is, the higher it contributes to the output vector.
 </div>
 
 > **Note:**
-You should know that the **concat** and **Linear** blocks at the end of
-the mechanism are related to the multi-head which we are going to
-talk about next.
+The name of these three vectors comes from retrieval systems. So,
+when you type a <u><strong>query</strong></u> on Google to search for, this query
+will be mapped to a set of results <u><strong>keys</strong></u> to score each
+result. And the highest results will be the <u><strong>values</strong></u> you
+were looking for.
 
 -   **Multi-Head Self-Attention:**\
     A multi-head self-attention is just performing the single-head
-    self-attention N times and <u><strong>concatenating</strong></u> the output
-    vectors together. In theory, this will make each head learn
-    something different about the input. After concatenation, we apply a
-    linear fully-connected layer to match dimensions for the residual
-    connection.
+    self-attention $h$ times and <u><strong>concatenating</strong></u> the
+    output matrices together before applying a linear layer
+    $W^{O} \in \mathbb{R}^{h d_v \times d_m}$ as shown in the following formula:
+    
+$$\text{MultiHead}\left( Q,\ K,\ V \right) = Concat\left( \text{head}_{1},...\text{head}_{h} \right)\ W^{O}$$
+
+$$\text{head}_{i} = \text{Attention}\left( Q_i, K_i, V_i \right)$$
+    
+&emsp;&emsp;&emsp;  In theory, this will make each head learn something
+different about the input. After concatenation, we apply a linear
+fully-connected layer to match dimensions for the residual connection.
 
 <div align="center">
     <img src="media/Transformer/image10.png" width=750>
 </div>
-
-$$\text{MultiHead}\left( Q,\ K,\ V \right) = Concat\left( \text{head}_{1},...\text{head}_{h} \right)\ W^{O}$$
-
-&emsp;&emsp;&emsp;Where $Q,\ K,\ V \in \mathbb{R}^{n \times d_{m}}$ are input
-embedding matrices, $n$ is sequence length, $d_{m}$ is the embedding dimension,
-and $h$ is the number of heads. Each head is defined as:
-
-$$\text{head}_{i} = \text{Attention}\left( QW_{i}^{Q},KW_{i}^{K},VW_{i}^{V} \right)$$
-
-$$\ \ \ \ \ \ \ \ \ \ \  = \text{softmax}\left\lbrack \frac{QW_{i}^{Q}\left( KW_{i}^{K} \right)^{T}}{\sqrt{d_{k}}} \right\rbrack VW_{i}^{V}$$
-
-&emsp;&emsp;&emsp; Where
-$W_{i}^{Q},W_{i}^{K} \in \mathbb{R}^{d_{m} \times d_{k}},W_{i}^{V} \in \mathbb{R}^{d_{m} \times d_{v}},W_{i}^{O} \in \mathbb{R}^{h d_v \times d_m}$
-are learned matrices.
 
 -   **Residual Connection & Normalization**:
     After the multi-head self-attention, the positional input embedding
