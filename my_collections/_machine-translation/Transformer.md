@@ -204,6 +204,7 @@ $$\text{head}_{i} = \text{Attention}\left( Q_i, K_i, V_i \right)$$
 &emsp;&emsp;&emsp;  In theory, this will make each head learn something
 different about the input. After concatenation, we apply a linear
 fully-connected layer to match dimensions for the residual connection.
+The following image shows the multi-head attention of just two heads $h=2$:
 
 <div align="center">
     <img src="media/Transformer/image10.png" width=750>
