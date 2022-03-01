@@ -234,7 +234,10 @@ batch and the layer normalization normalizes over all weights in the layer.
     for further processing. The feed-forward network is just a couple of
     linear layers with a $\text{ReLU}$ activation function in between.
     The dimension of the feed-forward network is defined by the
-    $d_{\text{ff}}$ parameter.
+    $d_{\text{ff}}$ parameter where $$W_1 \in \mathbb{R}^{d_{m} \times d_{ff}},
+    W_2 \in \mathbb{R}^{d_{ff} \times d_{m}}$$ are the learnable weights and 
+    $$b_1 \in \mathbb{R}^{d_{ff}}, b_2 \in \mathbb{R}^{d_{m}}$$ are the
+    learnable biases.
 
 $$\text{FFN}\left( x \right) = \text{ReLU}\left( xW_{1} + b_{1} \right)W_{2} + b_{2}$$
 
