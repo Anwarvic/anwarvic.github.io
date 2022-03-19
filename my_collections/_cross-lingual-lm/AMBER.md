@@ -40,9 +40,7 @@ three alignment objectives are:
 $$\mathcal{L}_{\text{MLM}}\left( x,y \right) = - \mathbb{E}_{s\sim\left\lbrack 1,\left| \left\lbrack x;y \right\rbrack \right| \right\rbrack}\log\text{ P}\left( \left\lbrack x;y \right\rbrack_{s} \middle| \left\lbrack x;y \right\rbrack_{\backslash s} \right)$$
 
 -   <u><strong>Sentence Alignment:</strong></u>\
-    This objective, adapted from
-    [Additive Margin Softmax (AMS)](https://arxiv.org/pdf/1902.08564.pdf)
-    encourages cross-lingual alignment of sentence
+    This objective encourages cross-lingual alignment of sentence
     representations. Given sentence pair $\left( x,y \right)$, we
     separately calculate sentence embeddings
     $\left( c_{x},\ c_{y} \right)$ where the sentence embeddings is
@@ -78,9 +76,13 @@ function:
 
 $$\mathcal{L}\left( x,y \right) = \mathcal{L}_{\text{MLM}}\left( x,y \right) + \mathcal{L}_{\text{SA}}\left( x,y \right) + \mathcal{L}_{\text{WA}}\left( x,y \right)$$
 
-> **Note:**\
-AMBER with just MLM objective is the same as
-[mBERT](https://anwarvic.github.io/cross-lingual-lm/mBERT).
+> **Notes:**
+>
+> - AMBER with just MLM objective is the same as
+    [mBERT](https://anwarvic.github.io/cross-lingual-lm/mBERT).
+> - Sentence Alignment objective is the same as
+    [Additive Margin Softmax (AMS)](https://arxiv.org/pdf/1902.08564.pdf)
+    where the margin is zero $(m=0)$.
 
 Experiments
 -----------
