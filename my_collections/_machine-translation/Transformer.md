@@ -131,7 +131,7 @@ look into this [article](https://towardsdatascience.com/master-positional-encodi
 
 -   **Single-Head Self-Attention:**\
     Self-attention allows the encoder to associate each input word to
-    other words in the input. To achieve self-attention, we feed the\
+    other words in the input. To achieve self-attention, we feed the
     embedded input $X \in \mathbb{R}^{n \times d_{m}}$ into three
     different linear fully-connected layers
     $W^{Q},W^{K} \in \mathbb{R}^{d_{m} \times d_{k}},\ W^{V} \in \mathbb{R}^{d_{m} \times d_{v}}$
@@ -140,7 +140,7 @@ look into this [article](https://towardsdatascience.com/master-positional-encodi
     $K \in \mathbb{R}^{n \times d_{k}}$, and **value**
     $V \in \mathbb{R}^{n \times d_{v}}$.
 
-$$Q = XW^{Q},\ \ \ \ K = XW^{K},\ \ \ \ V = XW^{V}\ $$
+$$Q = XW^{Q},\ \ \ \ K = XW^{K},\ \ \ \ V = XW^{V}$$
 
 <div align="center">
     <img src="media/Transformer/image5.png" width=350>
@@ -234,9 +234,9 @@ batch and the layer normalization normalizes over all weights in the layer.
     for further processing. The feed-forward network is just a couple of
     linear layers with a $\text{ReLU}$ activation function in between.
     The dimension of the feed-forward network is defined by the
-    $d_{\text{ff}}$ parameter where $$W_1 \in \mathbb{R}^{d_{m} \times d_{ff}},
-    W_2 \in \mathbb{R}^{d_{ff} \times d_{m}}$$ are the learnable weights and 
-    $$b_1 \in \mathbb{R}^{d_{ff}}, b_2 \in \mathbb{R}^{d_{m}}$$ are the
+    $d_{\text{ff}}$ parameter where $W_1 \in \mathbb{R}^{d_{m} \times d_{ff}},
+    W_2 \in \mathbb{R}^{d_{ff} \times d_{m}}$ are the learnable weights and 
+    $b_1 \in \mathbb{R}^{d_{ff}}, b_2 \in \mathbb{R}^{d_{m}}$ are the
     learnable biases.
 
 $$\text{FFN}\left( x \right) = \text{ReLU}\left( xW_{1} + b_{1} \right)W_{2} + b_{2}$$
