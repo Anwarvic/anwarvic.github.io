@@ -24,7 +24,7 @@ monolingual and parallel data using three alignment objectives that
 align the multilingual word/sentence representations together. These
 three alignment objectives are:
 
--   **[MLM or TLM:]{.ul}**\
+-   <u><strong>MLM or TLM:</strong></u>\
     This objective, proposed in
     [BERT](https://anwarvic.github.io/language-modeling/BERT), takes a
     pair of sentences $\left( x,y \right)$, and optimizes the prediction
@@ -39,8 +39,10 @@ three alignment objectives are:
 
 $$\mathcal{L}_{\text{MLM}}\left( x,y \right) = - \mathbb{E}_{s\sim\left\lbrack 1,\left| \left\lbrack x;y \right\rbrack \right| \right\rbrack}\log\text{ P}\left( \left\lbrack x;y \right\rbrack_{s} \middle| \left\lbrack x;y \right\rbrack_{\backslash s} \right)$$
 
--   **[Sentence Alignment:]{.ul}**\
-    This objective encourages cross-lingual alignment of sentence
+-   <u><strong>Sentence Alignment:</strong></u>\
+    This objective, adapted from
+    [Additive Margin Softmax (AMS)](https://arxiv.org/pdf/1902.08564.pdf)
+    encourages cross-lingual alignment of sentence
     representations. Given sentence pair $\left( x,y \right)$, we
     separately calculate sentence embeddings
     $\left( c_{x},\ c_{y} \right)$ where the sentence embeddings is
@@ -54,7 +56,7 @@ $$\mathcal{L}_{\text{MLM}}\left( x,y \right) = - \mathbb{E}_{s\sim\left\lbrack 1
 
 $$\mathcal{L}_{\text{SA}}\left( x,y \right) = - \log\ \frac{e^{c_{x}^{\intercal}c_{y}}}{\sum_{y' \in \mathcal{B}}^{}e^{c_{x}^{\intercal}c_{y'}}}$$
 
--   **Bidirectional Word Alignment:**\
+-   <u><strong>Bidirectional Word Alignment:</strong></u>\
     This objective encourages bidirectional alignment of word embeddings
     by leveraging the attention mechanism in the
     [Transformer](https://anwarvic.github.io/machine-translation/Transformer)
