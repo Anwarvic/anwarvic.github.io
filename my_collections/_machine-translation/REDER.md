@@ -1,5 +1,5 @@
 ---
-title: "REDER: Reversible Duplex Transformer"
+title: "REDER"
 date: 2021-05-07
 cover: /image0.png
 labs: ["ByteDance AI Lab", "Nanjing University", "UC Santa Barbara"]
@@ -170,7 +170,7 @@ Where:
     loss function is calculated via the following formula knowing that
     $sg()$ is the stop-gradient operation:
 
-$$\mathcal{L}_{\text{fba}}\left( x \middle| y;\theta \right) = \frac{1}{L}\sum_{l = 1}^{L}{1 - \cos\left( {\overrightarrow{H}}_{l},\ \text{sg}\left( {\overleftarrow{H}}_{l} \right) \right)}$$
+$$\mathcal{L}_{\text{fba}}\left( x \middl| y;\theta \right) = \frac{1}{L}\sum_{l = 1}^{L}{1 - \cos\left( {\overrightarrow{H}}_{l},\ \text{sg}\left( {\overleftarrow{H}}_{l} \right) \right)}$$
 
 -   $\mathcal{L}\_{\text{cc}}\left( x^{\left( n \right)};\theta \right)$
     is the cycle consistency loss of the forward direction, while
