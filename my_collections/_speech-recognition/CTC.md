@@ -5,46 +5,45 @@ cover: /image0.png
 labs: ["The Swiss AI Lab", "Munich University"]
 ---
 
-To show how CTC changed the game of ASR, let's consider the following
-scenario. We have a dataset of audio clips and corresponding
-transcripts. Unfortunately, we don't know how the characters in the
-transcript align to the audio. This makes training a speech recognizer
-harder than it might at first seem.
+Data sets for speech recognition are usually a dataset of audio clips
+and corresponding transcripts. The main issue in these datasets is that
+we don't know how the characters in the transcript align to the audio.
+Without this alignment, it would be very hard to train a speech
+recognition model since people's rates of speech vary. CTC provides a
+solution to this problem.
 
-Without this alignment, the simple approaches aren't available to us. We
-could devise a rule like "one character corresponds to ten inputs". But
-people's rates of speech vary, so this type of rule can always be
-broken. Another alternative is to hand-align each character to its
-location in the audio. From a modeling standpoint this works
-well --- we'd know the ground truth for each input time-step. However,
-for any reasonably sized dataset this is prohibitively time consuming.
+CTC stands for "Connectionist Temporal Classification" which is a way to
+get around not knowing the alignment between the input and the output.
+CTC was proposed by Alex Graves, Santiago Fernandes, Faustino Gomez, and
+Jürgen Schmidhuber in 2006 and published in this paper: [Connectionist
+Temporal Classification: Labelling Unsegmented Sequence Data with
+Recurrent Neural
+Networks](http://www.cs.toronto.edu/~graves/icml_2006.pdf).
 
-Connectionist Temporal Classification (CTC) is a way to get around not
-knowing the alignment between the input and the output. CTC, short for
-Connectionist Temporal Classification, is published by Alex Graves,
-Santiago Fernandes, Faustino Gomez, and Jürgen Schmidhuber in 2006 in
-their paper: [Connectionist temporal classification: labelling
-unsegmented sequence data with recurrent neural
-networks](http://www.cs.toronto.edu/~graves/icml_2006.pdf).
+The intuition of CTC is to convert the speech recognition problem to a
+Temporal Classification problem where each frame of the input audio will
+be labeled <u><strong>independently</strong></u> to a single character,
+so that the output will be the same length as the input. Then, a
+collapsing function that combines sequences of identical letters is
+applied, resulting in a shorter sequence as shown in the following figure:
 
-The intuition of CTC is to output a single character for every frame of
-the input, so that the output is the same length as the input, and then
-to apply a collapsing function that combines sequences of identical
-letters, resulting in a shorter sequence.
-
-Let's imagine inference on someone saying the word dinner, and let's
-suppose we had a function that chooses the most probable letter for each
-input spectral frame representation x~i~ . We'll call the sequence of
-letters corresponding to each input frame an **alignment**, because it
-tells us where in the acoustic signal each letter aligns to as shown in
-the following figure:
 
 <div align="center">
     <img src="media/CTC/image1.png" width=750>
 </div>
 
-As we can see, our naive algorithm has two
-problems based on the previous example:
+
+Blank Character
+---------------
+The previous figure represents the temporal classification of the audio
+of someone saying the word "dinner". Of course, here we are assuming
+there is a classifier that is able to choose the most probable letter
+for each input spectral frame representation $x_{i}$ . The sequence of
+letters corresponding to each input frame is called an "alignment",
+because it tells us where in the acoustic signal each letter aligns to.
+Then, a collapsing function that combines similar letters is applied to
+result in the word "diner". As we can see from the past example, this
+naive algorithm has two problems:
 
 -   It doesn't handle double letters as it transcribed the speech as
     "diner", not "dinner"!
@@ -61,6 +60,7 @@ silence. Now, the output becomes:
     <img src="media/CTC/image2.png" width=750>
 </div>
 
+> **Note:**
 As you probably guessed, the CTC collapsing function
 has a lot of different alignments that could map to the same output
 string. The following are just some of the other alignments that would
@@ -69,10 +69,6 @@ produce the same output and there are many and many more.
 <div align="center">
     <img src="media/CTC/image3.png" width=750>
 </div>
-
-And this is crucial for calculating the
-loss function as we are going to see next. But before getting to that,
-let's talk first about the object of CTC.
 
 Objective Function
 ------------------
@@ -129,7 +125,7 @@ using the following steps:
     expand the true output to include that character. Now, the true
     output becomes:
 
-␣ a ␣ b ␣
+$$\text{␣ a ␣ b ␣}$$
 
 -   Then, we are going to form the CTC network where the number of rows
     should be the extended output and the number of columns should be
@@ -139,7 +135,7 @@ using the following steps:
     <img src="media/CTC/image4.png" width=750>
 </div>
 
--   Define all the <u>possible alignments</u> of the previous CTC network:
+-   Define all the possible alignments of the previous CTC network:
 
 <div align="center">
     <img src="media/CTC/image5.png" width=750>
@@ -159,12 +155,7 @@ $$p\left( \text{␣␣␣␣ab} \right) = p\left( \text{␣} \right) \ast p\left
 
 $$p\left( \text{ab␣␣␣␣} \right) = p\left( \text{a} \right) \ast p\left( \text{b} \right) \ast p\left( \text{␣} \right) \ast p\left( \text{␣} \right) \ast p\left( \text{␣} \right) \ast p\left( \text{␣} \right)$$
 
-Loss Function
--------------
-
-The CTC loss function is differentiable with respect to the per
-time-step output probabilities since it's just sums and products of
-them. Then, the loss function will be just the negative log-likelihood
+Then, the loss function will be just the negative log-likelihood
 of the objective function. So, for a training $D$, the loss function
 will be:
 
@@ -207,28 +198,29 @@ Now, the paths will be:
     <img src="media/CTC/image7.png" width=750>
 </div>
 
-**Notes:**
 
--   The blank character "␣" is like a garbage token, it doesn't
+> **Notes:**
+>
+> - The blank character "␣" is like a garbage token, it doesn't
     represent anything but noise. So, it's very different than the space
     character " ".
-
--   CTC works <u><strong>only</strong></u> when the output sequence Y is
+>
+> - CTC works <u><strong>only</strong></u> when the output sequence Y is
     shorter than the input sequence X.
-
--   CTC assumes conditional independence which means that the output at
+>
+> - CTC assumes conditional independence which means that the output at
     time $t$ is independent of the output at time $t - 1$, given the
     input.
-
--   CTC does not implicitly learn a language model over the data (except
+>
+> - CTC does not implicitly learn a language model over the data (except
     for the case of attention-based encoder-decoder architectures). It
     is therefore essential when using CTC to interpolate a language
     model using a hyper-parameter$\lambda$ that is fine-tuned on a dev
     set:
-
-$$p\left( Y \middle| X \right) = \lambda\log\ p_{\text{CTC}}\left( Y \middle| X \right) + \left( 1 - \lambda \right)\log\ p_{\text{LM}}\left( Y \right)$$
-
--   For more details about implementing CTC, you should check this
+>
+> $$p\left( Y \middle| X \right) = \lambda\log\ p_{\text{CTC}}\left( Y \middle| X \right) + \left( 1 - \lambda \right)\log\ p_{\text{LM}}\left( Y \right)$$
+>
+> - For more details about implementing CTC, you should check this
     [gist](https://gist.github.com/awni/56369a90d03953e370f3964c826ed4b0)
     created by Awni Hannun the one who optimized CTC in this
     [paper](https://arxiv.org/pdf/1408.2873.pdf). And also this
