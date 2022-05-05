@@ -7,7 +7,7 @@ labs: ["University of Toronto"]
 
 RNN-T stands for "Recurrent Neural Network Transducer" which is a promising
 architecture for general-purpose sequence such as audio transcription built
-using [RNN](https://anwarvic.github.io/language-modeling/RNN)s.RNN-T was
+using [RNN](https://anwarvic.github.io/language-modeling/RNN)s. RNN-T was
 proposed by Alex Graves at the University of Toronto back in 2012 and
 published under the name: [Sequence Transduction with Recurrent Neural
 Networks](https://arxiv.org/pdf/1211.3711.pdf). This paper introduces an
@@ -31,21 +31,28 @@ $$Pr\left( y \middle| x \right) = \sum_{}^{}{\Pr\left( a \middle| x \right)}$$
 Both the inputs vectors $x_{i}$ and the output vectors $y_{j}$ are
 represented by fixed-length real-valued vectors where $x_{i}$ would
 typically be a vector of MFC coefficients and $y_{j}$ would be a
-one-hot vector encoding a particular phoneme or null denoted by $\varnothing$.
+one-hot vector encoding a particular phoneme or null $\varnothing$.
 
-As shown in the past figure, RNN-T consists of two networks to determine the past conditional distribution::
+As shown in the past figure, RNN-T consists of two networks to determine the
+past conditional distribution:
 
 -   <u><strong>Transcription Network</strong></u> $F$:\
-    This RNN network scans the input sequence $x$ and outputs the
-    transcription vector sequence:
+    This RNN network acts like an acoustic model as it scans the input sequence
+    $x$ and outputs the transcription (feature) vector sequence:
 
 $$f = \left( f_{1},\ f_{2},\ ...f_{n} \right)$$
 
 -   <u><strong>Prediction Network</strong></u> $G$:\
-    This RNN network scans the output sequence $y$ and outputs the
-    prediction vector sequence:
+    This RNN network acts like a language model as it scans the output sequence
+    $y$ and outputs the prediction vector sequence:
 
 $$g = \left( g_{1},\ g_{2},\ ...g_{n} \right)$$
+
+-   <u><strong>Joint Network</strong></u>:\
+    This network is a simple feed-forward network that combines the
+    transcription vector $f_i$ and the prediction vector $g_j$.
+
+$$ y = Softmax(W[f_i, g_j] + b) $$
 
 Transcription Network
 ---------------------
@@ -90,9 +97,7 @@ Prediction Network
 The prediction network $G$ is a recurrent neural network consisting of
 an input layer, a single hidden layer, and an output layer. The inputs
 to this network are phonemes encoded as one-hot vectors while the output
-are the prediction vectors. The size of each prediction vector is
-$K + 1$ where $K$ is the unique phonemes in the data plus the null
-phoneme (ɸ).
+are the prediction vectors.
 
 <div align="center">
     <img src="media/RNN-T/image2.png" width=750>
@@ -111,7 +116,23 @@ $$g_{t} = W_{ho}h_{t} + b_{o}$$
 Where $W_{ih}$ is the input-hidden weight matrix, $W_{hh}$ is the
 hidden-hidden weight matrix, $W_{ho}$ is the hidden-output weight
 matrix, $b_{h}$ and $b_{o}$ are the bias terms, and $H$ is the LSTM cell
-functions as the Transcription Network $F$.
+functions.
+
+Joint Network
+-------------
+As said ealier, the Joint network (Joiner) is a simple feed-forward network
+that combines the transcription vector $f_i$ and the prediction vector $g_j$
+and results in the output vector whose size is $K + 1$ where $K$ is the unique
+characters in the data/language plus the null character ($\varnothing$).
+
+<div align="center">
+    <img src="media/RNN-T/image3.png" width=450>
+</div>
+
+The output from the Joint Network will be the output vector. We can apply
+$Softmax()$ over that vector to get the most probable character for that
+time-step or we can use these soft labels and decode it in a smarter way as
+we are going to see next.
 
 Output Distribution
 -------------------
@@ -138,7 +159,7 @@ the bottom represent the null state before any outputs have been
 emitted.
 
 <div align="center">
-    <img src="media/RNN-T/image3.png" width=450>
+    <img src="media/RNN-T/image4.png" width=450>
 </div>
 
 The set of all possible paths from the bottom left to the terminal node
@@ -176,7 +197,7 @@ $\left( i,j \right)$ in the output lattice using a beam search (defined
 in the following algorithm):
 
 <div align="center">
-    <img src="media/RNN-T/image4.png" width=450>
+    <img src="media/RNN-T/image5.png" width=450>
 </div>
 
 Experiments
@@ -203,5 +224,5 @@ table, the phoneme error rate of the transducer is among the lowest
 recorded on TIMIT:
 
 <div align="center">
-    <img src="media/RNN-T/image5.png" width=750>
+    <img src="media/RNN-T/image6.png" width=750>
 </div>
