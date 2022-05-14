@@ -165,7 +165,7 @@ allow more stable gradients as the dot product could lead to
 exploding values:
 
 <div align="center">
-    <img src="media/Transformer/image7.png" width=350>
+    <img src="media/Transformer/image7.png" width=250>
 </div>
 
 &emsp;&emsp;&emsp;Then, we are going to perform a Softmax over these down-scaled
@@ -207,7 +207,7 @@ fully-connected layer to match dimensions for the residual connection.
 The following image shows the multi-head attention of just two heads $h=2$:
 
 <div align="center">
-    <img src="media/Transformer/image10.png" width=750>
+    <img src="media/Transformer/image10.png" width=550>
 </div>
 
 -   **Residual Connection & Normalization**:
@@ -217,7 +217,7 @@ The following image shows the multi-head attention of just two heads $h=2$:
     After that, a layer normalization is applied:
 
 <div align="center">
-    <img src="media/Transformer/image11.png" width=550>
+    <img src="media/Transformer/image11.png" width=350>
     <!-- <img src="media/Transformer/image12.png" width=150> -->
 </div>
 
@@ -242,7 +242,7 @@ batch and the layer normalization normalizes over all weights in the layer.
 $$\text{FFN}\left( x \right) = \text{ReLU}\left( xW_{1} + b_{1} \right)W_{2} + b_{2}$$
 
 <div align="center">
-    <img src="media/Transformer/image13.png" width=350>
+    <img src="media/Transformer/image13.png" width=250>
 </div>
 
 
@@ -250,7 +250,7 @@ Decoder
 -------
 
 <div align="center">
-    <img src="media/Transformer/image14.png" width=350>
+    <img src="media/Transformer/image14.png" width=450>
 </div>
 
 In this part, we are going to focus on the
@@ -276,7 +276,7 @@ same components as the encoder except for two things:
 &emsp;&emsp;&emsp;We are using -inf as a small numbers that will be zero
 when applying the Softmax.
 
--   **Multi-head Attention \#2:**
+-   **Multi-head Attention #2:**
     The query and key of this block will come from the encoder output
     and the values will be the output of the masked multi-head block.
 
