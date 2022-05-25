@@ -6,7 +6,8 @@ labs: ["FAIR"]
 ---
 
 CMLM stands for "Conditional Masked Language Modeling" Transformer which
-is an encoder-decoder Transformer architecture trained with a masked
+is an encoder-decoder [Transformer](https://anwarvic.github.io/machine-translation/Transformer)
+architecture trained with a masked
 language modeling (MLM) training objective and uses "masked-predict"
 algorithm for decoding. This model was proposed by FAIR in 2019 and
 published in their paper: [Mask-Predict: Parallel Decoding of
@@ -24,6 +25,11 @@ iteratively decodes in linear time. CMLM Transformer is the same as the
 with one change in the decoder; the masking of the self-attention in the
 decoder was removed to make the decoder attend to both left and right
 contexts when generating the output translation.
+
+> **Note:**
+The difference between MLM and CMLM is that MLM predicts masked tokens given
+the remaining sentence while CMLM predicts masked tokens given the source
+sentence + the remaining of target sentence.
 
 CMLM Training
 -------------
