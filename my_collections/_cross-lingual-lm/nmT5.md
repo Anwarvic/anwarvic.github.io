@@ -25,7 +25,7 @@ pre-training:
 
 -   <strong><u>TLM (Translation Language Modeling):</u></strong>\
     This objective was first proposed by the
-    [XLM](https://anwarvic.github.io/language-modeling/XLM) model and
+    [XLM](https://anwarvic.github.io/cross-lingual-lm/XLM) model and
     was used for encoder only pre-training. In this paper, they extended
     it to the encoder-decoder setting.
 
