@@ -15,14 +15,27 @@ Josh Gerdes.
 The following are the prerequisites that need to be installed to be able to 
 build the website offline:
 
-- Install ruby; this is the command on Ubuntu
+- Install ruby2.7; this is the command on Ubuntu 20.04.
   ```
   sudo apt-get install ruby-full build-essential zlib1g-dev
   ```
 - Install bundler
   ```
-  gem install bundler
+  sudo gem install bundler:2.2.29
   ```
+- Intall Jekyll
+  ```
+  sudo gem install jekyll
+  ```
+
+> Note:
+If you are using Ubuntu 22.04, use this instead to install ruby2.7:
+```
+echo "deb https://ppa.launchpadcontent.net/brightbox/ruby-ng/ubuntu/ focal main"|sudo tee  /etc/apt/sources.list.d/brightbox.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  80F70E11F0F0D5F10CB20E62F5DA5F09C3173AA6
+sudo apt update
+sudo apt install ruby2.7 ruby2.7-dev
+```
 
 ## Run it offline
 
