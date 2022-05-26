@@ -23,10 +23,10 @@ CNN-based models cover a small window in the time domain based on the
 kernel size. Since ContextNet is a fully CNN-model, it uses
 squeeze-and-excitation (SE) layers to enhance the global context.
 
-Let the input sequence be $x = \left( x_{1},\ ...x_{T} \right)$. The
+Let the input sequence be $x = \left( x_{1},\ ...x_{T} \right)$, the
 ContextNet transforms the original signal $x$ into a high level
-representation $h = \left( h_{1},\ ...h_{T'} \right)$, where $T' \leq T$
-like so:
+representation $h = \left( h_{1},\ ...h_{T'} \right)$ such that $T' \leq T$
+just like so:
 
 $$h = \text{ContextNet}\left( x \right) = C_{K}\left( C_{K - 1}\left( \text{...}C_{1}\left( x \right) \right) \right)$$
 
@@ -42,8 +42,8 @@ following table:
 </div>
 
 > **Note:**\
-α is a hyper-parameter that controls the scaling of our model.
-Increasing α when α \> 1 increases the number of channels of the
+$\alpha$ is a hyper-parameter that controls the scaling of our model.
+Increasing $\alpha > 1$ increases the number of channels of the
 convolutions, giving the model more representation power with a larger
 model size.
 
@@ -63,7 +63,7 @@ squeeze-and-excitation block.
 
 Which can be described in the following mathematical formula:
 
-$$C\left( x \right) = \text{Act}\left( \text{SE}\left( f^{m}\left( x \right) \right) + \text{Proj}\left( x \right) \right)$$
+$$C\left( x \right) = \text{Act}\left( \text{SE}\left( f^{n}\left( x \right) \right) + \text{Proj}\left( x \right) \right)$$
 
 $$f\left( x \right) = \text{Act}\left( \text{BN}\left( \text{Conv}\left( x \right) \right) \right)$$
 
@@ -78,8 +78,8 @@ in ContextNet consists of the following components:
     on all depthwise convolution layers in the network.
 
 -   <u><strong>Swish Activation:</strong></u>\
-    ContextNet uses swish function with $\beta = 1$ defined below; which
-    was consistently better than ReLU:
+    ContextNet uses swish function with $\beta = 1$ defined below; which was
+    (according to the paper) consistently better than ReLU:
 
 $$A\text{ct}\left( x \right) = x.\sigma\left( \beta x \right) = \frac{x}{1 - e^{- \beta x}}$$
 
