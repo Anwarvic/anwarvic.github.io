@@ -33,7 +33,7 @@ represented by fixed-length real-valued vectors where $x_{i}$ would
 typically be a vector of MFC coefficients and $y_{j}$ would be a
 one-hot vector encoding a particular phoneme or null $\varnothing$.
 
-As shown in the past figure, RNN-T consists of two networks to determine the
+As shown in the past figure, RNN-T consists of three networks to determine the
 past conditional distribution:
 
 -   <u><strong>Transcription Network</strong></u> $F$:\
