@@ -44,6 +44,11 @@ collections:
     permalink: /:collection/:path
     title: "Speech Recognition"
     show: true
+  S2T-translation:
+    output: true
+    permalink: /:collection/:path
+    title: "Speech-to-Text Translation"
+    show: true
   word-embedding:
     output: true
     permalink: /:collection/:path
