@@ -33,12 +33,12 @@ Adapter Tuning
 Adapter Tuning is considered a new technique for transfer learning.
 Before that, There are two common transfer learning techniques in NLP:
 
--   Feature-based Transfer Learning:\
+-   <u><strong>Feature-based Transfer Learning</strong></u>:\
     It involves pre-training real-valued embeddings vectors. These
     embeddings may be at the word, sentence, or paragraph level. The
     embeddings are then fed to custom downstream models.
 
--   Fine-tuning:\
+-   <u><strong>Fine-tuning</strong></u>:\
     Fine-tuning involves copying the weights from a pre-trained network
     and tuning them on the downstream task. Recent work shows that
     fine-tuning often enjoys better performance than feature-based
