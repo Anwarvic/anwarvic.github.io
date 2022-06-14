@@ -1,6 +1,6 @@
 ---
 title: "XLSR"
-date: 2018-04-15
+date: 2020-06-24
 cover: /image1.png
 labs: ["FAIR"]
 ---
@@ -23,7 +23,7 @@ as [wav2vec
 difference is that XLSR was trained on multiple languages unlike
 [wav2vec 2.0](https://anwarvic.github.io/speech-recognition/wav2vec_2)
 which was trained only on English. The quantization in XLSR produces
-**[multilingual]{.underline}** quantized speech units whose embeddings
+<u><strong>multilingual</strong></u> quantized speech units whose embeddings
 are then used as targets for a
 [Transformer](https://anwarvic.github.io/machine-translation/Transformer)
 trained by contrastive learning. The model learns to share discrete
@@ -162,11 +162,11 @@ Large reduces CER by $38\%$ relative to multi-BLSTMP+VGG baseline:
     <img src="media/XLSR/image3.png" width=750>
 </div>
 
-These results show that **[the approach used to train XLSR is very
+These results show that <u><strong>the approach used to train XLSR is very
 effective for learning generic cross-lingual representations in an
-unsupervised way]{.underline}**. Also, it shows that cross-lingual
-transfer are **[particularly effective on low-resource
-languages]{.underline}** such as Swedish (sv) and Turkish (tr).
+unsupervised way</strong></u>. Also, it shows that cross-lingual
+transfer are <u><strong>particularly effective on low-resource
+languages</strong></u> such as Swedish (sv) and Turkish (tr).
 
 To better assess the cross-lingual transfer of the learned
 representations, they decided to evaluate the XLSR-10 model trained on
@@ -180,9 +180,9 @@ still outperforms XLSR-Monolingual.
     <img src="media/XLSR/image4.png" width=750>
 </div>
 
-This further suggests that **[the learned representations capture
+This further suggests that <u><strong>the learned representations capture
 generic features of the speech signal which transfer to many
-languages]{.underline}**.
+languages</strong></u>.
 
 XLSR-53
 -------
