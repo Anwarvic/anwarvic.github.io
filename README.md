@@ -322,6 +322,7 @@ follow the following three steps:
     output: true
     permalink: /:collection/:path
     title: "[COLLECTION-TITLE]" #this is for the button
+    show: true/false # show the collection button on the cover page
   ```
 - Create a new file at the root named `[COLLECTION-NAME].md` with the following
   written inside:
