@@ -23,26 +23,32 @@ collections:
     output: true
     permalink: /:collection/:path
     title: "Language Modeling"
+    show: true
   machine-translation:
     output: true
     permalink: /:collection/:path
     title: "Machine Translation"
+    show: true
   multilingual-nmt:
     output: true
     permalink: /:collection/:path
     title: "Multilingual NMT"
+    show: true
   cross-lingual-lm:
     output: true
     permalink: /:collection/:path
     title: "Cross-lingual LM"
+    show: true
   speech-recognition:
     output: true
     permalink: /:collection/:path
     title: "Speech Recognition"
-  # word-embedding:
-  #   output: true
-  #   permalink: /:collection/:path
-  #   title: "Word Embedding"
+    show: true
+  word-embedding:
+    output: true
+    permalink: /:collection/:path
+    title: "Word Embedding"
+    show: false
 
 defaults:
   -
