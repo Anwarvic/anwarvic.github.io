@@ -1,6 +1,7 @@
 ---
 title: "GloVe"
 date: 2014-10-25
+labs: ["Stanford"]
 ---
 
 GloVe (Global Vectors for Word Representation) is a model released in
