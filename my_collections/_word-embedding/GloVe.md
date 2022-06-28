@@ -1,6 +1,7 @@
 ---
 title: "GloVe"
 date: 2014-10-25
+cover: /image0.png
 labs: ["Stanford"]
 ---
 
@@ -135,7 +136,7 @@ The following graph is from the published GloVe paper:
     -   Window size $m$. As we can see in the following graph, the best
         value is around $8$.
 
-    -   Using </u>symmetric<u> or <u>Asymmetric</u> windows. Symmetric
+    -   Using <u>symmetric</u> or <u>Asymmetric</u> windows. Symmetric
         is using the window size for both directions (left and right).
         Asymmetric is using the window size for just one direction.
 
@@ -162,11 +163,13 @@ model into a real-life task. Both have some pros and cons:
 
 <div align="center" class="inline-table">
 <table>
-    <tr>
-        <th></th>
-        <th style="text-align:center"><strong>Intrinsic</strong></th>
-        <th style="text-align:center"><strong>Extrinsic</strong></th>
-    </tr>
+    <thead>
+        <tr>
+            <th></th>
+            <th style="text-align:center"><strong>Intrinsic</strong></th>
+            <th style="text-align:center"><strong>Extrinsic</strong></th>
+        </tr>
+    </thead>
     <tr>
         <td><strong>Pros</strong></td>
         <td>
