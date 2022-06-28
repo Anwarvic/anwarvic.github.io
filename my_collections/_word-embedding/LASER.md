@@ -1,6 +1,8 @@
 ---
 title: "LASER"
 date: 2019-09-25
+cover: /image1.png
+labs: ["University of the Basque Country", "FAIR"]
 ---
 
 LASER stands for "**L**anguage-**A**gnostic **Se**ntence
