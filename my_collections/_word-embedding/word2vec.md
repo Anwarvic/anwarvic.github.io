@@ -1,6 +1,8 @@
 ---
 title: "Word2Vec"
 date: 2013-09-07
+cover: /image1.png
+labs: ["Google Research"]
 ---
 
 Word2Vec stands for "word-to-vector" is a model architecture created by
