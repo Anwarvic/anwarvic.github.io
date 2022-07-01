@@ -1,6 +1,8 @@
 ---
 title: "t-SNE"
 date: 2008-11-25
+cover: /image.png
+labs: ["Maastricht University", "University of Toronto"]
 ---
 
 One of the popular things to do with word embedding, is to take this
