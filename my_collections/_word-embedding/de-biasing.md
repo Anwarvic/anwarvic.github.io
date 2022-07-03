@@ -1,6 +1,8 @@
 ---
 title: "De-biasing Word Vectors"
 date: 2016-07-21
+cover: /image1.png
+labs: ["Boston University", "Microsoft Research"]
 ---
 
 In this paper: [Man is to Computer Programmer as Woman is to Homemaker?
