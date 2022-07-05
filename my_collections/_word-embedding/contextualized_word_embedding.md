@@ -1,6 +1,7 @@
 ---
 title: "Contextualized Word Embedding: ELMO & BERT"
 date: 2018-03-22
+cover: /image1.png
 ---
 
 In the past few years, a number of new methods leveraging contextualized
