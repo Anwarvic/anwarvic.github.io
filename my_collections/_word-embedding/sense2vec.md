@@ -1,6 +1,8 @@
 ---
 title: "sense2vec"
 date: 2015-11-19
+cover: /image1.png
+labs: ["Digital Reasoning Systems"]
 ---
 
 One of the limits of word2vec is polysemy, which means that one word
