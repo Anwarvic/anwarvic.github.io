@@ -1,6 +1,8 @@
 ---
 title: "Subword Embedding"
 date: 2017-06-19
+cover: /image1.png
+labs: ["FAIR"]
 ---
 
 Methods such as word2vec or GloVe ignore the internal structure of words
