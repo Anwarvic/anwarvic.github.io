@@ -49,6 +49,11 @@ collections:
     permalink: /:collection/:path
     title: "Word Embedding"
     show: false
+  misc:
+    output: true
+    permalink: /:collection/:path
+    title: "Misc."
+    show: false
 
 defaults:
   -
