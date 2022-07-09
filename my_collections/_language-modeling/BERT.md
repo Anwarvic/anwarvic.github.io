@@ -89,6 +89,16 @@ There is a new token \[CLS\] added to the start of the input sentence
 when passed to BERT. \[CLS\] stands for classification and this is just
 a way to tell BERT we are using your architecture for classification.
 
+Now, let’s ask a very important question: what happens if we increased the
+masking percentage to more than 15%? Actually, researchers at Princeton tried
+to answer this question in their paper "[Should You Mask 15% in Masked Language
+Modeling?](https://arxiv.org/pdf/2202.08005.pdf)" published in 2022. And they
+found out that masking up to 40% of input tokens can outperform the 15%
+baseline, and even masking 80% can preserve most of the performance,
+as measured by fine-tuning on downstream tasks. You can use this GitHub
+repository: [princeton-nlp/dinkytrain](https://github.com/princeton-nlp/dinkytrain)
+to reproduce their results.
+
 NSP
 ---
 
@@ -159,6 +169,67 @@ core model as explained in:
 -   **Named Entity Recognition (NER):**\
     BERT can be trained by feeding the output vector of each token
     into a classification layer that predicts the NER label.
+
+BERT Linguistic Patterns
+------------------------
+
+According to this paper "[BERT Rediscovers the Classical NLP
+Pipeline](https://arxiv.org/pdf/1905.05950.pdf)" published by Google in
+2019, the authors of this paper found out that different layers of BERT
+capture different linguistic semantics. For example, they found out that
+lower layers of BERT encode more local syntax while higher layers
+capture more complex semantics. They used a pre-trained BERT-base &
+BERT-Large on eight different tasks.
+
+The following table shows the layer-wise metrics on BERT-base (left) and
+BERT-large (right) where blue bars are mixing weights that tell us
+<u><strong>which layers are most relevant when a probing classifier at this
+layer has access to the whole BERT model</strong></u>, while purple
+bars are differential scores normalized for each task which 
+<u><strong>measures how much better we do on the probing task if we observe
+one additional encoder layer</strong></u>:
+
+<div align="center">
+    <img src="media/BERT/image7.png" width=450>
+</div>
+
+
+From the past figure, if we have access to the whole BERT model, we can
+see the following with respect to each task:
+
+-   **Part-of-speech (POS):** The purple bars show that the first few
+    layers are the most important; and the blue bars show us that
+    probing the first layers will have the same effect as the last
+    layers.
+
+-   **Constituents (Consts.):** The purple bars show that the first few
+    layers are the most important; and the blue bars show us that
+    probing the middle layers will have the highest effect.
+
+-   **Dependencies (Deps.):** The purple bars show that the first few
+    layers of BERT-base are the most important while the middle layers
+    of BERT-large are the most important; and the blue bars show us that
+    probing the middle layers will have the highest effect.
+
+-   **Entities:** The purple bars show that the first few layers are the
+    most important; and the blue bars show us that probing the
+    middle-last layers will have the highest effect.
+
+-   **Semantic role labeling (SRL):** The purple bars show that the
+    first few layers are the most important; and the blue bars show us
+    that probing the middle layers will have the highest effect.
+
+-   **Coreference (Coref.):** The purple bars show that the last few
+    layers are the least important; and the blue bars show us that
+    probing the middle-last layers will have the highest effect.
+
+-   **Semantic proto-roles (SPR):** The purple bars show all layers are
+    important; and the blue bars show us that probing over all layers
+    has the same effect.
+
+-   **Relation classification (SemEval):** The purple bars show all
+    layers are important; and the blue bars show us that probing over
+    all layers has the same effect.
 
 Base / Large BERT
 -----------------
