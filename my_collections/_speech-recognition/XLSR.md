@@ -1,5 +1,9 @@
-XLSR
-====
+---
+title: "XLSR"
+date: 2018-04-15
+cover: /image1.png
+labs: ["FAIR"]
+---
 
 XLSR stands for "Cross-Lingual Speech Representation" which is a
 large-scale multilingual speech recognition model based on [wav2vec
@@ -25,10 +29,12 @@ are then used as targets for a
 trained by contrastive learning. The model learns to share discrete
 tokens across languages, creating bridges among these languages.
 
-![](media/XLSR//media/image1.png){width="5.99375in"
-height="2.0930555555555554in"}
+<div align="center">
+    <img src="media/XLSR/image1.png" width=750>
+</div>
 
-**Note to Reader:**\
+
+> **Note to Reader:**\
 Reading the [wav2vec
 2.0](https://anwarvic.github.io/speech-recognition/wav2vec_2) post is
 much needed before going on reading this post.
@@ -68,6 +74,49 @@ loss.
   **Large**   24      1024        4096                16      0.1       $$1e^{- 3}$$
   ----------- ------- ----------- ------------------- ------- --------- --------------------
 
+<div align="center" class="inline-table">
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>BASE</th>
+            <th>LARGE</th>
+        </tr>
+    </thead>
+    <tr>
+        <td><strong>$$N%%</strong></td>
+        <td>12</td>
+        <td>24</td>
+    </tr>
+    <tr>
+        <td><strong>$$d_{m}$$</strong></td>
+        <td>768</td>
+        <td>1024</td>
+    </tr>
+    <tr>
+        <td><strong>$$d_{\text{ff}}$$</strong></td>
+        <td>3072</td>
+        <td>4096</td>
+    </tr>
+    <tr>
+        <td><strong>$$h$$</strong></td>
+        <td>8</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td><strong>dropout</strong></td>
+        <td>0.1</td>
+        <td>0.1</td>
+    </tr>
+    <tr>
+        <td><strong>Learning rate peak</strong></td>
+        <td>$$1e^{- 5}$$</td>
+        <td>$$1e^{- 3}$$</td>
+    </tr>
+</table>
+</div>
+
+
 The following is a list of all pre-trained models in the paper:
 
 -   **XLSR-English:** It is an XLSR-base model pre-trained on only
@@ -99,8 +148,9 @@ compared to XLSR-Monolingual. XLSR-10 (large) obtains 12.2 PER on
 average which is PER reduction of $72\%$ relative to
 [mCPC](https://anwarvic.github.io/speech-recognition/mCPC):
 
-![](media/XLSR//media/image2.png){width="5.909722222222222in"
-height="2.9381944444444446in"}
+<div align="center">
+    <img src="media/XLSR/image2.png" width=750>
+</div>
 
 Same experiment was applied on different languages from
 [BABEL](https://catalog.ldc.upenn.edu/byyear) dataset, and similar
@@ -108,8 +158,9 @@ results were found. XLSR-10 (base) improves over XLSR-Monolingual by
 $18\%$ relative CER (Character Error Rate). XLSR-10 (large) XLSR-10
 Large reduces CER by $38\%$ relative to multi-BLSTMP+VGG baseline:
 
-![](media/XLSR//media/image3.png){width="5.917361111111111in"
-height="2.59375in"}
+<div align="center">
+    <img src="media/XLSR/image3.png" width=750>
+</div>
 
 These results show that **[the approach used to train XLSR is very
 effective for learning generic cross-lingual representations in an
@@ -125,8 +176,9 @@ each language, and compare it to monolingual models pretrained
 specifically on these languages. The following table shows that XLSR-10
 still outperforms XLSR-Monolingual.
 
-![](media/XLSR//media/image4.png){width="4.895138888888889in"
-height="2.4944444444444445in"}
+<div align="center">
+    <img src="media/XLSR/image4.png" width=750>
+</div>
 
 This further suggests that **[the learned representations capture
 generic features of the speech signal which transfer to many
@@ -146,11 +198,13 @@ the following two tables (the first table for
 [CommonVoice](https://commonvoice.mozilla.org/en/languages) dataset, and
 the other for [BABEL](https://catalog.ldc.upenn.edu/byyear) dataset):
 
-![](media/XLSR//media/image5.png){width="5.907638888888889in"
-height="1.5743055555555556in"}
+<div align="center">
+    <img src="media/XLSR/image5.png" width=750>
+</div>
 
-![](media/XLSR//media/image6.png){width="5.774305555555555in"
-height="1.4680555555555554in"}
+<div align="center">
+    <img src="media/XLSR/image6.png" width=750>
+</div>
 
 On the [MLS](https://www.openslr.org/94/) dataset, they fine-tuned
 XLSR-53 on 1h, 10h, 100h and full data to evaluate the few-shot
@@ -159,5 +213,6 @@ table, XLSR-53 signicantly outperforms the LibriVox [wav2vec
 2.0](https://anwarvic.github.io/speech-recognition/wav2vec_2) model on
 all languages except English and by significant margin:
 
-![](media/XLSR//media/image7.png){width="5.207638888888889in"
-height="1.711111111111111in"}
+<div align="center">
+    <img src="media/XLSR/image7.png" width=750>
+</div>
