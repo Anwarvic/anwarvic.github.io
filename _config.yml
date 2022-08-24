@@ -1,6 +1,6 @@
 # Site settings
 title: "Anwarvic's Blog"
-description: "I write about research papers in these topics:"
+description: "I'm an AI research resident at Meta (Facebook previously). And I summarize research papers in these topics:"
 url: 'https://anwarvic.github.io'
 cover: images/forest.jpg
 baseurl: ''
