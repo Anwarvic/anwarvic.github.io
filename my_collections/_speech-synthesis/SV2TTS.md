@@ -58,7 +58,7 @@ components:
     vocoder network that converts the mel-spectrogram into time domain
     waveform samples.
 
-    Let's talk about each component separately in more details:
+Let's talk about each component separately in more details:
 
 ### Speaker Encoder
 
