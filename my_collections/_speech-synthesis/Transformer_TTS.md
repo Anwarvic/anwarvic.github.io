@@ -49,7 +49,7 @@ called "encoder per-net" and "decoder pre-net" respectively. In the next part,
 we are going to discuss these parts in more details.
 
 <div align="center">
-    <img src="media/Transformer_TTS/image2.png" width=750>
+    <img src="media/Transformer_TTS/image2.png" width=450>
 </div>
 
 ### Text-to-phone Converter
