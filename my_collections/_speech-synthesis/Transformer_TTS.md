@@ -26,13 +26,13 @@ repository:
 </div>
 
 Recent end-to-end neural text-to-speech (TTS) models such as
-[Tacotron](https://anwarvic.github.io/speech-synthesis/Tacotron_2) and
+[Tacotron](https://anwarvic.github.io/speech-synthesis/Tacotron) and
 [Tacotron 2](https://anwarvic.github.io/speech-synthesis/Tacotron_2)
 depend intensively on recurrent neural networks
 ([RNNs](https://anwarvic.github.io/language-modeling/RNN)) which are
 very slow to train and can't capture long dependencies. That's why
 Transformer TTS model was proposed. In this model, they adapted the
-multi-head attention mechanism to replace the RNN structures and also
+multi-head attention mechanism to replace the RNN structures and
 the original attention mechanism in [Tacotron
 2](https://anwarvic.github.io/speech-synthesis/Tacotron_2).
 
@@ -157,7 +157,7 @@ refine the reconstruction of mel spectrogram.
 It's worth mentioning that, for the stop linear, there is only one
 positive sample in the end of each sequence which means "stop", while
 hundreds of negative samples for other frames. This imbalance may result
-in unstoppable inference. We impose a positive weight
+in unstoppable inference. To fix that, they imposed a positive weight
 $\left( 5.0 \sim 8.0 \right)$ on the tail positive stop token when
 calculating binary cross entropy loss, and this problem was efficiently
 solved.
