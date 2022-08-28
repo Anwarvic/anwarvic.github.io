@@ -9,10 +9,10 @@ WaveNet is a generative deep neural network for generating raw audio
 waveforms based on PixelCNN architecture. WaveNet was proposed by Deep
 Mind in 2016 and published in this paper: [WaveNet: A Generative Model
 for Raw Audio](https://arxiv.org/pdf/1609.03499.pdf). The official audio
-samples outputted from the trained Tacotron by Google is provided in
+samples outputted from the trained WaveNet by Google is provided in
 this
 [website](https://www.deepmind.com/blog/wavenet-a-generative-model-for-raw-audio).
-The unofficial TensorFlow implementation for Tacotron can be found in
+The unofficial TensorFlow implementation for WaveNet can be found in
 this GitHub repository:
 [tensorflow-wavenet](https://github.com/ibab/tensorflow-wavenet).
 
@@ -41,6 +41,11 @@ more details:
 <div align="center">
     <img src="media/WaveNet/image1.png" width=750>
 </div>
+
+> **Note:**
+Later in the speech community, WaveNet were used as a Vocoder which takes
+audio spectrograms as input and returns waveforms as output. And that's
+because of its ability to operate on images as input.
 
 Dilated Causal Convolution
 --------------------------
@@ -128,7 +133,7 @@ architecture remains the same, but the Gated Activation Unit become:
 $$Z = \tanh\left( W_{f,k} \ast X + V_{f,k}^{\intercal}h \right)\bigodot\ \sigma\left( W_{g,k} \ast X + V_{g,k}^{\intercal}h \right)$$
 
 A single WaveNet was able to model speech from any of the speakers by
-conditioning it on a onehot encoding of a speaker. This confirms that it
+conditioning it on a one-hot encoding of a speaker. This confirms that it
 is powerful enough to capture the characteristics of all 109 speakers
 from the dataset in a single model. They also observed that adding
 speakers resulted in better validation set performance compared to
