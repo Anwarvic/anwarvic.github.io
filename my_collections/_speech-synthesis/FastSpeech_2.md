@@ -5,11 +5,11 @@ cover: /image2.png
 labs: ["Zhejiang University", "Microsoft Research", "Microsoft Azure Speech"]
 ---
 
-[FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech)
+[FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech)
 model was a novel non-autoregressive TTS model that achieve on-par
 results to auto-regressive counterparts while being 38 times faster.
 Despite these advantages,
-[FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech)
+[FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech)
 had three main issues:
 
 -   It was depending on a teacher auto-regressive model making pipeline
@@ -23,12 +23,12 @@ had three main issues:
     voice quality.
 
 FastSpeech 2 is a non-autoregressive TTS model by the same authors as
-[FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech)
+[FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech)
 where they solved the issues mentioned above. FastSpeech 2 is trained
 directly on the ground-truth target instead of the simplified output
 from the teacher TTS. FastSpeech 2 was proposed by Microsoft (same
 authors as
-[FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech))
+[FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech))
 in 2020 and published in this paper under the same name: "[FastSpeech 2:
 Fast and High-Quality End-to-End Text to
 Speech](https://arxiv.org/pdf/2006.04558.pdf)". The official synthesized
@@ -63,7 +63,7 @@ to discuss each component in more details:
 ### Encoder
 
 The encoder here is the same as the Feed-forward Transformer in
-[FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech)
+[FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech)
 which is a stack of $N$ blocks of FFT blocks. Each FFT block, as shown
 below, consists of <u><strong>multi-head self-attention mechanism</strong></u>
 to extract the cross-position information and 2-layer
@@ -106,7 +106,7 @@ respectively.
 #### Duration Predictor
 
 The Duration Predictor (same as in
-[FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech))
+[FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech))
 takes the phoneme hidden sequence as input and predicts the duration of
 each phoneme (how many mel frames correspond to this phoneme), and is
 converted into logarithmic domain for ease of prediction.
@@ -114,7 +114,7 @@ converted into logarithmic domain for ease of prediction.
 It is optimized with mean square error (MSE) loss, taking the extracted
 duration as training target. Instead of extracting the phoneme duration
 using a pre-trained autoregressive TTS model in
-[FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech),
+[FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech),
 it uses [Montreal forced
 alignment](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner)
 tool.
@@ -150,7 +150,7 @@ quantized values and optimize the energy predictor with MSE loss.
 ### Mel-spectrogram Decoder
 
 The decoder here is the same as the Feed-forward Transformer in
-[FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech)
+[FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech)
 which is a stack of $N$ blocks of FFT blocks. Each FFT block, as shown
 below, consists of <u><strong>multi-head self-attention mechanism</strong></u>
 to extract the cross-position information and 2-layer <u><strong>1D
@@ -226,18 +226,18 @@ the waveform decoder to synthesize speech audio.
 ## Experiments
 
 Similar to
-[FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech),
+[FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech),
 all experiments in this paper was done on LJSpeech dataset which
 contains $13,100$ English audio clips (about 24 hours) and corresponding
 text transcripts. Unlike
-[FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech),
+[FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech),
 they split the dataset differently: they used $12,228$ samples for
 training, $349$ samples (with document title LJ003) for validation and
 $523$ samples (with document title LJ001 and LJ002) for testing. For
 subjective evaluation, they randomly choose 100 samples in test set.
 
-Similary to
-[FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech),
+Similarly to
+[FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech),
 as a pre-processing step, they converted the text sequence into the
 phoneme sequence using [grapheme-to-phoneme
 (g2p)](https://github.com/Kyubyong/g2p) tool. And they converted the raw
@@ -281,12 +281,12 @@ terms of:
     [Transformer
     TTS](https://anwarvic.github.io/speech-synthesis/Transformer_TTS),
     and
-    [FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech).
+    [FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech).
     All previous models used [Parallel
     WaveGAN](https://anwarvic.github.io/speech-synthesis/Parallel_WaveGAN)
     (PWG) as vocoder. The results are shown in the following table which
     shows that FastSpeech 2 outperforms
-    [FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech)
+    [FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech)
     and other auto-regressive models. can nearly match the quality of
     the [Transformer
     TTS](https://anwarvic.github.io/speech-synthesis/Transformer_TTS)
@@ -301,13 +301,13 @@ terms of:
     They compared the inference of FastSpeech 2 compared to [Transformer
     TTS](https://anwarvic.github.io/speech-synthesis/Transformer_TTS)
     model and
-    [FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech)
+    [FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech)
     and results are shown in the following table. FastSpeech 2
     simplifies the training pipeline of
-    [FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech)
+    [FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech)
     by removing the teacher-student distillation process, and thus
     reduces the training time by $3.12$x compared with
-    [FastSpeech](https://anwarvic.github.io/machine-translation/FastSpeech).
+    [FastSpeech](https://anwarvic.github.io/speech-synthesis/FastSpeech).
 
 <div align="center">
     <img src="media/FastSpeech_2/image10.png" width=750>
