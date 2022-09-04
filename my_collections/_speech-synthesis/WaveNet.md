@@ -32,6 +32,8 @@ below:
 
 $$p\left( X \right) = \prod_{t = 1}^{T}{p\left( x_{t} \middle| x_{1},\ x_{2},\ ...\ x_{t - 1} \right)}$$
 
+
+## Architecture
 The following figure is the WaveNet architecture. As we can see from the
 figure, WaveNet consists of three main components: **Causal Convolution layers**,
 **Gated Activation**, **Residual and Skip connections**.
@@ -47,8 +49,7 @@ Later in the speech community, WaveNet were used as a Vocoder which takes
 audio spectrograms as input and returns waveforms as output. And that's
 because of its ability to operate on images as input.
 
-Dilated Causal Convolution
---------------------------
+### Dilated Causal Convolution
 
 By using causal convolutions, we make sure the model cannot violate the
 ordering in which we model the data: the prediction
@@ -86,8 +87,7 @@ three times forming 30 dilated layers:
 > **Note:**\
 Dilated convolution with $dilation = 1$ yields the standard convolution.
 
-Gated Activation Units
-----------------------
+### Gated Activation Units
 
 After the dilated causal convolution layers, the input features $X$ are
 passed to the Gated Activation Units resulting into output features $Z$
@@ -100,8 +100,7 @@ element-wise multiplication operator, $\sigma()$ is a sigmoid function,
 $k$ is the layer index, $f$ and $g$ denote filter and gate,
 respectively, and $W$ is a learnable convolution filter.
 
-Residual & Skip Connections
----------------------------
+### Residual & Skip Connections
 
 Both residual and parameterized skip connections are used throughout the
 network, to speed up convergence and enable training of much deeper
