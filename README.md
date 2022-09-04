@@ -1,6 +1,6 @@
 # [anwarvic.github.io](https://anwarvic.github.io)
 
-This is the source code for my blog hosted in the following
+This is the source code for my blog hosted on the following
 url: https://anwarvic.github.io. This source code was adapted from the
 [Jekyll-Uno](https://github.com/joshgerdes/jekyll-uno) theme created by
 Josh Gerdes.
@@ -92,8 +92,8 @@ order:
 - `js/`: Directory containing all JavaScript scripts in this blog.
   - `jquery.v3.3.1.min.js`: JQuery v3.3.1 (included so I can work offline).
   - `main.js`: User-defined functions.
-  - `search.json`: JSON file that creates blog database for the search
-    functionality. Gonna talk about in more detail [later](#Search).
+  - `search.json`: JSON file that builds the blog database for the search
+    functionality, gonna talk about in more detail [later](#Search).
   - `simple-blog-search.min.js`:
   [Simple Blog Search](https://github.com/SeraphRoy/SimpleBlogSearch)
   plugin used for the search functionality.
@@ -106,9 +106,9 @@ order:
   - `labs.html`: The HTML labs for `/labs` route showing list of labs published
     papers mentioned in the blog.
 
-- `my_collections/`: Directory containing all articles I wrote for my blog. All
-  files in this directory are in Markdown format. Any images included in any
-  article can be found here as well.
+- `my_collections/`: Directory containing all articles I wrote for my blog.
+  All files in this directory are in Markdown format. Any images included in
+  any article can be found here as well.
 
 - `_sass/`: Directory containing all SCSS files.
   - `animate.scss`: Defines simple animation used in the blog; like the
@@ -124,15 +124,11 @@ order:
 - `googleb6210f0379e386f0.html`: File that Google search engine uses to to
 prove my ownership to the domain.
 - `index.html`: The HTML file for the home page.
-- `labs.md`: The main page for `\labs` route.
-- `language-modeling.md`: The main page for `/language-modeling` route.
-- `machine-translation.md`: The main page for `/machine-translation` route.
-- `multilingual-nmts.md`: The main page for `/multilingual-nmts` route.
+- `xxx.md`: The main page for `\xxx` route. For example, `labs.md` is the
+  main page for the `\labs` route, and so on.
 - `robots.txt`: A file used by search engine crawlers.
 - `search.html`: The main page for the `/search` route.
 - `sitemap.xml`: A Sitemap is an XML file that lists the URLs for a site.
-- `speech-recognition.md`: The main page for the `/speech-recognition` route.
-- `word-embedding.md`: The main page for the `/word-embedding` route.
 
 Now, we have an idea about each single file of this repository. Once you start
 the server using the `bundle exec jekyll serve --watch` command, the server
@@ -147,7 +143,7 @@ http://localhost:4000 which will present the content of the `index.html` file.
 
 ## _config.yml
 
-`_config.yml` is a YAML file containing the configuration for the Jekyll server.
+`_config.yml` is a YAML file containing the configuration for Jekyll.
 You can consider this file as the start-point of the whole project. In this
 file, you can define the global variables for the whole project. Any file in
 this project whether it's an HTML, CSS, JavaScript or even a markdown can
@@ -167,20 +163,34 @@ Now, let's discuss a few of these global variables:
 - `collection_dir`: The directory where all the collections will be found. Mine
   is `my_collections`, so there should be a directory at the root of the project
   with the same name.
-- `collections`: A list of all collections in this blog. Each collection is a
-  topic; such as "Machine Translation", "Language Modeling", ...etc. Each
-  collection has the following properties:
+- `collections`: A list of all collections in this blog. In my use-case, each
+  collection is a topic in AI, such as "Machine Translation",
+  "Language Modeling", ...etc.
+  Each collection has the following properties:
     - `output: true`: This means there will be output for this collection.
     - `permalink`: This is the route of this collection.
     - `title`: The title of the collection.
+    - `show`: Setting this to `true` means a button with the `title` value
+      will be created on the cover page. I use this feature to filter-out
+      some of the collections that I don't want them to be accessible from
+      the cover page.
 - `defaults`: All default options can be defined here. Here, I defined the
-  default layout for all of my collections; which is `post.html`.
+  default layout for all of my collections (`my_collections/*`) to be
+  `post.html`.
 - `destination`: The directory where the project will be built. Mine is `_site`,
   so after starting the server, a new directory called `_site` will be created
   in the root directory.
-- `markdown`: The Markdown Flavor used in the project.
+- `markdown`: The Markdown Flavor used in the project, which is `kramdown` and
+  it is defined at the end of the file.
 - `exclude`: The files that should be excluded and not monitored by the Jekyll
-  server.
+  server. By default, Jekyll keeps an eye on all files in this project, once
+  a file is updated the server rebuilds the whole project to view that update.
+  These files are the onces that the server will ignore when you update them.
+
+> **Note:**\
+Any update to the `_config.yml` file will not be viewed till you restart the
+server. That's because `_config.yml` is the start point to the project
+and it's not monitored during the run.
 
 The following are some of the past variables shown in the blog:
 
@@ -190,9 +200,9 @@ The following are some of the past variables shown in the blog:
 
 ## index.html
 
-The index.html file is the main HTMl layout for this project. If you open this
-file in this project, you will find the following few lines. These few lines
-are called Front Matter, you can read more about them from
+The `index.html` file is the main HTMl layout for this project. If you open
+this file, you will find the following few lines. These few lines
+are called **Front Matter**, you can read more about them from
 [here](https://jekyllrb.com/docs/front-matter/):
 ```
 ---
@@ -212,7 +222,7 @@ want to write a new `Machine Translation` post, you can do it by following
 these steps:
 - Go to the `my_collections/_machine-translation` directory.
 - Create a new Markdown file with the name of the post.
-- Add the Front Matter to the file.
+- Add the following Front Matter to the file.
     ```
     ---
     title:    # Title of the post.
@@ -222,7 +232,7 @@ these steps:
     comments: # Whether or not the post will have comments. (default: true)
     ---
     ```
-- Add the content of the post using Markdown.
+- Add the content of the post using Markdown after the Front Matter.
 
 ---
 # Features
@@ -287,14 +297,15 @@ check the following three files:
 
 One of the most important features implemented here is to show the number of
 minutes an average reader would take to read a certain article. You can find
-this piece of information at the first line of any article.
+this piece of information at the first line of any article as shown in the
+following image:
 
 <div align="center">
   <img src="images/assets/to_read.png" width=750>
 </div>
 
-The piece of code responsible for this feature can be found in the `post.html`
-layout file. In particular, the following few lines:
+The following is the piece of code responsible for this feature, which can be
+found in the `post.html` layout file:
 ```html
 <span id="reading-time">
   {% assign words = page.content | strip_html | number_of_words %}
@@ -311,12 +322,12 @@ other languages, don't forget to change it here.
 
 ## Create New Collection
 
-In this blog, you can see about five different collections which are:
-"Language Modeling", "Machine Translation", "Multilingual NMTs",
-"Speech Recognition" and "Word Embedding". To be able to create a new one,
-follow the following three steps:
+In this blog, you can see different collections, such as "Language Modeling",
+"Machine Translation", ...etc. To be able to create a new one, follow the
+following three steps:
 
-- Create a new entry at the collection list in the `_config.yml` file like so:
+- Create a new entry at the `collections` list in the `_config.yml` file
+  like so:
   ```yaml
   [COLLECTION-NAME]: #this is for the URL
     output: true
@@ -325,7 +336,7 @@ follow the following three steps:
     show: true/false # show the collection button on the cover page
   ```
 - Create a new file at the root named `[COLLECTION-NAME].md` with the following
-  written inside:
+  Front Matter written inside:
   ```
   ---
   layout: named_collection
@@ -339,9 +350,9 @@ follow the following three steps:
 
 ## Disqus
 
-You can use disqus plugin to enable comments on your blog. To customize it, you
-only need to add your disqus shortname to the `disqus_shortname` variable in
-the `_config.yml` file.
+You can use [disqus plugin](https://disqus.com/) to enable comments on your
+blog. To customize it, you only need to add your **disqus shortname** to the
+`disqus_shortname` variable in the `_config.yml` file.
 
 The HTML for the disqus plugin, can be found in the `disqus.html` file.
 
@@ -361,14 +372,13 @@ The HTML for the disqus plugin, can be found in the `disqus.html` file.
 
 ## Google Analytics
 
-You can enable Google Analytics on your blog. To customize this, you only need
+You can enable Google Analytics for your blog. To customize this, you only need
 to add your Tracking ID (or Measurement ID) to the `google_analytics` variable
 in the `_config.yml` file. To know how to get this ID, check out the following
 [page](https://support.google.com/analytics/answer/9304153?utm_campaign=2021-q1-onboarding-ga&utm_source=google-growth&utm_medium=email&utm_content=gold-welcome-0).
 
-If you want to check the Javascript code responsible for enabling Google
-Analytics, you can check the `footer.html` file. You will find the following
-code:
+The Javascript code responsible for enabling Google Analytics can be seen below
+and it's inserted in the `footer.html` file:
 ```HTML
 <!-- Adding Google Analytics -->
 {% if site.google_analytics and jekyll.environment != "development" %}
@@ -385,9 +395,9 @@ code:
 
 ## robots
 
-If you have a page <u>**with a layout**</u> that you want to make it not
-accessible to search engines, you can add the following line in the Front Matter
-of that page:
+If you have a page <u>**with a layout**</u> that you DON'T want it to be
+accessible to all search engines, you can add the following line in the
+Front Matter of that page:
 ```
 ---
 ...
@@ -405,8 +415,8 @@ following `<meta>` tag to the page header (`head.html`):
 
 > **Note:**
 >
-> This is only for pages that has layout. In other words, its layout can NOT be
-> `layout: null`
+> This is only for pages that has layout. In other words, its `layout`
+variable can NOT be `null`, e.g. `layout: null`
 ## Sitemap
 
 A Sitemap is an XML file that lists the URLs for a site. It allows webmasters
@@ -442,3 +452,5 @@ line in the Front Matter of that post/page:
 sitemap:
   exclude: true
 ```
+
+That's it!! 😊
