@@ -5,13 +5,14 @@ cover: /image0.png
 labs: ["Google"]
 ---
 
-Tacotron is an end-to-end generative text-to-speech (TTS) model that
+Tacotron is a two-staged generative text-to-speech (TTS) model that
 synthesizes speech directly from characters. Given (text, audio) pairs,
 Tacotron can be trained completely from scratch with random
 initialization to output spectrogram without any phoneme-level
-alignment. Tacotron was proposed by Google in 2017 and published in this
-paper under the same name: [Tacotron: Towards End-to-End Speech
-Synthesis](https://arxiv.org/pdf/1703.10135.pdf). The official audio
+alignment. After that, a Vocoder model is used to convert the audio
+spectrogram to waveforms. Tacotron was proposed by Google in 2017 and
+published in this paper under the same name: [Tacotron: Towards End-to-End
+Speech Synthesis](https://arxiv.org/pdf/1703.10135.pdf). The official audio
 samples outputted from the trained Tacotron by Google is provided in
 this [website](https://google.github.io/tacotron/). The unofficial
 TensorFlow implementation for Tacotron can be found in this GitHub
