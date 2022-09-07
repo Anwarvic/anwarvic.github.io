@@ -5,19 +5,19 @@ cover: /image0.png
 labs: ["Google", "University of California"]
 ---
 
-Tacotron 2 is an end-to-end generative text-to-speech (TTS) model that
+Tacotron 2 is a two-staged text-to-speech (TTS) model that
 synthesizes speech directly from characters. Given (text, audio) pairs,
 Tacotron 2 can be trained completely from scratch with random
 initialization to output spectrogram without any phoneme-level
-alignment. Tacotron 2 was proposed by the same main authors that
-proposed
-[Tacotron](https://anwarvic.github.io/speech-synthesis/Tacotron) earlier
+alignment. After that, a Vocoder model is used to convert the audio
+spectrogram to waveforms. Tacotron 2 was proposed by the same main
+authors that proposed [Tacotron
+](https://anwarvic.github.io/speech-synthesis/Tacotron) earlier
 in the same year (2017). Tacotron 2 was published in this paper:
 [Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram
 Predictions](https://arxiv.org/pdf/1712.05884.pdf). The official audio
 samples outputted from the trained Tacotron 2 by Google is provided in
-this
-[website](https://google.github.io/tacotron/publications/tacotron2/).
+this [website](https://google.github.io/tacotron/publications/tacotron2/).
 The unofficial PyTorch implementation for Tacotron 2 can be found in
 Nvidia's official GitHub repository:
 [NVIDIA/tacotron2](https://github.com/NVIDIA/tacotron2).
