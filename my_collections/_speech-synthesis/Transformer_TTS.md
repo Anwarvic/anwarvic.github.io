@@ -32,25 +32,28 @@ depend intensively on recurrent neural networks
 ([RNNs](https://anwarvic.github.io/language-modeling/RNN)) which are
 very slow to train and can't capture long dependencies. That's why
 Transformer TTS model was proposed. In this model, they adapted the
-multi-head attention mechanism to replace the RNN structures and
-the original attention mechanism in [Tacotron
+multi-head attention mechanism from [Transformer
+](https://anwarvic.github.io/machine-translation/Transformer) to replace
+the RNN structures and the original attention mechanism in [Tacotron
 2](https://anwarvic.github.io/speech-synthesis/Tacotron_2).
 
 Architecture
 ------------
 
 The architecture for Transformer TTS can be seen in the following
-figure. From this figure, we can see that Transformer TTS consists of
-five different components now: <u><strong>Text-to-phone Converter</strong></u>,
+figure which shows that Transformer TTS consists of five different
+components: <u><strong>Text-to-phone Converter</strong></u>,
 <u><strong>Encoder</strong></u>, <u><strong>Decoder</strong></u>,
-<u><strong>Post-network</strong></u>, <u><strong>Vocoder</strong></u>.
+<u><strong>Post-network</strong></u>, and <u><strong>Vocoder</strong></u>.
 The encoder and decoder networks have additional components added to them
-called "encoder per-net" and "decoder pre-net" respectively. In the next part,
-we are going to discuss these parts in more details.
+called "encoder per-net" and "decoder pre-net" respectively.
 
 <div align="center">
     <img src="media/Transformer_TTS/image2.png" width=450>
 </div>
+
+In the next part, we are going to discuss the different parts of
+Transformer-TTS in more details.
 
 ### Text-to-phone Converter
 
