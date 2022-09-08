@@ -5,43 +5,118 @@ cover: /image2.png
 labs: ["NVIDIA"]
 ---
 
-WaveGlow is a generative Vocoder capable of generating high quality
-speech from mel-spectrograms. WaveGlow combines insights from
-[Glow](https://openai.com/blog/glow/) and
-[WaveNet](https://anwarvic.github.io/speech-synthesis/WaveNet) in order
-to provide fast, efficient and high quality audio synthesis, hence the
-name "WaveGlow". WaveGlow was proposed by NVIDIA in 2018 and published
+WaveGlow is a flow-based generative Vocoder capable of generating high
+quality speech waveforms from mel-spectrograms. WaveGlow got that name
+as it combines insights from [Glow](https://openai.com/blog/glow/)
+(flow-based generative model created by OpenAI in 2018) and
+[WaveNet](https://anwarvic.github.io/speech-synthesis/WaveNet) (another
+Vocoder model) in order to provide fast, efficient and high quality
+audio synthesis. WaveGlow was proposed by NVIDIA in 2018 and published
 in this paper under the same name: "[WaveGlow: A Flow-based Generative
 Network for Speech Synthesis](https://arxiv.org/pdf/1811.00002.pdf)".
 The official PyTorch implementation of this paper can be found on
 NVIDIA's official GitHub repository:
 [NVIDIA/waveglow](https://github.com/NVIDIA/waveglow). The official
-audio samples resulted from WaveGlow can be found in this
+synthetic audio samples resulting from WaveGlow can be found in this
 [website](https://nv-adlr.github.io/WaveGlow).
 
-> **Note:**\
-If you are not familiar with Glow, it is a generative model proposed by
-OpenAI in 018 and published in this paper "[Glow: Generative Flow with
-Invertible 1x1 Convolutions](https://arxiv.org/pdf/1807.03039.pdf)". The
-most interesting fact about this model is its reversibility. This model
-can transform the data space into latent space "training", and be able
-to restore it from the latent space without losing much information
-during "generation" as shown below:
-> 
-> <div align="center">
->    <img src="media/WaveGlow/image1.png" width=550>
-> </div>
+## Generative Models Recap
 
+Since WaveGlow depends heavily on Glow which is a special type of
+generative models called "flow-based". Then, a recap on generative
+models in general will make things clearer and connect the missing
+pieces if found.
+
+A generative model is a model that is able to generate new data from a
+certain input, this input could be a number, a vector, a matrix, or even
+a multi-dimensional tensor. In our context (vocoding), a generative
+model can be looked at as a voice actor. Given a spectrogram which is
+usually $(80 \times Time)$ matrix, this voice actor can generate very
+realistic audio waveforms or speech.
+
+Now, we kinda understand what is a generative model. Let's take it one
+step further and try to formulate that in mathematical terms. A
+generative model is a statistical model that tries to learn the joint
+probability distribution $P(X,Y)$ on given observable
+variable $X$ and target variable $Y$. In our context (vocoding), $X$ is
+the spectrogram and $Y$ is the audio waveform. In reality, there is a
+relation between spectrogram and waveform\... right? A generative model
+is the model responsible for finding out that relation using the huge
+amount of data that we provide for it to learn.
+
+Of course doing that is not easy, and according to this
+[tutorial](https://arxiv.org/pdf/1701.00160.pdf) by Ian Goodfellow,
+there are different types/families of generative models as shown in the
+following figure. In this part, we are going to focus on just three of
+them: GAN, VAE, and Flow-based models (Tractable Density).
+
+<div align="center">
+    <img src="media/WaveGlow/image1.png" width=750>
+</div>
+
+Generative models are very popular with images. So, in the next part we
+are going to talk about them in that context. However, as you will see
+this can be expanded to other contexts easily. Let's go through them one
+by one:
+
+-   <u><strong>GAN:</strong></u>\
+    GANs (Generative Adversarial Networks) consist of two
+    components (generator, discriminator), only the generator is a
+    generative model. Given 2d matrix randomly sampled from a Gaussian
+    distribution, the generator tries to generate images using the help
+    of the discriminator and millions of training data. <u><strong>In other
+    words, the generator is trying to find a relation/map from the
+    Gaussian distribution space to the image space.</strong></u>
+
+<div align="center">
+    <img src="media/WaveGlow/image2.png" width=750>
+</div>
+
+-   <u><strong>VAE:</strong></u>\
+    Before talking about Variational Auto Encoders, let's first try to
+    understand what an Auto Encoder is. An Auto Encoder (AE) is a
+    statistical model that is able to map image space $X$ to a
+    lower-dimension space $Z$, and then map $Z$ back to the image space
+    $X$. Up till this point, we don't have any control over $Z$ which
+    made it so noisy. To fix that issue, VAEs comes into picture and
+    tries to make $Z$ as close as possible to a normal distribution
+    $\mathcal{N}(0,1)$. <u><strong>In other words, VAEs are trying to find a
+    relation/map from the image space to a normal distribution using the
+    encoder part, and map the normal distribution back to the image
+    space using the decoder part.</strong></u>
+
+<div align="center">
+    <img src="media/WaveGlow/image3.png" width=750>
+</div>
+
+-   <u><strong>Flow-based Models:</strong></u>\
+    Flow-based Models are very similar to VAEs with two main
+    differences:
+
+    -   First, the decoder (or as they call it here "inverse-flow") is
+        the inverse function of the encoder (or "flow"); which means
+        that we don't have to train two models now, we can train only
+        one, the flow, and inverse it during inference.
+
+    -   Second, the latent space $Z$ has the same dimension as the image
+        space $X$.
+
+<div align="center">
+    <img src="media/WaveGlow/image4.png" width=350>
+</div>
+
+Now, we have a better picture of generative models. Let's get back to
+WaveGlow.
 
 ## Architecture
 
-WaveGlow is implemented using only a single network, trained using only
+WaveGlow is implemented using a single network, trained using only
 a single cost function: maximizing the likelihood of the training data,
 which makes the training procedure simple and stable. The whole
 architecture of WaveGlow can be seen in the following figure:
 
 <div align="center">
-    <img src="media/WaveGlow/image2.png" width=350>
+    <img src="media/WaveGlow/image5.png" width=350>
 </div>
 
 -   For the forward pass, this model takes groups of 8 audio samples as
@@ -85,7 +160,7 @@ estimation using Real NVP](https://arxiv.org/pdf/1605.08803.pdf)". The
 affine coupling layer, shown in the following figure, works like so:
 
 <div align="center">
-    <img src="media/WaveGlow/image3.png" width=250>
+    <img src="media/WaveGlow/image6.png" width=250>
 </div>
 
 -   We initialize the last convolution of each NN() with zeros, such
@@ -151,5 +226,5 @@ Ground Truth. From the table, you can see that none of the methods reach
 the score of ground truth. However, WaveGlow has the highest score.
 
 <div align="center">
-    <img src="media/WaveGlow/image4.png" width=450>
+    <img src="media/WaveGlow/image7.png" width=450>
 </div>
