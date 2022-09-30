@@ -436,7 +436,7 @@ that post/page:
 ...
 sitemap:
   priority: 0.7
-  changefreq: weekly 
+  changefreq: weekly
 ```
 
 > **Note:**
