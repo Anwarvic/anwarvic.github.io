@@ -139,6 +139,9 @@ Where:
 -   $sg\lbrack.\rbrack$ is the stop-gradient operator, which removes the
     gradient of input in the backward pass.
 
+> **Note:**\
+The duration predictor used here is deterministic, which means that it will produce the same duration given the same input.
+
 ### Monotonic Alignment Search (MAS)
 
 MAS searches for the most probable monotonic alignment between the
