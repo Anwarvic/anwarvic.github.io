@@ -1,7 +1,7 @@
 ---
 title: "WaveNet"
 date: 2016-09-12
-cover: /image0.png
+cover: /image1.png
 labs: ["Google", "DeepMind"]
 ---
 
