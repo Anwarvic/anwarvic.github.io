@@ -31,12 +31,12 @@ post.
 
 ## Architecture
 
-The overall architecture of the VITS is shown in the following figure.
-VITS consists of a <u><strong>Posterior Encoder</strong></u>, <u><strong>Prior
-Encoder</strong></u>, <u><strong>Decoder</strong></u>,
+The overall architecture of the VITS is shown in the following figure. As we,
+can see VITS consists of a <u><strong>Posterior Encoder</strong></u>,
+<u><strong>Prior Encoder</strong></u>, <u><strong>Decoder</strong></u>,
 and <u><strong>Stochastic Duration Predictor</strong></u>. The Posterior
-Encoder and Decoder's Discriminator are only used for training, not for
-inference. In the next part, we are going to tackle every component in more
+Encoder and Decoder's Discriminator modules are only used during training, not
+for inference. In the next part, we are going to tackle every component in more
 details:
 
 <div align="center">
@@ -49,14 +49,17 @@ For the posterior encoder, they used 16
 [WaveNet](https://anwarvic.github.io/speech-synthesis/WaveNet) residual
 blocks which consists of layers of dilated convolutions with a gated
 activation unit and skip connection. The posterior encoder takes
-linear-scale log magnitude spectrograms $x_{lin}$ as input and produce
-latent variables $z$ with $192$ channels. The linear projection layer
-above the blocks produces the mean and variance of the normal posterior
-distribution.
+linear-scale log magnitude spectrograms $x_{lin}$ as input and produces
+latent variables $z$ with $192$ channels.
 
 <div align="center">
     <img src="media/VITS/image2.png" width=250>
 </div>
+
+The idea behind the Posterior Encoder is to map the audio data from the
+mel-spectrogram space to a normal-distribution space. That's why in the paper,
+they used a linear layer on top of the Posterior Encoder to produce the mean
+and variance of the normal posterior distribution.
 
 ### Prior Encoder
 
@@ -64,19 +67,22 @@ The prior encoder consists of different components as you can see from
 the following figure. It consists of a <u><strong>Text Encoder</strong></u> ,
 a <u><strong>Projection Layer</strong></u>, a <u><strong>Normalizing
 Flow</strong></u>, and it uses <u><strong>Monotonic Alignment Search
-(MSA)</strong></u> algorithm.
+(MSA)</strong></u> algorithm. Similar to the Posterior Encoder, the Prior
+Encoder is aiming at mapping the textual data from the phoneme space to
+a normal distribution space. 
 
 <div align="center">
     <img src="media/VITS/image3.png" width=450>
 </div>
 
 The text encoder is a
-[Transformer](https://anwarvic.github.io/machine-translation/Transformer)
+[Transformer](https://anwarvic.github.io/machine-translation/Transformer)-
 encoder that uses relative positional representation instead of absolute
-positional encoding which processes the input phonemes $c_{text}$ and
-results in hidden representations $h_{text}$. Then, a linear projection
-layer is used to produce the mean $\mu_{\theta}$ and variance
-$\sigma_{\theta}$ used for constructing the prior distribution.
+positional encoding (as used in the original paper) which processes the
+input phonemes $c_{text}$ and results in hidden representations
+$h_{text}$. Then, a linear projection layer is used to produce the mean
+$\mu_{\theta}$ and variance $\sigma_{\theta}$ used for constructing
+the prior distribution.
 
 On the other end, a normalizing flow $f_{\theta}$ is used to improve the
 flexibility of the prior distribution, which is a stack of four affine
