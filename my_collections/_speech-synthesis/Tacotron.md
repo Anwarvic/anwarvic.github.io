@@ -42,9 +42,9 @@ of text. As you can see from the encoder's architecture:
     which is basically a non-linear bottleneck layer with dropout. This
     network helps with convergence and improves generalization.
 
--   Finally, the output from the pre-net is passed to the CBHG module
+-   Finally, the output from the pre-net is passed to the CBHG network
     (we are going to talk about it in more details later). The CBHG
-    module transforms the pre-net outputs into the final encoder
+    network transforms the pre-net outputs into the final encoder
     representation used by the attention module. In the paper, they
     found that using this module not only reduces overfitting, but also
     makes fewer mispronunciations.
@@ -104,7 +104,7 @@ The goal of the post-processing net is to convert the
 decoder's target into waveforms. The need for a whole network to do this
 task is the need to see the full decoded sequence instead of doing it
 auto-regressively. The backbone of this network is the CBHG (Convolution
-Bank + Highway Network) module which consists of a bank of 1-D
+Bank + Highway GRU) network which consists of a bank of 1-D
 convolutional filters, followed by highway networks and a bidirectional
 [GRU](https://anwarvic.github.io/language-modeling/RNN) layer. It works
 like so:
