@@ -1,7 +1,7 @@
 ---
 title: "WaveGlow"
 date: 2018-10-31
-cover: /image2.png
+cover: /image5.png
 labs: ["NVIDIA"]
 ---
 
@@ -102,7 +102,7 @@ by one:
         space $X$.
 
 <div align="center">
-    <img src="media/WaveGlow/image4.png" width=350>
+    <img src="media/WaveGlow/image4.png" width=750>
 </div>
 
 Now, we have a better picture of generative models. Let's get back to
