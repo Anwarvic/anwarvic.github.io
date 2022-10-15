@@ -110,9 +110,9 @@ $$F^{(av)} = \left\{ \begin{matrix}
 
 $$p_{t} = Softmax\left( W.e_{t} + b \right)$$
 
--   Finally, AV-HuBERT is pre-trained to **[first identify the fake
+-   Finally, AV-HuBERT is pre-trained to <u><strong>first identify the fake
     frames and then infer the labels belonging to the original
-    frames]{.underline}** according to the following loss function:
+    frames</strong></u> according to the following loss function:
 
 $$\mathcal{L} = - \sum_{t \in M^{(a)} \cup M^{(v)}}^{}{\log\left( p_{t}.z_{t} \right)} - \alpha\sum_{t \notin M^{(a)} \cup M^{(v)}}^{}{\log\left( p_{t}.z_{t} \right)}$$
 
