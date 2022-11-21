@@ -1,7 +1,7 @@
 ---
 title: "u-HuBERT: A Unified HuBERT"
 date: 2022-07-14
-cover: /image2.png
+cover: /image0.png
 labs: ["FAIR", "Toyota Technological Institute at Chicago"]
 ---
 
@@ -39,7 +39,7 @@ Unlike
 which was pre-trained only using multi-modal (i.e audio-visual) data,
 <u><strong>u-HuBERT is pre-trained using both uni-modal and multi-modal speech
 data forming modality-agnostic features</strong></u>. To encourage the
-modaility-Agnosticism even more, the modality dropout -which was used in
+modality-Agnosticism even more, the modality dropout -which was used in
 the audio-visual fusion block in AV-HuBERT- is extended and applied to
 data by randomly dropping a subset of the modalities, effectively
 creating multiple copies of the data with the same target but different
@@ -141,7 +141,7 @@ where
 
 -   **Ft mod-drop-p:** modality dropout is applied in fine-tuning.
 
--   FT mod: denotes the type of labeled data used for fine-tuning.
+-   **FT mod:** denotes the type of labeled data used for fine-tuning.
 
 -   Zero-shot scenarios are highlighted with purple shades.
 
