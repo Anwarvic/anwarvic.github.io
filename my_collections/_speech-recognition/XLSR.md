@@ -68,12 +68,6 @@ downstream task is built on top of the model and trained on the labeled
 data with a [CTC](https://anwarvic.github.io/speech-recognition/CTC)
 loss.
 
-  ----------- ------- ----------- ------------------- ------- --------- --------------------
-              $$N$$   $$d_{m}$$   $$d_{\text{ff}}$$   $$h$$   dropout   Learning rate peak
-  **Base**    12      768         3072                8       0.1       $$1e^{- 5}$$
-  **Large**   24      1024        4096                16      0.1       $$1e^{- 3}$$
-  ----------- ------- ----------- ------------------- ------- --------- --------------------
-
 <div align="center" class="inline-table">
 <table>
     <thead>
@@ -84,7 +78,7 @@ loss.
         </tr>
     </thead>
     <tr>
-        <td><strong>$$N%%</strong></td>
+        <td><strong>$$N$$</strong></td>
         <td>12</td>
         <td>24</td>
     </tr>
