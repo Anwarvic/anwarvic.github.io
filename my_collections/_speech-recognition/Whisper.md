@@ -122,28 +122,28 @@ So, let's see the prompt used for different tasks:
 -   VAD, Voice Activity Detection:
 
 <div align="center">
-    <img src="media/Whisper/image7.png" width=350>
+    <img src="media/Whisper/image7.png" width=250>
 </div>
 
 -   Timestamp-predictions; i.e Speech Alignment or Diarization:
 
 <div align="center">
-    <img src="media/Whisper/image8.png" width=450>
-    <img src="media/Whisper/image9.png" width=450>
+    <img src="media/Whisper/image8.png" width=300>
+    <img src="media/Whisper/image9.png" width=300>
 </div>
 
 In order to study the scaling properties of Whisper, they trained
 various sizes according to the following table:
 
 <div align="center">
-    <img src="media/Whisper/image10.png" width=450>
+    <img src="media/Whisper/image10.png" width=350>
 </div>
 
 > **Note:**\
 Following the release of the paper, the authors announced a
 "large-v2" model trained for $2.5x$ more epochs with regularization
-and no architecture changes. This\
-large-v2" model surpasses the performance of the large model.
+and no architecture changes. This "large-v2" model surpasses the
+performance of the "large" model.
 
 ## Training Details
 
