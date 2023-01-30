@@ -43,7 +43,7 @@ figure shows different examples of code-switched data between English
 and Chinese:
 
 <div align="center">
-    <img src="media/ALM/image2.png" width=750>
+    <img src="media/ALM/image2.png" width=450>
 </div>
 
 When most of the code-switched sequence $U$ is derived from $X$, this
@@ -75,7 +75,7 @@ following these steps:
     shown in the following figure:
 
 <div align="center">
-    <img src="media/ALM/image3.png" width=750>
+    <img src="media/ALM/image3.png" width=450>
 </div>
 
 Pre-training
@@ -99,7 +99,7 @@ model to learn to predict the words being masked out as shown in the
 following figure:
 
 <div align="center">
-    <img src="media/ALM/image4.png" width=750>
+    <img src="media/ALM/image4.png" width=450>
 </div>
 
 Data used in pre-training was monolingual data from Wikipedia and
