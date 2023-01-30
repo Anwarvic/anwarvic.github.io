@@ -49,7 +49,7 @@ $$\mathcal{L}_{\text{MLM}}\left( x,y \right) = - \mathbb{E}_{s\sim\left\lbrack 1
     any sentence in the mini-batch $\mathcal{B}$:
 
 <div align="center">
-    <img src="media/AMBER/image1.png" width=450>
+    <img src="media/AMBER/image1.png" width=350>
 </div>
 
 $$\mathcal{L}_{\text{SA}}\left( x,y \right) = - \log\ \frac{e^{c_{x}^{\intercal}c_{y}}}{\sum_{y' \in \mathcal{B}}^{}e^{c_{x}^{\intercal}c_{y'}}}$$
@@ -98,7 +98,7 @@ following table, shows the size of AMBER compared to other cross-lingual
 models:
 
 <div align="center">
-    <img src="media/AMBER/image3.png" width=750>
+    <img src="media/AMBER/image3.png" width=450>
 </div>
 
 After pre-training, they fine-tuned AMBER on English annotations and
@@ -109,7 +109,7 @@ applied the model to predict on non-English data on the following tasks:
     similar results to XLM-R despite being half its size:
 
 <div align="center">
-    <img src="media/AMBER/image4.png" width=1050>
+    <img src="media/AMBER/image4.png" width=750>
 </div>
 
 -   **PAWS-X:** is a paraphrase detection dataset in five different
@@ -118,7 +118,7 @@ applied the model to predict on non-English data on the following tasks:
     its size:
 
 <div align="center">
-    <img src="media/AMBER/image5.png" width=750>
+    <img src="media/AMBER/image5.png" width=450>
 </div>
 
 -   **XNLI:** is a natural language inference dataset in 15 languages.
@@ -136,14 +136,14 @@ applied the model to predict on non-English data on the following tasks:
     benchmark:
 
 <div align="center">
-    <img src="media/AMBER/image7.png" width=1050>
+    <img src="media/AMBER/image7.png" width=750>
 </div>
 
 The following table summarizes the average results over all
 languages for the past four benchmarks:
 
 <div align="center">
-    <img src="media/AMBER/image8.png" width=750>
+    <img src="media/AMBER/image8.png" width=450>
 </div>
 
 > **Note:**\
