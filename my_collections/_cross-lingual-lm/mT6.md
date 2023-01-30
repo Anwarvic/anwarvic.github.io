@@ -32,7 +32,7 @@ the masked spans, each of which starts with a unique mask token to
 indicate the span to be decoded as shown in the following figure:
 
 <div align="center">
-    <img src="media/mT6/image1.png" width=750>
+    <img src="media/mT6/image1.png" width=450>
 </div>
 
 In the paper, they presented three more text-to-text pre-training tasks
@@ -67,7 +67,7 @@ for improving mT5 with translation data. These pre-training tasks are:
     masked and predict the spans in one language.
 
 <div align="center">
-    <img src="media/mT6/image4.png" width=750>
+    <img src="media/mT6/image4.png" width=450>
 </div>
 
 Regarding the data, they used natural sentences from CCNet in 94 languages for
@@ -147,5 +147,5 @@ And the following are the results on fine-tuning benchmarks:
     scores and averaged over three runs:
 
 <div align="center">
-    <img src="media/mT6/image9.png" width=750>
+    <img src="media/mT6/image9.png" width=450>
 </div>
