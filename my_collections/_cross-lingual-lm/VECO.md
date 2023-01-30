@@ -176,7 +176,7 @@ same 250K vocabulary that was used by
 list of the model can be seen in the following table:
 
 <div align="center">
-    <img src="media/VECO/image4.png" width=750>
+    <img src="media/VECO/image4.png" width=450>
 </div>
 
 The following table shows a comparison between VECO and other baselines:
@@ -200,7 +200,7 @@ Transformer baseline by 2.3 BLEU points. Moreover, it even beats the
 times deep as VECO.
 
 <div align="center">
-    <img src="media/VECO/image7.png" width=750>
+    <img src="media/VECO/image7.png" width=450>
 </div>
 
 And to investigate where the improvement in VECO comes from, they
