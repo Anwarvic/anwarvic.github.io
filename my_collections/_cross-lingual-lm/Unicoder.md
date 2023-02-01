@@ -127,7 +127,7 @@ $X^{t}$ to this task, the model tries to predict the original sentence
 $X$ as shown in the following graph:
 
 <div align="center">
-    <img src="media/Unicoder/image3.png" width=750>
+    <img src="media/Unicoder/image3.png" width=450>
 </div>
 
 ### Paraphrase Classification
@@ -242,7 +242,7 @@ training data of **source language + pseudo translation of the source language**
 as shown in the following figure:
 
 <div align="center">
-    <img src="media/Unicoder/image9.png" width=750>
+    <img src="media/Unicoder/image9.png" width=550>
 </div>
 
 Results
@@ -280,5 +280,5 @@ performance on the XNLI benchmark:
     the best performance across all three languages.
 
 <div align="center">
-    <img src="media/Unicoder/image12.png" width=750>
+    <img src="media/Unicoder/image12.png" width=450>
 </div>
