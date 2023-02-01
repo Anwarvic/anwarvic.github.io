@@ -29,11 +29,11 @@ a read before going on.
 
 We know how to obtain MLM and TLM from XLM model:
 
-$$\mathcal{L}_{\text{MLM}} = - \log\frac{\exp\left( \theta_{T}\left( c_{1} \right)^{T}\text{\ .\ }\theta_{E}\left( x_{1} \right) \right)}{\sum_{x' \in \mathcal{V}}^{}{\exp\left( \theta_{T}\left( c_{1} \right)^{T}\text{\ .\ }\theta_{E}\left( x' \right) \right)}}$$
+$$\mathcal{L}_{\text{MLM}} = - \log\frac{\exp\left( \theta_{T}\left( c_{1} \right)^{T}\text{.}\theta_{E}\left( x_{1} \right) \right)}{\sum_{x' \in \mathcal{V}}^{}{\exp\left( \theta_{T}\left( c_{1} \right)^{T}\text{.}\theta_{E}\left( x' \right) \right)}}$$
 
-$$\mathcal{L}_{\text{TLM}} = - \log\frac{\exp\left( \theta_{T}\left( c_{1} \right)^{T}\text{\ .\ }\theta_{E}\left( x_{1} \right) \right)}{\sum_{x' \in \mathcal{V}}^{}{\exp\left( \theta_{T}\left( c_{1} \right)^{T}\text{\ .\ }\theta_{E}\left( x' \right) \right)}}$$
+$$\mathcal{L}_{\text{TLM}} = - \log\frac{\exp\left( \theta_{T}\left( c_{1} \right)^{T}\text{.}\theta_{E}\left( x_{1} \right) \right)}{\sum_{x' \in \mathcal{V}}^{}{\exp\left( \theta_{T}\left( c_{1} \right)^{T}\text{.}\theta_{E}\left( x' \right) \right)}}$$
 
-$$\ \ \ \ \ \ \ \ \ \ \ \  - \log\frac{\exp\left( \theta_{T}\left( c_{2} \right)^{T}\text{\ .\ }\theta_{E}\left( x_{2} \right) \right)}{\sum_{x' \in \mathcal{V}}^{}{\exp\left( \theta_{T}\left( c_{2} \right)^{T}\text{\ .\ }\theta_{E}\left( x' \right) \right)}}$$
+$$\ \ \ \ \ \ \ \ \ \ \ \  - \log\frac{\exp\left( \theta_{T}\left( c_{2} \right)^{T}\text{.}\theta_{E}\left( x_{2} \right) \right)}{\sum_{x' \in \mathcal{V}}^{}{\exp\left( \theta_{T}\left( c_{2} \right)^{T}\text{.}\theta_{E}\left( x' \right) \right)}}$$
 
 Where:
 
@@ -58,7 +58,7 @@ information-theoretic framework. The goal of XLCO is to distinguish the
 translation of an input sentence from a set of negative examples. The
 formula of this objective is:
 
-$$\mathcal{L}_{\text{XLCO}} = - \log\frac{\exp\left( \theta_{Q}\left( c_{1} \right)^{T}\text{\ .\ }\theta_{K}\left( c_{2} \right) \right)}{\sum_{c' \in \mathcal{N}}^{}{\exp\left( \theta_{Q}\left( c_{1} \right)^{T}\text{\ .\ }\theta_{K}\left( c' \right) \right)}}$$
+$$\mathcal{L}_{\text{XLCO}} = - \log\frac{\exp\left( \theta_{Q}\left( c_{1} \right)^{T}\text{.}\theta_{K}\left( c_{2} \right) \right)}{\sum_{c' \in \mathcal{N}}^{}{\exp\left( \theta_{Q}\left( c_{1} \right)^{T}\text{.}\theta_{K}\left( c' \right) \right)}}$$
 
 Where:
 
