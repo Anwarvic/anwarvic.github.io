@@ -26,7 +26,7 @@ around 100x speedup compared with
 [InfoXLM](https://anwarvic.github.io/cross-lingual-lm/InfoXLM):
 
 <div align="center">
-    <img src="media/XLM-E/image1.png" width=750>
+    <img src="media/XLM-E/image1.png" width=450>
 </div>
 
 Pre-training
@@ -55,7 +55,7 @@ discriminator should be able to classify the real tokens from the
 replaced ones as shown in the following figure:
 
 <div align="center">
-    <img src="media/XLM-E/image2.png" width=750>
+    <img src="media/XLM-E/image2.png" width=450>
 </div>
 
 The multilingual RTD is exactly the same with a few differences:
