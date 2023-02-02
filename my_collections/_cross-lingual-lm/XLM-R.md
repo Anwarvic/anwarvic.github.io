@@ -88,7 +88,7 @@ Beyond this point the curse of multilinguality kicks in and degrades
 performance across all languages.
 
 <div align="center">
-    <img src="media/XLM-R/image4.png" width=450>
+    <img src="media/XLM-R/image4.png" width=250>
 </div>
 
 The issue is even more prominent when the capacity of the model is small. To
@@ -100,7 +100,7 @@ But the added capacity for XLM-100, however, is not enough and it still lags
 behind.
 
 <div align="center">
-    <img src="media/XLM-R/image5.png" width=450>
+    <img src="media/XLM-R/image5.png" width=250>
 </div>
 
 ### Performance Vs Low / High-resource
@@ -118,7 +118,7 @@ And when we decrease the value of , the model see batches of low-resource
 languages more often. So, we need to trade-off between these two factors.
 
 <div align="center">
-    <img src="media/XLM-R/image6.png" width=450>
+    <img src="media/XLM-R/image6.png" width=250>
 </div>
 
 They found that $\alpha = 0.3$ is the optimal value for α if we are
@@ -137,7 +137,7 @@ figure, we observe a 2.8% increase in XNLI average accuracy as we
 increase the vocabulary size from 32K to 256K:
 
 <div align="center">
-    <img src="media/XLM-R/image7.png" width=450>
+    <img src="media/XLM-R/image7.png" width=250>
 </div>
 
 ### Performance Vs Data Size
@@ -148,7 +148,7 @@ trained on two different datasets: Wikipedia (60 Gigabytes) and Common
 Crawl (2.5 Terabytes).
 
 <div align="center">
-    <img src="media/XLM-R/image8.png" width=450>
+    <img src="media/XLM-R/image8.png" width=250>
 </div>
 
 
@@ -158,7 +158,7 @@ Similarly for the batch sizes, the bigger the batch size is, the better
 the cross-lingual language model will be:
 
 <div align="center">
-    <img src="media/XLM-R/image9.png" width=450>
+    <img src="media/XLM-R/image9.png" width=250>
 </div>
 
 Results
@@ -221,7 +221,7 @@ understanding tasks such as:
     datasets using the F1 metric:
 
 <div align="center">
-    <img src="media/XLM-R/image11.png" width=750>
+    <img src="media/XLM-R/image11.png" width=450>
 </div>
 
 -   **Question Answering:**\
@@ -244,7 +244,7 @@ understanding tasks such as:
     benchmark:
 
 <div align="center">
-    <img src="media/XLM-R/image13.png" width=750>
+    <img src="media/XLM-R/image13.png" width=450>
 </div>
 
 Important Finding
@@ -258,7 +258,7 @@ BERT models on 7 languages and compare performance as shown in the
 following table:
 
 <div align="center">
-    <img src="media/XLM-R/image14.png" width=750>
+    <img src="media/XLM-R/image14.png" width=450>
 </div>
 
 According to the former table, we can conclude the following:
