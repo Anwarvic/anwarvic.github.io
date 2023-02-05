@@ -40,7 +40,7 @@ components:
     that will be taken as input by the subsequent contrastive module.
 
 <div align="center">
-    <img src="media/w2v-BERT/image1.png" width=750>
+    <img src="media/w2v-BERT/image2.png" width=550>
 </div>
 
 -   <u><strong>Contrastive Module:</strong></u>\
