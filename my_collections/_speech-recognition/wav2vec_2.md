@@ -125,7 +125,7 @@ previously in the
 paper.
 
 <div align="center">
-    <img src="media/wav2vec_2/image2.png" width=750>
+    <img src="media/wav2vec_2/image2.png" width=450>
 </div>
 
 Pre-training & Fine-tuning
