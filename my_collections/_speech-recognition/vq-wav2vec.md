@@ -164,8 +164,8 @@ section of 150k frames for each example (approximately 9.3 seconds for
 
 The vq-wav2vec architecture has an encoder network of 8 layers with 512
 channels each, kernel sizes $\left( 10,8,4,4,4,1,1,1 \right)$ and
-strides $\left( 5,4,2,2,2,1,1,1 \right)$, yielding a total stride of
-160. Also, it has a context network composed of 12 layers, with 512
+strides $\left( 5,4,2,2,2,1,1,1 \right)$, yielding a total stride of $160$.
+Also, it has a context network composed of 12 layers, with 512
 channels, stride 1, and kernel sizes starting at 2 and increasing by 1
 for every subsequent layer. The total number of parameters for
 vq-wav2vec is $34 \times 10^{6}$.
@@ -224,7 +224,7 @@ character convolutional LM. The results show that vq-wav2vec together
 with BERT training achieves a new state of the art.
 
 <div align="center">
-    <img src="media/vq-wav2vec/image4.png" width=750>
+    <img src="media/vq-wav2vec/image4.png" width=450>
 </div>
 
 And the following table shows the TIMIT phoneme recognition in terms of
@@ -232,7 +232,7 @@ phoneme error rate (PER). As we can see, vq-wav2vec + BERT-small achieve
 a new state of the art.
 
 <div align="center">
-    <img src="media/vq-wav2vec/image5.png" width=750>
+    <img src="media/vq-wav2vec/image5.png" width=450>
 </div>
 
 Next, they compared Gumbel-Softmax to k-means for vector quantization.
@@ -242,7 +242,7 @@ BERT, Gumbel-Softmax is more accurate than k-means but these differences
 disappear with BERT</strong></u>:
 
 <div align="center">
-    <img src="media/vq-wav2vec/image6.png" width=750>
+    <img src="media/vq-wav2vec/image6.png" width=450>
 </div>
 
 Next, they performed an ablation study while changing critical parts in
@@ -250,7 +250,7 @@ the model. The following table shows that masking entire spans of tokens
 performs significantly better than individual tokens (M = 1) on TIMIT:
 
 <div align="center">
-    <img src="media/vq-wav2vec/image7.png" width=350>
+    <img src="media/vq-wav2vec/image7.png" width=250>
 </div>
 
 Furthermore, they tried different masking probability while pre-training
@@ -258,5 +258,5 @@ BERT on discretized audio data. The following table shows that BERT is
 fairly robust to masking large parts of the input:
 
 <div align="center">
-    <img src="media/vq-wav2vec/image8.png" width=350>
+    <img src="media/vq-wav2vec/image8.png" width=250>
 </div>
