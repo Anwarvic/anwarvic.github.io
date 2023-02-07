@@ -181,7 +181,7 @@ suggests the advantage of placing the convolution module after the
 self-attention module in the Conformer block.
 
 <div align="center">
-    <img src="media/Conformer/image9.png" width=750>
+    <img src="media/Conformer/image9.png" width=450>
 </div>
 
 Also, they tried replacing the Feed-forward module with a single
