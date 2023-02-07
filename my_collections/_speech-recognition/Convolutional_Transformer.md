@@ -95,7 +95,7 @@ which suggests that the convolutional tranformer indeed learns
 long-range acoustic characteristics of speech.
 
 <div align="center">
-    <img src="media/Convolutional_Transformer/image2.png" width=550>
+    <img src="media/Convolutional_Transformer/image2.png" width=450>
 </div>
 
 Ablation Study
@@ -124,7 +124,7 @@ The following table shows the WER on different LibriSpeech sets where:
     intermediate ReLU layer in each encoder and decoder layer.
 
 <div align="center">
-    <img src="media/Convolutional_Transformer/image3.png" width=550>
+    <img src="media/Convolutional_Transformer/image3.png" width=450>
 </div>
 
 The table shows that replacing the 1-D convolutional context in the
@@ -140,7 +140,7 @@ table shows the effect of different decoder convolutional context
 sizes spread over different depths:
 
 <div align="center">
-    <img src="media/Convolutional_Transformer/image4.png" width=750>
+    <img src="media/Convolutional_Transformer/image4.png" width=450>
 </div>
 
 As shown in the table, the best performance comes from using wider
@@ -155,5 +155,5 @@ The following table shows that having a deeper decoder, although not
 as critical, showed better overall performance.
 
 <div align="center">
-    <img src="media/Convolutional_Transformer/image5.png" width=750>
+    <img src="media/Convolutional_Transformer/image5.png" width=450>
 </div>
