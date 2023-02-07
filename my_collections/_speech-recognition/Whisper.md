@@ -2,7 +2,7 @@
 title: "Whisper"
 date: 2022-12-06
 cover: /image1.png
-labs: ["OpenAI"]
+labs: ["Open AI"]
 ---
 Whisper stands for "**W**eb-scale **S**upervised **P**retraining for
 **S**peech **R**ecognition" (I know, it should've been "WSPSR"). Whisper
