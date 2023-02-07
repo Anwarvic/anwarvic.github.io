@@ -20,7 +20,7 @@ this paper can be found in this GitHub repository:
 [Transformer-Transducer](https://github.com/upskyy/Transformer-Transducer).
 
 <div align="center">
-    <img src="media/Transformer_Transducer/image1.png" width=450>
+    <img src="media/Transformer_Transducer/image1.png" width=250>
 </div>
 
 As shown in the previous figure, The Transformer Transducer is composed
@@ -44,7 +44,7 @@ the final output of the multi-headed attention sublayer:
 $$x^{+} = LayerNorm\left( x \right) + AttentionLayer\left( \text{LayerNorm}\left( x \right) \right)$$
 
 <div align="center">
-    <img src="media/Transformer_Transducer/image2.png" width=450>
+    <img src="media/Transformer_Transducer/image2.png" width=250>
 </div>
 
 Also, a dropout on the output of the dense layer is applied to prevent
@@ -61,7 +61,7 @@ regularization, and a residual connection of normalized input and the
 output of the second dense layer:
 
 <div align="center">
-    <img src="media/Transformer_Transducer/image3.png" width=450>
+    <img src="media/Transformer_Transducer/image3.png" width=250>
 </div>
 
 $$x^{+} = \text{LayerNorm}\left( x \right) + \text{FFN}\left( \text{LayerNorm}\left( x \right) \right)$$
