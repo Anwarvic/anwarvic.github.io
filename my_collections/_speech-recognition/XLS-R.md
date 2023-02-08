@@ -123,7 +123,7 @@ indicates that multilingual fine-tuning is particularly effective
 for X → English directions.
 
 <div align="center">
-    <img src="media/XLS-R/image8.png" width=750>
+    <img src="media/XLS-R/image8.png" width=450>
 </div>
 
 Next, they analyzed the impact of initializing the decoder network
