@@ -8,9 +8,9 @@ Whisper stands for "**W**eb-scale **S**upervised **P**retraining for
 **S**peech **R**ecognition" (I know, it should've been "WSPSR"). Whisper
 is a speech model trained in a supervised setup on 680,000 hours of
 labeled audio data to handle different speech-related tasks such as
-"transcription", "translation", "VAD", and "alignment". Whisper was
-proposed by OpenAI in September 2022 and published in this paper
-"[Robust Speech Recognition via Large-Scale Weak
+"transcription", "translation", "VAD", and "alignment" on approximately
+$100$ languages. Whisper was proposed by OpenAI in 2022 and published
+in this paper "[Robust Speech Recognition via Large-Scale Weak
 Supervision](https://arxiv.org/pdf/2212.04356.pdf)". The official code
 for Whisper can be found on OpenAI's official GitHub repository:
 [openai/whisper](https://github.com/openai/whisper). The following
