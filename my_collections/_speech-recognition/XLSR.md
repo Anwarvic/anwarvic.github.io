@@ -72,39 +72,31 @@ loss.
 <table>
     <thead>
         <tr>
-            <th></th>
-            <th>BASE</th>
-            <th>LARGE</th>
+            <th>Model Size</th>
+            <th>$$N$$</th>
+            <th>$$d_{m}$$</th>
+            <th>$$d_{\text{ff}}$$</th>
+            <th>$$h$$</th>
+            <th>Dropout</th>
+            <th>LR peak</td>
         </tr>
     </thead>
     <tr>
-        <td><strong>$$N$$</strong></td>
+        <td>BASE</td>
         <td>12</td>
-        <td>24</td>
-    </tr>
-    <tr>
-        <td><strong>$$d_{m}$$</strong></td>
         <td>768</td>
-        <td>1024</td>
-    </tr>
-    <tr>
-        <td><strong>$$d_{\text{ff}}$$</strong></td>
         <td>3072</td>
-        <td>4096</td>
-    </tr>
-    <tr>
-        <td><strong>$$h$$</strong></td>
         <td>8</td>
-        <td>12</td>
-    </tr>
-    <tr>
-        <td><strong>dropout</strong></td>
         <td>0.1</td>
-        <td>0.1</td>
-    </tr>
-    <tr>
-        <td><strong>Learning rate peak</strong></td>
         <td>$$1e^{- 5}$$</td>
+    </tr>
+    <tr>
+        <td>LARGE</td>
+        <td>24</td>
+        <td>1024</td>
+        <td>4096</td>
+        <td>12</td>
+        <td>0.1</td>
         <td>$$1e^{- 3}$$</td>
     </tr>
 </table>
