@@ -13,7 +13,7 @@ self-supervised pre-training of language emobdied in
 proposed by Google Brain in 2021 and published in this paper "[w2v-BERT:
 Combining Contrastive Learning and Masked Language Modeling for
 Self-Supervised Speech
-Pre-Training](https://arxiv.org/pdf/2108.06209.pdf)".The w2v-BERT
+Pre-Training](https://arxiv.org/pdf/2108.06209.pdf)". The w2v-BERT
 pre-training framework is illustrated down blow:
 
 <div align="center">
