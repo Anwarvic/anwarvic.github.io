@@ -52,7 +52,7 @@ described in the next subsection) in between to bridge the length gap
 between the phoneme and mel-spectrogram sequence.
 
 <div align="center">
-    <img src="media/FastSpeech/image3.png" width=350>
+    <img src="media/FastSpeech/image3.png" width=250>
 </div>
 
 Each FFT block, as shown below, consists
@@ -68,7 +68,7 @@ residual connections, layer normalization, and dropout are added after
 the self-attention network and 1D convolutional network respectively.
 
 <div align="center">
-    <img src="media/FastSpeech/image4.png" width=350>
+    <img src="media/FastSpeech/image4.png" width=250>
 </div>
 
 > **Note:**\
@@ -86,7 +86,7 @@ the Length Regulator expands the hidden state of the phoneme sequence so
 it equals the length of the mel-spectrogram sequence.
 
 <div align="center">
-    <img src="media/FastSpeech/image5.png" width=350>
+    <img src="media/FastSpeech/image5.png" width=250>
 </div>
 
 More formally, given phoneme sequence hidden states as
