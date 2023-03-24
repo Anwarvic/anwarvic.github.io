@@ -56,12 +56,22 @@
       </li>
       {% endif %}
 
+      {% if site.author.google_scholar %}
+      <!-- Google Scholar -->
+      <li class="navigation__item">
+        <a href="https://scholar.google.com/citations?user={{ site.author.google_scholar }}" target="_blank" title="Google Scholar">
+          <i class="iconify-inline" style="font-size: 1.8em;" data-icon="academicons:google-scholar"></i>
+        </a>
+      </li>
+      {% endif %}
+
       <!-- RSS -->
+      <!-- 
       <li class="navigation__item">
         <a href="{{ site.baseurl }}/feed.xml" title="Subscribe (RSS)" target="_blank">
           <i class="big-icon iconify-inline" data-icon="ph:rss-bold"></i>
-          <!-- <span class="label">RSS</span> -->
         </a>
       </li>
+      -->
     </ul>
   </nav>
