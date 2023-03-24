@@ -28,11 +28,11 @@ efficiency of Transformers while keeping the same great performance.
     them in chunks which removes the effect of the depth and saves
     memory inside feed-forward layers.
 
-    Before getting into more details, let's first see how a transformer
-    model consumes memory assuming that the vocabulary is $V$, the word
-    embedding size is $d$, the input sequence length is $L$, the depth
-    of the feed-forward network is $d_{\text{ff}}$ where the $i^{th}$ layer
-    has $N_{i}$ neurons, and the number of batches is $B$:
+Before getting into more details, let's first see how a transformer model
+consumes memory assuming that the vocabulary is $V$, the word embedding size
+is $d$, the input sequence length is $L$, the depth of the feed-forward
+network is $d_{\text{ff}}$ where the $i^{th}$ layer has $N_{i}$ neurons,
+and the number of batches is $B$:
 
 -   Word embedding matrix is $V*d$.
 
@@ -47,15 +47,13 @@ efficiency of Transformers while keeping the same great performance.
 
     -   $L*L$ attention weights.
 
-        This is just for one layer, the memory with N layers is N-times
-        larger than that due to the fact that activations need to be
-        stored for back-propagation. And all of that was just for the
-        encoder, the decoder takes even more memory. Also, this was done
-        using one batch, using the batch size will roughly multiply this
-        number by a factor of B. And the standard way of saving
-        parameters is float-32 bit. So, all this needs to be multiplied
-        by 4 to get the number of bytes needed for saving this model.
-        Which is a lot!
+This is just for one layer, the memory with N layers is N-times larger than
+that due to the fact that activations need to be stored for back-propagation.
+And all of that was just for the encoder, the decoder takes even more memory.
+Also, this was done using one batch, using the batch size will roughly multiply
+this number by a factor of B. And the standard way of saving parameters is
+float-32 bit. So, all this needs to be multiplied by 4 to get the number of
+bytes needed for saving this model. Which is a lot!
 
 Nowadays, researchers tend to use large-scale long-sequence transformers
 since they yield great results. But this strains resources to the point
@@ -163,7 +161,7 @@ And this can be done by the following steps:
     the full matrix (left graph).
 
 <div align="center">
-    <img src="media/Reformer/image2.png" width=750>
+    <img src="media/Reformer/image2.png" width=550>
 </div>
 
 -   Next, they sorted the queries by bucket number and, within each
@@ -172,7 +170,7 @@ And this can be done by the following steps:
     pairs from the same bucket will cluster near the diagonal.
 
 <div align="center">
-    <img src="media/Reformer/image3.png" width=350>
+    <img src="media/Reformer/image3.png" width=250>
 </div>
 
 -   Hash buckets in this formulation tend to have different number of
@@ -182,7 +180,7 @@ And this can be done by the following steps:
     chunk back. In the following graph $m = 2$.
 
 <div align="center">
-    <img src="media/Reformer/image4.png" width=350>
+    <img src="media/Reformer/image4.png" width=250>
 </div>
 
 -   Following our earlier notation, this corresponds to setting where
