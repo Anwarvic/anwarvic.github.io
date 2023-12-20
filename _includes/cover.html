@@ -12,14 +12,34 @@
         <img src="{{ site.baseurl }}/images/avatar.png" class="user-image"
         onmouseover="this.src='{{ site.baseurl }}/images/avatar-light.png';"
         onmouseout="this.src='{{ site.baseurl }}/images/avatar.png';">
+        
+        <!-- Title -->
         <h1 class="panel-cover__title panel-title">
           <a href="{{ site.baseurl }}/">{{ site.author.name }}</a>
         </h1>
-        </a>
+        
+        <!-- Pronouns -->
         <!-- <h6 class="panel-cover__title panel-subtitle">{{ site.author.pronouns }}
           <i class="medium-icon iconify-inline" data-icon="foundation:male-symbol"></i>
         </h6> -->
+        
+        <!-- Subtitle -->
+        <p class="panel-cover__description">I'm ex-AI research resident at Meta</p>
+        <div class="navigation-wrapper-secondary">
+          <nav class="cover-navigation">
+              <ul class="navigation">
+                <li class="navigation__item">
+                  <a href="{{ site.baseurl }}/about-me" class="blog-button" id="about-me"
+                  onclick="activateButton(this.id)">About Me</a>
+                </li>
+              </ul>
+          </nav>
+        </div>
+
+        <!-- Socials -->
         {% include socials.html%}
+       
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
         
         <form class="search-container" onsubmit="return searchTheArchives()" >
           <input type="search" id="search-input" placeholder="Search.." autocomplete="off" style="padding-right: 40px;">
@@ -28,7 +48,7 @@
         <hr class="panel-cover__divider panel-cover__divider--secondary">
         
         <div class="navigation-wrapper">
-          <p class="panel-cover__description">{{ site.description }}</p>
+          <p class="panel-cover__description">Also, I review research papers in these topics:</p>
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
               {% for collection in site.collections %}
