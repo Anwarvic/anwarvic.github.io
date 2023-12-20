@@ -1,0 +1,83 @@
+---
+layout: default
+---
+<article class="post-container post-container--single">
+    <header class="post-header">
+    <center>
+        <!-- Title -->
+        <div align="center" style="margin-bottom:1.3em">
+		    <span style="font-size:36px;">{{ page.title }}</span>
+        </div>
+        <!-- Authors -->
+        <table align=center>
+            <tr>
+                <td align=center>
+                    {% for author in page.authors %}
+                    <span style="font-size:20px">
+                        {% if author contains "Anwar" %}
+                            <a href="{{ site.url }}">{{ author }}</a>
+                        {% else %}
+                            {{ author }}
+                        {% endif %}
+                    </span>
+                    &nbsp;&nbsp;&nbsp;
+                    {% assign remainder = forloop.index | modulo: 4 %}
+                    {% if remainder == 0 and forloop.last == false %}
+                    <hr style="visibility:hidden;"/>
+                    {% endif %}
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+        <!-- Labs -->
+        <table align=center>
+            <tr>
+                <td align=center>
+                    {% for lab in page.labs %}
+                    <span style="font-size:16px"><strong>{{ lab }}</strong></span>
+                    &nbsp;&nbsp;&nbsp;
+                    {% assign remainder = forloop.index | modulo: 3 %}
+                    {% if remainder == 0%}
+                    <br>
+                    {% endif %}
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+        <!-- Resources -->
+        <table align=center>
+            <tr>
+                <td align=center>
+                    <span style="font-size:24px"><a href='{{ page.link }}'>[Paper]</a></span>
+                    &nbsp;&nbsp;&nbsp;
+                    {% if page.repo != nil %}
+                    <span style="font-size:24px"><a href='{{ page.repo }}'>[GitHub]</a></span>
+                    &nbsp;&nbsp;&nbsp;
+                    {% endif %}
+                    {% if page.poster != nil %}
+                    <span style="font-size:24px"><a href='{{ page.poster }}'>[Poster]</a></span>
+                    &nbsp;&nbsp;&nbsp;
+                    {% endif %}
+                    {% if page.demo != nil %}
+                    <span style="font-size:24px"><a href='{{ page.demo }}'>[Demo]</a></span>
+                    &nbsp;&nbsp;&nbsp;
+                    {% endif %}
+                    {% if page.slides != nil %}
+                    <span style="font-size:24px"><a href='{{ page.slides }}'>[Slides]</a></span>
+                    &nbsp;&nbsp;&nbsp;
+                    {% endif %}
+                    {% if page.talk != nil %}
+                    <span style="font-size:24px"><a href='{{ page.talk }}'>[Talk]</a></span>
+                    &nbsp;&nbsp;&nbsp;
+                    {% endif %}
+            </tr>
+        </table>
+	</center>
+    </header>
+
+    <section class="post" align="center">
+        <h2>Abstract</h2>
+        {{ content }}
+    </section>
+
+</article>

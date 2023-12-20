@@ -790,7 +790,18 @@ input[type="tel"] {
 		border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
 		.navigation-wrapper.visible {
 			display: block; }
-
+	
+	.navigation-wrapper-secondary {
+		display: none;
+		position: fixed;
+		top: 42px;
+		right: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px 0;
+		background: rgba(51, 51, 51, 0.98);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+	
 	.cover-navigation {
 		display: block;
 		position: relative;
