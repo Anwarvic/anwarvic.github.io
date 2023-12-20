@@ -1,6 +1,5 @@
 # Site settings
 title: "Anwarvic's Blog"
-description: "I'm an AI research resident at Meta (Facebook previously). And I summarize research papers in these topics:"
 url: 'https://anwarvic.github.io'
 cover: images/forest.jpg
 baseurl: ''
@@ -20,6 +19,11 @@ author:
 
 collections_dir: my_collections
 collections:
+  about-me:
+    output: true
+    permalink: /:collection/:path
+    title: "About Me"
+    show: false
   language-modeling:
     output: true
     permalink: /:collection/:path
