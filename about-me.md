@@ -29,7 +29,8 @@ Europe under the supervision on Prof.
 [Laurent Besacier](https://europe.naverlabs.com/people_user_naverlabs/laurent-besacier/)
 and [Inyoung Kim](https://europe.naverlabs.com/people_user_naverlabs/Inyoung-Kim).
 Prior to this academic pursuit, I was an R&D software engineer at IST Networks
-where I contributed to [Nūn](https://www.istnetworks.com/nun-studio/)
-(Arabic Text-to-Speech) and [botter](https://botter.io/) (Chatbot with transferable skills).
+where I was one of the main contributors to [Nūn](https://www.istnetworks.com/nun-studio/),
+an Arabic Text-to-Speech system, and [botter](https://botter.io/), a Chatbot
+with transferable skills.
 
 <br><br>
