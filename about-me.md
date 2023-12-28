@@ -6,7 +6,11 @@ permalink: /about-me/
 ---
 
 <div>
-<h2>Hi! <img width=22 src="https://github.com/Anwarvic/Anwarvic/blob/master/assets/hi.gif?raw=true"></h2>
+    <h2>
+    Hi there,
+    <img width=35 src="https://github.com/Anwarvic/Anwarvic/blob/master/assets/hi.gif?raw=true">
+    </h2> 
+</div>
 
 My name is "Mohamed Anwar", but you can call me "Anwar". I'm on the purge of starting
 my PhD journey, so your well-wishes are greatly appreciated. My primary research
