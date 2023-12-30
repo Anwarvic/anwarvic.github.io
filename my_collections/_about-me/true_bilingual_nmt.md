@@ -5,9 +5,9 @@ date: 2022-04-08
 authors: ["Mohamed Anwar", "Lekan Raheem", "Maab Elrashid", "Melvin Johnson", "Julia Kreutzer"]
 labs: ["African Institute for Mathematical Sciences (AIMS)", "Google Research"]
 link: https://openreview.net/pdf?id=SAGNK9ME8Wc
-repo: 
+repo: https://github.com/Anwarvic/truel_bilingual_nmt
 poster: https://drive.google.com/file/d/1TSeM-UTHqtl4dYlOkpd_5nFN3owP6Ga-/view?usp=sharing
-demo: https://github.com/Anwarvic/truel_nmt
+demo: 
 slides: https://docs.google.com/presentation/d/1dS-kLyHegtuoONahjx4YKQWFx7B_w3rfS2wVOrq0K6U/edit?usp=sharing
 talk:
 comments: false
@@ -31,17 +31,13 @@ switched data.
 Generate realistic code-switching translation using the following method:
 
 <div align="center">
-    <a href="https://github.com/facebookresearch/muavic?tab=readme-ov-file#getting-data">
-        <img src="media/true_bilingual_nmt/csw_data.png" width=750>
-    </a>
+    <img src="media/true_bilingual_nmt/csw_data.png" width=750>
 </div>
 
 Use an alignment objective on the encoder side to create language-agnostic representations:
 
 <div align="center">
-    <a href="https://github.com/facebookresearch/muavic?tab=readme-ov-file#getting-data">
-        <img src="media/true_bilingual_nmt/alignment_method.png" width=750>
-    </a>
+    <img src="media/true_bilingual_nmt/alignment_method.png" width=750>
 </div>
 
 
