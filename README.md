@@ -10,52 +10,34 @@ Josh Gerdes.
   <img src="images/assets/peek_mobile.gif" height=500>
 </div>
 
-## Dependencies
-
-The following are the prerequisites that need to be installed to be able to 
-build the website offline:
-
-- Install ruby2.7; this is the command on Ubuntu 20.04.
-  ```
-  sudo apt-get install ruby-full build-essential zlib1g-dev
-  ```
-- Install bundler
-  ```
-  sudo gem install bundler:2.2.29
-  ```
-- Intall Jekyll
-  ```
-  sudo gem install jekyll
-  ```
-
-> Note:
-If you are using Ubuntu 22.04, use this instead to install ruby2.7:
-```
-echo "deb https://ppa.launchpadcontent.net/brightbox/ruby-ng/ubuntu/ focal main"|sudo tee  /etc/apt/sources.list.d/brightbox.list
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  80F70E11F0F0D5F10CB20E62F5DA5F09C3173AA6
-sudo apt update
-sudo apt install ruby2.7 ruby2.7-dev
-```
 
 ## Run it offline
 
-Now all dependencies are installed, you can follow these steps to be able to
-build the blog offline on your machine:
+To be able to test the blog website offline, you can follow these steps:
 
-- clone the repository from GitHub:
-  ```
-  git clone https://github.com/Anwarvic/anwarvic.github.io.git
-  ```
-- Install gems found in `Gemfile`:
-  ```
-  bundle install
-  ```
-- Now, we can start Jekyll server:
-  ```
-  bundle exec jekyll serve --watch
-  ```
-- You can access the blog via the following link: http://localhost:4000
+1. Install ruby from the [official website](https://www.ruby-lang.org/en/downloads/).
+The most recent version tested was `2.7`:
+    ```
+    sudo apt-get install ruby-full build-essential zlib1g-dev
+    ```
+2. Install bundler and Jekyll:
+    ```
+    gem install bundler:2.2.29 jekyll
+    ```
+3. clone the repository from GitHub:
+    ```
+    git clone https://github.com/Anwarvic/anwarvic.github.io.git
+    ```
+4. Install gems found in [`Gemfile`](./Gemfile):
+    ```
+    bundle install
+    ```
+5. Start Jekyll server:
+    ```
+    bundle exec jekyll serve --watch
+    ```
 
+Now, you can access the blog via the following link: http://localhost:4000
 
 ---
 
