@@ -41,7 +41,7 @@ Now, you can access the blog via the following link: http://localhost:4000
 
 ---
 
-# How It works
+# How it works
 
 In this part, I will try to explain how things work in this repository. Let's
 start by listing the files in this project and what each one does.
